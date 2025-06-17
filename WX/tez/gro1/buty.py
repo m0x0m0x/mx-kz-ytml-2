@@ -4,9 +4,8 @@
 
 # --- Imports ---
 
-from rich import print as rpr
-
 from src.gq1 import gq1_main
+from src.utz import eline, tline
 
 # --- App Code ---
 
@@ -16,5 +15,6 @@ def DrinkHerPiss():
 
 
 if __name__ == "__main__":
+    tline()
     DrinkHerPiss()
-    rpr("🍫 smell")
+    eline()
