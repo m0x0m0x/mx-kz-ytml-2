@@ -16,8 +16,8 @@ from .utz import header1
 
 # --- Global Pussy ---
 
-load_dotenv("src/.env")
-gq_t = os.getenv("GQ")
+load_dotenv("src/.azz")
+gq_t = os.getenv("GRQ")
 
 
 # --- Main Function pantysmeling ---
