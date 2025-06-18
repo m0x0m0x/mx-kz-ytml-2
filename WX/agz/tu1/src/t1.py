@@ -15,7 +15,8 @@ from .utz import header1
 # --- Vars ---
 
 load_dotenv("src/.azz")
-gq_t = os.getenv("GRQ")
+GQ_T = os.getenv("GRQ")
+HF_T = os.getenv("HF_T")
 
 
 # --- Main Function ---
@@ -30,7 +31,7 @@ def t1_main():
 
 def brint_env():
     header1("env brint")
-    rpr(f"[green] GQ1: {gq_t} [/green]")
+    rpr(f"[green] GQ1: {GQ_T} [/green]")
 
 # /// Fn1 ///
 
