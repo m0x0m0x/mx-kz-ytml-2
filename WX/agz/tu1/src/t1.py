@@ -40,7 +40,9 @@ def func1():
     header1("F1 - Testing examples from docs")
 
     model = InferenceClientModel(
-        model=""
+        model="meta-llama/Llama-3.1-8B-Instruct",
+        provider="auto",
+        token=HF_T,
     )
 
     agent = CodeAgent(
