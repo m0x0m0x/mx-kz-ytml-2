@@ -7,6 +7,7 @@
 import os
 
 from dotenv import load_dotenv
+from huggingface_hub import InferenceClient
 from rich import print as rpr
 from smolagents import CodeAgent, DuckDuckGoSearchTool
 
