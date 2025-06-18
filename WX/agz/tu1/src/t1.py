@@ -62,9 +62,34 @@ def func2():
 
     # Custom tool
     @tool
-    def get_weather_date(city: str) -> str:
+    def get_weather_date(city: str) -> dict:
         """Get the weather date for a given city."""
-        return f"The weather in {city} is sunny with a high of 75°F."
+        sample = {
+            "new york": {
+                "temps": [20, 22, 21, 20, 19, 12, 15],
+                "rain": [0, 0, 1, 0, 0, 1, 0],
+                "humidity": [50, 55, 60, 65, 70, 75, 80],
+                "unit": "Fahrenheit",
+            },
+            "london": {
+                "temps": [15, 16, 14, 13, 12, 11, 10],
+                "rain": [1, 0, 1, 0, 0, 1, 0],
+                "humidity": [80, 85, 90, 95, 100, 105, 110],
+                "unit": "Celsius",
+            },
+            "paris": {
+                "temps": [18, 19, 20, 21, 22, 23, 24],
+                "rain": [0, 0, 0, 1, 0, 0, 0],
+                "humidity": [60, 65, 70, 75, 80, 85, 90],
+                "unit": "Celsius",
+            },
+            "tokyo": {
+                "temps": [25, 26, 27, 28, 29, 30, 31],
+                "rain": [0, 0, 0, 0, 1, 0, 0],
+                "humidity": [50, 55, 60, 65, 70, 75, 80],
+                "unit": "Celsius",
+            },
+        }
 
     model = HfApiModel(
         model="meta-llama/Llama-3.1-8B-Instruct",
