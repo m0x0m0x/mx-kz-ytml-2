@@ -52,3 +52,9 @@ def func1():
     )
 
     agent.run("Compare and Contrast Booty Dancing and Booty Candy")
+
+# /// Fn2 - Following the tutorial ///
+
+
+def func2():
+    header1("F2 - Following the tutorial")
