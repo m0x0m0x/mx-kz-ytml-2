@@ -58,6 +58,12 @@ def func1():
 
 
 def func2():
+    """
+    Return the sample weather data for a given city.
+
+    Args:
+        city (str): The name of the city to get weather data for.
+    """
     header1("F2 - Following the tutorial")
 
     # Custom tool
@@ -97,7 +103,6 @@ def func2():
         return sample_data.get(city_lower, {"error": f"No data for {city}"})
 
     model = HfApiModel(
-        model="meta-llama/Llama-3.1-8B-Instruct",
         provider="hf-inference",
         token=HF_T,
     )
