@@ -62,7 +62,7 @@ def func2():
     Return the sample weather data for a given city.
 
     Args:
-        city (str): The name of the city to get weather data for.
+        city : The name of the city to get weather data for.
     """
     header1("F2 - Following the tutorial")
 
