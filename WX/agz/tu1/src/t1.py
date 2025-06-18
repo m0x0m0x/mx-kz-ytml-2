@@ -93,6 +93,9 @@ def func2():
             },
         }
 
+        city_lower = city.lower()
+        return sample_data.get(city_lower, {"error": f"No data for {city}"})
+
     model = HfApiModel(
         model="meta-llama/Llama-3.1-8B-Instruct",
         provider="hf-inference",
