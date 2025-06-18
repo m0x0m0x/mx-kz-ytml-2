@@ -45,9 +45,11 @@ def func1():
         token=HF_T,
     )
 
-    agent = CodeAgent(
-        tools=[DuckDuckGoSearchTool()],
-        model=model,
-    )
 
-    agent.run("Compare and Contrast Booty Dancing and Booty Candy")
+agent = CodeAgent(
+    tools=[DuckDuckGoSearchTool()],
+    model=model,
+    add_base_tools=True,
+)
+
+agent.run("Compare and Contrast Booty Dancing and Booty Candy")
