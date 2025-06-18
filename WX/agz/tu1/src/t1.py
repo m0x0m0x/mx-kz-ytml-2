@@ -39,7 +39,15 @@ def brint_env():
 def func1():
     header1("F1 - Testing examples from docs")
 
-    model = HfApiModel()
+    model = HfApiModel(
+        model_name="meta-llama/llama-3.1-70b-instruct",
+        api_token=HF_T,
+        max_tokens=2048,
+        temperature=0.7,
+        top_p=0.9,
+        top_k=50,
+        repetition_penalty=1.2,
+    )
 
     agent = CodeAgent(
         tools=[DuckDuckGoSearchTool()],
