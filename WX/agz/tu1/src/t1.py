@@ -8,7 +8,7 @@ import os
 
 from dotenv import load_dotenv
 from rich import print as rpr
-from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel
+from smolagents import CodeAgent, DuckDuckGoSearchTool, InferenceClientModel
 
 from .utz import header1
 
@@ -38,6 +38,8 @@ def brint_env():
 
 def func1():
     header1("F1 - Testing examples from docs")
+
+    client =
 
     model = HfApiModel(
         model_name="meta-llama/llama-3.1-70b-instruct",
