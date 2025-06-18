@@ -1,165 +1,29 @@
-
 [H[2J[3J[0;36m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
 [0;35mExecute UV [0m
 [0;36m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
 [0;32m Executing... 
  uv run buty.py [0m
 ┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉ tu1 ┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉
-╭───────────────────── <: ─────────────────────╮
-│ F2 - Testing agent run with Groq via litellm │
-╰───────────────────── :> ─────────────────────╯
-[09:54:19] INFO     HTTP Request: GET                                                                                         _client.py:1025
+╭──────────── <: ─────────────╮
+│ F2 - Following the tutorial │
+╰──────────── :> ─────────────╯
+[10:39:59] INFO     HTTP Request: GET                                                                                         _client.py:1025
                     https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200                
                     OK"                                                                                                                      
+Running Weather Analysis Agent...
 ╭───────────────────────────────────────────────────────────────── New run ─────────────────────────────────────────────────────────────────╮
 │                                                                                                                                           │
-│ Compare and Contrast Booty Dancing and Booty Candy                                                                                        │
+│ Get the weather data for New York, London, Paris, and Tokyo.                                                                              │
+│         1. Calculate the average temperature for each city.                                                                               │
+│         2. Determine which city has the highest humidity.                                                                                 │
+│         3. Plot the temperature data for each city.                                                                                       │
+│         4. Discuss the impact of weather on daily life in these cities.                                                                   │
 │                                                                                                                                           │
 ╰─ LiteLLMModel - groq/llama-3.1-8b-instant ────────────────────────────────────────────────────────────────────────────────────────────────╯
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
            INFO                                                                                                                 utils.py:3119
                     LiteLLM completion() model= llama-3.1-8b-instant; provider = groq                                                        
-[09:54:20] INFO     HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"                      _client.py:1025
-           INFO     Wrapper: Completed Call, calling success_handler                                                            utils.py:1215
-           INFO     selected model name for cost calculation: groq/llama-3.1-8b-instant                                cost_calculator.py:655
-           INFO     selected model name for cost calculation: groq/llama-3.1-8b-instant                                cost_calculator.py:655
-           INFO     selected model name for cost calculation: groq/llama-3.1-8b-instant                                cost_calculator.py:655
- ─ Executing parsed code: ────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
-  booty_dancing_definition = wikipedia_search(query="Booty Dancing")                                                                         
-  print("Booty Dancing definition:", booty_dancing_definition)                                                                               
-                                                                                                                                             
-  booty_candy_definition = wikipedia_search(query="Booty Candy")                                                                             
-  print("Booty Candy definition:", booty_candy_definition)                                                                                   
- ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
-Code execution failed at line 'booty_dancing_definition = wikipedia_search(query="Booty Dancing")' due to: InterpreterError: Forbidden 
-function evaluation: 'wikipedia_search' is not among the explicitly allowed tools or defined/imported in the preceding code
-[Step 1: Duration 1.24 seconds| Input tokens: 2,093 | Output tokens: 475]
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 2 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[09:54:21] INFO                                                                                                                 utils.py:3119
-                    LiteLLM completion() model= llama-3.1-8b-instant; provider = groq                                                        
-           INFO     HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"                      _client.py:1025
-           INFO     Wrapper: Completed Call, calling success_handler                                                            utils.py:1215
-           INFO     selected model name for cost calculation: groq/llama-3.1-8b-instant                                cost_calculator.py:655
- ─ Executing parsed code: ────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
-  booty_dancing_definition = web_search(query="Booty Dancing definition")                                                                    
-  print("Booty Dancing definition:", booty_dancing_definition)                                                                               
-                                                                                                                                             
-  booty_candy_definition = web_search(query="Booty Candy definition")                                                                        
-  print("Booty Candy definition:", booty_candy_definition)                                                                                   
- ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
-           INFO     selected model name for cost calculation: groq/llama-3.1-8b-instant                                cost_calculator.py:655
-           INFO     selected model name for cost calculation: groq/llama-3.1-8b-instant                                cost_calculator.py:655
-[09:54:22] INFO     response: https://lite.duckduckgo.com/lite/ 200                                                                lib.rs:464
-[09:54:24] INFO     response: https://lite.duckduckgo.com/lite/ 200                                                                lib.rs:464
-Execution logs:
-Booty Dancing definition: ## Search Results
-
-[Twerking - Wikipedia](https://en.wikipedia.org/wiki/Twerking)
-Participants at the Brasília Pride event twerking. Twerking (/ ˈ t w ɜːr k ɪ ŋ /; possibly from 'to work') is a type of dance to popular 
-music in a sexually provocative manner involving throwing or thrusting the hips back or shaking the buttocks, often in a low squatting 
-stance. [1] It is individually performed chiefly but not exclusively by women. [2] [3] ...
-
-[TWERKING Definition & Meaning - Merriam-Webster](https://www.merriam-webster.com/dictionary/twerking)
-sexually suggestive dancing characterized by rapid, repeated hip thrusts and shaking of the buttocks especially while squatting… See the full
-definition Menu Toggle
-
-[What is twerking? Meaning, origin and the best videos of celebrities 
-...](https://www.the-sun.com/lifestyle/9001970/twerking-origin-meaning-celebrity-videos-performing-dance-move/)
-Meaning, origin and the best videos of celebrities performing the dance move. Miley Cyrus made the move a viral sensation and now everyone, 
-from the Kardashians to Gemma Atkinson, is having a go. Josie Griffiths; ... It can also been referred to as "booty shaking", and the word 
-was derived from merging the terms "twist" and "jerk".
-
-[What Does Twerk Mean? - Meaning, Uses and More - FluentSlang](https://fluentslang.com/twerk-meaning/)
-Twerking, booty shaking, shaking it, bump and grind, and booty popping are similar to twerk because they all involve vigorously moving or 
-shaking one's buttocks. These terms are used to describe dance moves or actions that draw attention to the rear end and are often associated 
-with a lively and energetic atmosphere.
-
-[What is the Origin of Twerking? - Mental Floss](https://www.mentalfloss.com/article/51365/what-origin-twerking)
-A tongue-in-cheek definition by Urban Dictionary once defined twerking as "a series of movements made by females of the humanoid variety as 
-an expression of contempt for their fathers."
-
-[Twerking As a Dance and All You Need to Know About It](https://www.dancelifemap.com/twerking/)
-Some people refer to it as shaking the booty. Below is a brief look at this dance style with the aim of shedding some light to its origin and
-the factors surrounding it. The Most Famous Twerking Video. The crown for the most famous twerking video goes to Lexy Panterra. It got more 
-than 100+ Million views on Youtube sincie 2015 and the number ...
-
-[booty dance - Urban Dictionary](https://www.urbandictionary.com/define.php?term=booty+dance)
-1.to dance in a sexually explicit way often termed ghetto making your ass cheeks clap while shaking ones hips. 2. Shaking hips side to side 
-to the beat of the music, the faster your ass shakes the better your booty dance. 3.to thrust hips in a circle stopping at intervals in a 
-robotic motion before returning into a liquid motion of grinding then back into a booty shake
-
-[Twerking | Dance Wiki | Fandom](https://dance.fandom.com/wiki/Twerking)
-Twerking (/ˈtwɜːrkɪŋ/; possibly from 'to work') is a type of dance that came out of the bounce music scene of New Orleans in the late 1980s. 
-Individually performed chiefly but not exclusively by women, performers dance to popular music in a sexually provocative manner involving 
-throwing or thrusting their hips back or shaking their buttocks, often in a low squatting stance. Twerking is ...
-
-[What is the name of the dance style where the booty is shaking. How to 
-...](https://gigafox.ru/en/planning/kak-nazyvaetsya-stil-tanca-gde-tryasut-popoi-kak-nauchitsya/)
-Booty dance improves blood circulation in the lower abdomen and pelvic organs, which is very beneficial for women's health. 5. Also, twerk 
-perfectly liberates and adds self-confidence. 6. Twerking helps to master the body, makes you plastic and graceful. 7. Women get rid of 
-menstrual pain, bowel dysfunction, bile stagnation and other troubles ...
-
-[PDF](https://www.madance.com/wp-content/uploads/2020/12/Technique.pdf)
-Dance Terminology. Passé - Passed. Literally, the step would have the foot leave fifth posi-tion in front (although other positions may be 
-used) and pass the knee joint to finish in the fifth position in back. Also performed in reverse.
-Booty Candy definition: ## Search Results
-
-[Bootycandy - Concord Theatricals](https://www.concordtheatricals.com/p/56869/bootycandy)
-"Sassy and saucy! You may never think of the words 'booty' and 'candy' the same way ever again." - New York Post, Read More "Smart, searing, 
-and sensationally funny.. Robert O'Hara reveals an important asset for a playwright to make his mark: fearlessness." - The New York Times, 
-Read More "Funny, smutty, and enticingly ...
-
-[Review: 'Bootycandy' adorns itself with flamboyance, ribaldry, hilarity 
-...](https://www.latimes.com/entertainment/arts/la-et-cm-bootycandy-review-20151104-column.html)
-The play presented by a now grown-up Sutter is the dramatic center of "Bootycandy." His theatrical contribution sustains the campy fun but 
-mixes in self-hatred, violence and despair.
-
-[Play Page - Bootycandy - Actor's Express](https://actors-express.com/play-page-bootycandy/)
-BOOTYCANDY PLAYWRIGHT Robert O'Hara DIRECTOR MARTIN DAMIEN WILKINS May 14 -june 12, 2022 Gut-busting, in-your-face comedy! BUY TICKETS 
-Previous Next SYNOPSIS Join Sutter as he propels through a kaleidoscopic odyssey through his childhood home, church, dive bars, seedy motels 
-- and one riotously funny phone conversation about very inappropriate baby names. One of the most […]
-
-[Bootycandy Review: Growing Up Black and Gay and Rated R](https://newyorktheater.me/2014/09/10/bootycandy-review/)
-In the first of Robert O'Hara's ten scenes about growing up black and gay, a young child named Sutter asks his mother some uncomfortable 
-questions, including why she and his grandmother call his penis booty candy. "I don't know," his mother answers. "I guess because it's the 
-candy to the booty!" "So can I lick…
-
-['Bootycandy': Growing up black and gay | The Seattle 
-Times](https://www.seattletimes.com/entertainment/theater/bootycandy-growing-up-black-and-gay/)
-"Bootycandy," Robert O'Hara's theatrical salvo about growing up gay and black, pulls no punches. It opens with an explicit chat about male 
-genitalia (hence the euphemistic title) between a ...
-
-[Booty Candy - Robert O'Hara | PDF - Scribd](https://www.scribd.com/document/721459840/Booty-Candy-Robert-O-Hara)
-Robert O'Hara | Bootycandy | SAMUEL FRENCH SAMUELFRENCH.COM SAMUELFRENCH-LONDON.CO.UK 'BOOTANDY ws ft prance bythe Wooly Marmot These 
-'Company 'Hae Stuns Ara Duet Joey Herman, Sanaging ecto a When, D.C ane ne proms 'es dee Rober O'Hara i se by Toe Kame, cates ote Tes aes gy 
-Con Bis an on Ln one eaten Sogn om Win ven Hi scronons Jose ace ee seroR1¥0.
-
-['Booty Candy' explores blackness, queerness and identity 
-expression](https://www.wabe.org/booty-candy-explores-blackness-queerness-and-identity-expression/)
-With outrageous humor, the play explores themes of growing up Black and queer in America. A new production of "Booty Candy" is being 
-performed through June 12 at Actor's Express, and director Martin Damien Wilkins and actor Parris Sarter joined "City Lights" host Lois 
-Reitzes via Zoom to talk about the play. Interview highlights:
-
-[Booty Candy explores identities of black, queer people in 
-America](https://www.thepostathens.com/multimedia/50f6f14c-1acc-433f-9942-785fb35af891)
-Booty Candy explores the theme of growing up as a black and queer person in America. The show is known for its comedy, while still 
-highlighting the complexities of identity in black culture.
-
-['Bootycandy' Looks at Black Attitudes Toward Gays - The New York 
-Times](https://www.nytimes.com/2014/09/11/theater/bootycandy-looks-at-black-attitudes-toward-gays.html)
-"Bootycandy," Robert O'Hara's searing and sensationally funny comedy, looks at attitudes toward gays in black culture.
-
-[Bootycandy Reviews - Theatre In Chicago - Play Reviews](https://www.theatreinchicago.com/bootycandy/reviews/8896/)
-ChicagoCritic - Not Recommended "...In summary, Robert O'Hare's semi-autobiography, Bootycandy, isn't funny but more of a satirical insult. 
-His scenes run repetitiously long and his characters are stereotypical mockeries of back folks including the strong black mother, the 
-outspoken grandmother and the hypocritical reverend.
-
-Out: None
-[Step 2: Duration 3.03 seconds| Input tokens: 4,475 | Output tokens: 585]
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 3 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-           INFO                                                                                                                 utils.py:3119
-                    LiteLLM completion() model= llama-3.1-8b-instant; provider = groq                                                        
-           INFO     HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"       _client.py:1025
+[10:40:11] INFO     HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 500 Internal Server Error"   _client.py:1025
 
 [1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
 LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
@@ -168,9 +32,7 @@ LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
 [1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
 
 Error in generating model output:
-litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in 
-organization `org_01hwj98v04ee19e3af5bn49tzr` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4743, Requested 4798. 
-Please try again in 35.41s. Need more tokens? Upgrade to Dev Tier today at 
-https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+litellm.InternalServerError: InternalServerError: GroqException - {"error":{"message":"Internal Server 
+Error","type":"internal_server_error"}}
 
-[Step 3: Duration 0.04 seconds]
+[Step 1: Duration 11.82 seconds]

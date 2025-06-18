@@ -8,7 +8,7 @@ import os
 
 from dotenv import load_dotenv
 from rich import print as rpr
-from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel, tool
+from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel, LiteLLMModel, tool
 
 from .utz import header1
 
@@ -105,10 +105,12 @@ def func2():
         city_lower = city.lower()
         return sample_data.get(city_lower, {"error": f"No data for {city}"})
 
-    model = HfApiModel(
-        provider="hf-inference",
-        token=HF_T,
+    model = LiteLLMModel(
+        model_id="groq/llama-3.1-8b-instant",
+        temperature=0.1,
+        api_key=GQ_T,
     )
+
     agent = CodeAgent(
         tools=[get_weather_date],
         model=model,
