@@ -27,3 +27,164 @@ Error in generating model output:
 
 Invalid username or password.
 [Step 1: Duration 0.73 seconds]
+[H[2J[3J[0;36m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[0;35mExecute UV [0m
+[0;36m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[0;32m Executing... 
+ uv run buty.py [0m
+┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉ tu1 ┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉
+╭────────────── <: ───────────────╮
+│ F1 - Testing examples from docs │
+╰────────────── :> ───────────────╯
+[09:30:59] DEBUG    Loaded CA certs                                                                                               utils.rs:31
+           DEBUG    Loaded CA certs                                                                                               utils.rs:31
+╭───────────────────────────────────────────────────────────────── New run ─────────────────────────────────────────────────────────────────╮
+│                                                                                                                                           │
+│ Compare and Contrast Booty Dancing and Booty Candy                                                                                        │
+│                                                                                                                                           │
+╰─ InferenceClientModel - Qwen/Qwen2.5-Coder-32B-Instruct ──────────────────────────────────────────────────────────────────────────────────╯
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           DEBUG    Starting new HTTPS connection (1): huggingface.co:443                                              connectionpool.py:1049
+           DEBUG    https://huggingface.co:443 "GET /api/models/Qwen/Qwen2.5-Coder-32B-Instruct HTTP/1.1" 200 8571      connectionpool.py:544
+           DEBUG    Starting new HTTPS connection (1): router.huggingface.co:443                                       connectionpool.py:1049
+[09:31:00] DEBUG    https://router.huggingface.co:443 "POST                                                             connectionpool.py:544
+                    /hf-inference/models/Qwen/Qwen2.5-Coder-32B-Instruct/v1/chat/completions HTTP/1.1" 200 938                               
+ ─ Executing parsed code: ────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+  booty_dancing_info = web_search(query="Booty Dancing definition and characteristics")                                                      
+  booty_candy_info = web_search(query="Booty Candy definition and characteristics")                                                          
+  print("Booty Dancing Info:", booty_dancing_info)                                                                                           
+  print("\nBooty Candy Info:", booty_candy_info)                                                                                             
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+           DEBUG    starting new connection: https://html.duckduckgo.com/                                                      connect.rs:381
+           DEBUG    resolving html.duckduckgo.com                                                                                  dns.rs:126
+           DEBUG    connecting to 20.204.244.192:443                                                                              http.rs:730
+           DEBUG    connected to 20.204.244.192:443                                                                               http.rs:733
+           DEBUG    pooling idle connection for PoolKey { uri: https://html.duckduckgo.com/, alpn_protos: None, network: default  pool.rs:380
+                    }                                                                                                                        
+           DEBUG    inserting secure cookie 'kl'                                                                           cookie_store.rs:82
+           INFO     response: https://html.duckduckgo.com/html 202                                                                 lib.rs:464
+           DEBUG    _get_url() https://html.duckduckgo.com/html 202                                                  duckduckgo_search.py:125
+           INFO     Error to search using html backend: https://html.duckduckgo.com/html 202 Ratelimit               duckduckgo_search.py:182
+[09:31:01] DEBUG    starting new connection: https://lite.duckduckgo.com/                                                      connect.rs:381
+           DEBUG    resolving lite.duckduckgo.com                                                                                  dns.rs:126
+           DEBUG    connecting to 20.204.244.192:443                                                                              http.rs:730
+           DEBUG    connected to 20.204.244.192:443                                                                               http.rs:733
+           DEBUG    pooling idle connection for PoolKey { uri: https://lite.duckduckgo.com/, alpn_protos: None, network: default  pool.rs:380
+                    }                                                                                                                        
+[09:31:02] DEBUG    inserting secure cookie 'kl'                                                                           cookie_store.rs:82
+           INFO     response: https://lite.duckduckgo.com/lite/ 200                                                                lib.rs:464
+           DEBUG    _get_url() https://lite.duckduckgo.com/lite/ 200                                                 duckduckgo_search.py:125
+[09:31:03] DEBUG    reuse idle connection for PoolKey { uri: https://html.duckduckgo.com/, alpn_protos: None, network: default }  pool.rs:254
+           INFO     response: https://html.duckduckgo.com/html 202                                                                 lib.rs:464
+           DEBUG    _get_url() https://html.duckduckgo.com/html 202                                                  duckduckgo_search.py:125
+           INFO     Error to search using html backend: https://html.duckduckgo.com/html 202 Ratelimit               duckduckgo_search.py:182
+[09:31:04] DEBUG    reuse idle connection for PoolKey { uri: https://lite.duckduckgo.com/, alpn_protos: None, network: default }  pool.rs:254
+[09:31:05] INFO     response: https://lite.duckduckgo.com/lite/ 200                                                                lib.rs:464
+           DEBUG    _get_url() https://lite.duckduckgo.com/lite/ 200                                                 duckduckgo_search.py:125
+Execution logs:
+Booty Dancing Info: ## Search Results
+
+[Twerking - Wikipedia](https://en.wikipedia.org/wiki/Twerking)
+Participants at the Brasília Pride event twerking. Twerking (/ ˈ t w ɜːr k ɪ ŋ /; possibly from 'to work') is a type of dance to popular 
+music in a sexually provocative manner involving throwing or thrusting the hips back or shaking the buttocks, often in a low squatting 
+stance. [1] It is individually performed chiefly but not exclusively by women. [2] [3] ...
+
+[Twerking As a Dance and All You Need to Know About It](https://www.dancelifemap.com/twerking/)
+Media is only playing catch up at this point. There are very many renditions of twerking, but the constant factor about it is its provocative
+and sexualizing characteristic. This dance is not exclusive to a particular sex. Twerking is a form of sexy dance that involves hip thrusting
+and squatting. Some people refer to it as shaking the booty.
+
+[What is twerking? Meaning, origin and the best videos of celebrities 
+...](https://www.the-sun.com/lifestyle/9001970/twerking-origin-meaning-celebrity-videos-performing-dance-move/)
+Meaning, origin and the best videos of celebrities performing the dance move. Miley Cyrus made the move a viral sensation and now everyone, 
+from the Kardashians to Gemma Atkinson, is having a go. Josie Griffiths; ... It can also been referred to as "booty shaking", and the word 
+was derived from merging the terms "twist" and "jerk".
+
+[What is the name of the dance style where the booty is shaking. How to 
+...](https://gigafox.ru/en/planning/kak-nazyvaetsya-stil-tanca-gde-tryasut-popoi-kak-nauchitsya/)
+This dance style is called twerk (twerk) or bootie dance (booty dance). Both directions of dance involve active movement (jerking) of the 
+hips. I think that for such a dance it would be good to impose an age limit on the study, since the dance turns out to be very frank and 
+erotic. No one will give a child to learn pole dance or strip plastic.
+
+[booty dance - Urban Dictionary](https://www.urbandictionary.com/define.php?term=booty+dance)
+1.to dance in a sexually explicit way often termed ghetto making your ass cheeks clap while shaking ones hips. 2. Shaking hips side to side 
+to the beat of the music, the faster your ass shakes the better your booty dance. 3.to thrust hips in a circle stopping at intervals in a 
+robotic motion before returning into a liquid motion of grinding then back into a booty shake
+
+[The Black history of twerking -- and how it taught me 
+self-love](https://www.ted.com/talks/lizzo_the_black_history_of_twerking_and_how_it_taught_me_self_love/transcript)
+Superstar Lizzo traces booty shaking to a traditional West African dance and tells how Black women across generations kept the rhythm alive, 
+from blues and jazz singers to modern rap and hip-hop performers. With her characteristic energy, she shares how twerking empowered her to 
+love her own body -- and explains why understanding its origins ...
+
+[Booty Dance/Twerk Fun Facts - Kim Jordan - Kim Jordan - Creations](https://kimjordancreations.com/booty-dance-twerk-fun-facts/)
+8- Booty Dances can help reduce menstrual pain as they help relax the uterus. 9- The trick to the twerk movement is being able to relax your 
+gluteus muscles while simultaneously activating your pelvis to rotate forward and back continuously. 10- The strip clubs cannot be ignored in
+the biography of Booty Dance.
+
+[What is the booty dance and why you should learn how to dance?](https://tipings.com/en/pages/58119)
+believed that bootie dance refers to the style of Dancehall, but in fact it has its origins in African tribes.Dancing women living on the 
+hottest continent of the world, have always saturation movements associated with the work of the stomach, the rotation of the hips and 
+buttocks sexy shaking.It is these elements borrowed Buti and dance.
+
+[Dance Dictionary | Dancing Terms & Definitions](https://dancedictionary.com/)
+This characteristic helps to define Modern Dance, that is that a dancer is encouraged to be expressive of their inner feelings and emotions. 
+... There are many forms of sissonne in ballet with minor variations to the definition. Varying forms of sissonne may include landing on one 
+or two feet and in different positions (third positions, etc.). ...
+
+[Booty - Oxford Reference](https://www.oxfordreference.com/view/10.1093/acref/9780199543793.001.0001/acref-9780199543793-e-290)
+shake your booty dance energetically. informal Booty in this context means 'buttocks' (it originated in African American slang in the 1920s, 
+probably as an alteration of ...
+
+Booty Candy Info: ## Search Results
+
+[Bootycandy - Concord Theatricals](https://www.concordtheatricals.com/p/56869/bootycandy)
+Sutter is on an outrageous odyssey through his childhood home, his church, dive bars, motel rooms, and even nursing homes. Playwright Robert 
+O'Hara weaves together scenes, sermons, sketches, and daring meta-theatrics to create a kaleidoscopic portrayal of growing up gay and Black. 
+Uproarious satire crashes headlong into the murky terrain of pain and pleasure and… Bootycandy.
+
+[Review: 'Bootycandy' adorns itself with flamboyance, ribaldry, hilarity 
+...](https://www.latimes.com/entertainment/arts/la-et-cm-bootycandy-review-20151104-column.html)
+Don't bother to look up the definition of "Bootycandy," the outrageous title of Robert O'Hara's wild comedy about growing up black and gay.
+
+[booty candy - Urban Dictionary](https://www.urbandictionary.com/define.php?term=booty+candy)
+Mistress, side piece, sex toy, booty call; usually referring to the person a high profile business man or head of state is having an affair 
+with
+
+[Play Page - Bootycandy - Actor's Express](https://actors-express.com/play-page-bootycandy/)
+Join Sutter as he propels through a kaleidoscopic odyssey through his childhood home, church, dive bars, seedy motels - and one riotously 
+funny phone conversation about very inappropriate baby names. One of the most acclaimed satirical comedies in decades, Bootycandy is an 
+audacious series of subversive vignettes that explore what it means to grow up gay and black in America. Safety is Actor ...
+
+[Review: Actor's Express' "Bootycandy" unwraps bitter ... - ARTS 
+ATL](https://www.artsatl.org/review-bootycandy-takes-absurd-turns-getting-to-the-bottom-of-hidden-gay-life/)
+Laughter is the best medicine, but some things just aren't funny. However, playwright Robert O'Hara certainly tries to take the most 
+heartbreaking parts of the Black gay male experience and infuse then with humor in his wildly absurd play Bootycandy. Onstage at Actor's 
+Express through June 12, Bootycandy is a series of vignettes that offer a peek into the lives of Black gay men. From ...
+
+['Bootycandy' Looks at Black Attitudes Toward Gays - The New York 
+Times](https://www.nytimes.com/2014/09/11/theater/bootycandy-looks-at-black-attitudes-toward-gays.html)
+"Bootycandy," Robert O'Hara's searing and sensationally funny comedy, looks at attitudes toward gays in black culture.
+
+['Bootycandy': Growing up black and gay | The Seattle 
+Times](https://www.seattletimes.com/entertainment/theater/bootycandy-growing-up-black-and-gay/)
+"Bootycandy," Robert O'Hara's theatrical salvo about growing up gay and black, pulls no punches. It opens with an explicit chat about male 
+genitalia (hence the euphemistic title) between a ...
+
+['Booty Candy' explores blackness, queerness and identity 
+expression](https://www.wabe.org/booty-candy-explores-blackness-queerness-and-identity-expression/)
+A new production of "Booty Candy" is being performed through June 12 at Actor's Express, and director Martin Damien Wilkins and actor Parris 
+Sarter joined "City Lights" host Lois Reitzes via Zoom to talk about the play. Interview highlights: A story as offbeat as its title:
+
+[Theater Review: Bootycandy Loves Taking a Poke at Its Own Audience](https://www.vulture.com/2014/09/theater-review-bootycandy.html)
+That name, though.George C. Wolfe's The Colored Museum, an Off Broadway hit in 1986, was groundbreaking in the way a gravedigger is. Amid 
+brilliant satirical confetti, it declared an end to a ...
+
+[Bootycandy Reviews - Theatre In Chicago - Play Reviews](https://www.theatreinchicago.com/bootycandy/reviews/8896/)
+Reviews for Bootycandy in ChicagoTime Out Chicago - Highly Recommended "...But while Bootycandy isn't a traditional theatrical narrative, 
+it's also far from academic exercise. In Windy City Playhouse's Chicago premiere, directed by O'Hara, it's bitingly funny, provocative, 
+uncomfortable and engrossing. From Osiris Khepera's fiery sermon about alleged homosexuals in the church choir and Krystel ...
+
+Out: None
+[Step 1: Duration 5.60 seconds| Input tokens: 2,110 | Output tokens: 128]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Step 2 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
