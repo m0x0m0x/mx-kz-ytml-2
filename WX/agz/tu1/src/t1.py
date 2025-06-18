@@ -64,7 +64,9 @@ def func2():
     @tool
     def get_weather_date(city: str) -> dict:
         """Get the weather date for a given city."""
-        sample = {
+
+        # Sample Data
+        sample_data = {
             "new york": {
                 "temps": [20, 22, 21, 20, 19, 12, 15],
                 "rain": [0, 0, 1, 0, 0, 1, 0],
