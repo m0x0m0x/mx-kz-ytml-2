@@ -4,13 +4,14 @@
 
 # --- Imports ---
 
-from src.utz import eline, header1, tline
+from src.t1 import t1_main
+from src.utz import eline, tline
 
 # --- App Code ---
 
 
 def buty():
-    header1("Starter Test")
+    t1_main()
 
 
 if __name__ == "__main__":

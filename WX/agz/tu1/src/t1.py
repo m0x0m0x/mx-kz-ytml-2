@@ -8,6 +8,8 @@ import os
 
 from dotenv import load_dotenv
 
+from .utz import header1
+
 # --- Vars ---
 
 load_dotenv("src/.azz")
@@ -15,5 +17,7 @@ gq_t = os.getenv("GRQ")
 
 
 # --- Main Function ---
+def t1_main():
+    header1("Start Test")
 
 # --- Sub Function---
