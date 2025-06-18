@@ -8,7 +8,7 @@ import os
 
 from dotenv import load_dotenv
 from rich import print as rpr
-from smolagents import CodeAgent, DuckDuckGoSearchTool, InferenceClientModel
+from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel
 
 from .utz import header1
 
@@ -20,7 +20,7 @@ HF_T = os.getenv("HF1")
 
 
 # --- Main Function ---
-def t1_tez_main():
+def t1_main():
     # brint_env()
     func1()
 
@@ -39,7 +39,7 @@ def brint_env():
 def func1():
     header1("F1 - Testing examples from docs")
 
-    model = InferenceClientModel(
+    model = HfApiModel(
         model="meta-llama/Llama-3.1-8B-Instruct",
         provider="hf-inference",
         token=HF_T,
