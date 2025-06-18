@@ -7,7 +7,8 @@
 
 # Dirz
 
-|       Dir       |        What        |
-| :-------------: | :----------------: |
-| [`agz`](./agz/) | Smol Agent CW here |
-| [`tez`](./tez/) |   Various Tests    |
+|       Dir       |               What               |
+| :-------------: | :------------------------------: |
+| [`agz`](./agz/) |        Smol Agent CW here        |
+| [`tez`](./tez/) |          Various Tests           |
+| [`hfs`](./hfs/) | HugginFace Smolgents Course Work |
