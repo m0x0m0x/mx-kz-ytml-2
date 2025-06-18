@@ -40,7 +40,6 @@ def func1():
     header1("F1 - Testing examples from docs")
 
     model = HfApiModel(
-        provider="hf-inference",
         token=HF_T,
     )
 
