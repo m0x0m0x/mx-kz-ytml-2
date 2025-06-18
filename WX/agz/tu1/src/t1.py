@@ -58,18 +58,21 @@ def func1():
 
 
 def func2():
-    """
-    Return the sample weather data for a given city.
 
-    Args:
-        city : The name of the city to get weather data for.
-    """
     header1("F2 - Following the tutorial")
 
     # Custom tool
     @tool
     def get_weather_date(city: str) -> dict:
-        """Get the weather date for a given city."""
+        """
+    Retrieves weather information for a given city and date.
+
+    Args:
+        city (str): The name of the city to get the weather for.
+
+    Returns:
+        dict: Weather data for the specified city and date.
+    """
 
         # Sample Data
         sample_data = {
