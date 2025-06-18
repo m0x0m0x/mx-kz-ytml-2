@@ -8,7 +8,7 @@ import os
 
 from dotenv import load_dotenv
 from rich import print as rpr
-from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel
+from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel, tool
 
 from .utz import header1
 
