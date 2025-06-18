@@ -39,7 +39,9 @@ def brint_env():
 def func1():
     header1("F1 - Testing examples from docs")
 
-    model = InferenceClientModel()
+    model = InferenceClientModel(
+        model=""
+    )
 
     agent = CodeAgent(
         tools=[DuckDuckGoSearchTool()],
