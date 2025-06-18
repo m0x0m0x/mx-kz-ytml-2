@@ -56,8 +56,8 @@ def l_critical(text):
     log.critical(f"[white on red bold]{text}[/white on red bold]")
 
 
-def tline():
-    console.print(Rule(title="[green]Execution Section[/green]",
+def tline(name="tu1"):
+    console.print(Rule(title=f"[green]{name}[/green]",
                   characters="┉", style="bold green"))
 
 

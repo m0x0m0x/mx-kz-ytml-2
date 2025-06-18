@@ -4,17 +4,16 @@
 
 # --- Imports ---
 
-from src.gq1 import gq1_main
-from src.utz import eline, tline
+from src.utz import eline, header1, tline
 
 # --- App Code ---
 
 
-def DrinkHerPiss():
-    gq1_main()
+def buty():
+    header1("Starter Test")
 
 
 if __name__ == "__main__":
     tline()
-    DrinkHerPiss()
+    buty()
     eline()
