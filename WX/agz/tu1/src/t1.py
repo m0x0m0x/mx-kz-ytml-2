@@ -8,6 +8,7 @@ import os
 
 from dotenv import load_dotenv
 from rich import print as rpr
+from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel
 
 from .utz import header1
 
@@ -19,13 +20,29 @@ gq_t = os.getenv("GRQ")
 
 # --- Main Function ---
 def t1_main():
-    brint_env()
+    # brint_env()
+    func1()
 
 # --- Sub Function---
 
-# Brint env
+# /// Brint env ///
 
 
 def brint_env():
     header1("env brint")
     rpr(f"[green] GQ1: {gq_t} [/green]")
+
+# /// Fn1 ///
+
+
+def func1():
+    header1("F1 - Testing examples from docs")
+
+    model = HfApiModel()
+
+    agent = CodeAgent(
+        tools=[DuckDuckGoSearchTool()],
+        model=model,
+    )
+
+    agent.run("Compare and Contrast Booty Dancing and Booty Candy")
