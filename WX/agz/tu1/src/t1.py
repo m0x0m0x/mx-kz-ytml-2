@@ -60,6 +60,12 @@ def func1():
 def func2():
     header1("F2 - Following the tutorial")
 
+    # Custom tool
+    @tool
+    def get_weather_date(city: str) -> str:
+        """Get the weather date for a given city."""
+        return f"The weather in {city} is sunny with a high of 75°F."
+
     model = HfApiModel(
         model="meta-llama/Llama-3.1-8B-Instruct",
         provider="hf-inference",
