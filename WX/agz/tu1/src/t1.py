@@ -102,10 +102,12 @@ def func2():
         token=HF_T,
     )
     agent = CodeAgent(
-        tools=[DuckDuckGoSearchTool()],
+        tools=[get_weather_date()],
         model=model,
         add_base_tools=True,
+        additional_authorized_imports=['matplotlib'], verbosity_level=2,
     )
+
     agent.run(
         " Talk about safe booty dancing  "
     )
