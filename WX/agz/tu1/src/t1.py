@@ -107,7 +107,7 @@ def func2():
         token=HF_T,
     )
     agent = CodeAgent(
-        tools=[get_weather_date()],
+        tools=[get_weather_date],
         model=model,
         add_base_tools=True,
         additional_authorized_imports=['matplotlib'], verbosity_level=2,
