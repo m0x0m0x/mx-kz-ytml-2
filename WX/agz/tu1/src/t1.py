@@ -16,7 +16,7 @@ from .utz import header1
 
 load_dotenv("src/.azz")
 GQ_T = os.getenv("GRQ")
-HF_T = os.getenv("HF_T")
+HF_T = os.getenv("HF1")
 
 
 # --- Main Function ---
@@ -45,11 +45,10 @@ def func1():
         token=HF_T,
     )
 
+    agent = CodeAgent(
+        tools=[DuckDuckGoSearchTool()],
+        model=model,
+        add_base_tools=True,
+    )
 
-agent = CodeAgent(
-    tools=[DuckDuckGoSearchTool()],
-    model=model,
-    add_base_tools=True,
-)
-
-agent.run("Compare and Contrast Booty Dancing and Booty Candy")
+    agent.run("Compare and Contrast Booty Dancing and Booty Candy")
