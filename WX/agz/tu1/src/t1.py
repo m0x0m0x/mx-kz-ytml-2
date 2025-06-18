@@ -108,6 +108,18 @@ def func2():
         additional_authorized_imports=['matplotlib'], verbosity_level=2,
     )
 
-    agent.run(
-        " Talk about safe booty dancing  "
+    # Printing the response
+    rpr("Running Weather Analysis Agent...")
+    response = agent.run(
+        """
+        Get the weather data for New York, London, Paris, and Tokyo.
+        1. Calculate the average temperature for each city.
+        2. Determine which city has the highest humidity.
+        3. Plot the temperature data for each city.
+        4. Discuss the impact of weather on daily life in these cities.
+        """
     )
+
+    rpr("\nAgent Response:")
+    rpr(response)
+    rpr("\n Check your current directory for the plot image file.")
