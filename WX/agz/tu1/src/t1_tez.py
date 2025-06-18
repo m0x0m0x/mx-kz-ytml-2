@@ -33,7 +33,11 @@ def brint_env():
     header1("env brint")
     rpr(f"[green] GQ1: {GQ_T} [/green]")
 
+
 # /// Fn1 ///
+"""
+This function will use hfapi , note that the token has to be explicity added as shown. Otehrwise is will search 
+"""
 
 
 def func1():

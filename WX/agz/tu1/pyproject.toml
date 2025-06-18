@@ -10,5 +10,5 @@ dependencies = [
     "groq>=0.28.0",
     "huggingface-hub>=0.33.0",
     "rich>=14.0.0",
-    "smolagents[toolkit]>=1.18.0",
+    "smolagents[litellm,toolkit]>=1.18.0",
 ]
