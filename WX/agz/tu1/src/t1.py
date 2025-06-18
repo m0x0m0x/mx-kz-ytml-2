@@ -21,3 +21,9 @@ def t1_main():
     header1("Start Test")
 
 # --- Sub Function---
+
+# Brint env
+
+
+def brint_env():
+    header1("env brint")
