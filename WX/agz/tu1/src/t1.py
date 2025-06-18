@@ -22,7 +22,8 @@ HF_T = os.getenv("HF1")
 # --- Main Function ---
 def t1_main():
     # brint_env()
-    func1()
+    # func1()
+    func2()
 
 # --- Sub Function---
 
