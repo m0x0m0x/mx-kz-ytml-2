@@ -7,9 +7,8 @@
 import os
 
 from dotenv import load_dotenv
-from huggingface_hub import InferenceClient
 from rich import print as rpr
-from smolagents import CodeAgent, DuckDuckGoSearchTool
+from smolagents import CodeAgent, DuckDuckGoSearchTool, InferenceClientModel
 
 from .utz import header1
 
@@ -40,20 +39,7 @@ def brint_env():
 def func1():
     header1("F1 - Testing examples from docs")
 
-    client = InferenceClient(
-        provider="groq",
-        api_key=GQ_T
-    )
-
-    model = HfApiModel(
-        model_name="meta-llama/llama-3.1-70b-instruct",
-        api_token=HF_T,
-        max_tokens=2048,
-        temperature=0.7,
-        top_p=0.9,
-        top_k=50,
-        repetition_penalty=1.2,
-    )
+    model = InferenceClientModel()
 
     agent = CodeAgent(
         tools=[DuckDuckGoSearchTool()],
