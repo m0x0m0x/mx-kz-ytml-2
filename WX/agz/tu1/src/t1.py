@@ -41,7 +41,7 @@ def func1():
 
     model = InferenceClientModel(
         model="meta-llama/Llama-3.1-8B-Instruct",
-        provider="auto",
+        provider="hf-inference",
         token=HF_T,
     )
 
