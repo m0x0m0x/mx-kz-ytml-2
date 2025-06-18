@@ -8,7 +8,13 @@ import os
 
 from dotenv import load_dotenv
 from rich import print as rpr
-from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel, LiteLLMModel, tool
+from smolagents import (
+    CodeAgent,
+    DuckDuckGoSearchTool,
+    GradioUI,
+    HfApiModel,
+    tool,
+)
 
 from .utz import header1
 
@@ -105,10 +111,10 @@ def func2():
         city_lower = city.lower()
         return sample_data.get(city_lower, {"error": f"No data for {city}"})
 
-    model = LiteLLMModel(
-        model_id="groq/llama-3.1-8b-instant",
-        temperature=0.1,
-        api_key=GQ_T,
+    model = HfApiModel(
+        model="meta-llama/Llama-3.1-8B-Instruct",
+        provider="hf-inference",
+        token=HF_T,
     )
 
     agent = CodeAgent(
@@ -130,6 +136,4 @@ def func2():
         """
     )
 
-    rpr("\nAgent Response:")
-    rpr(response)
-    rpr("\n Check your current directory for the plot image file.")
+    GradioUI(agent).launch
