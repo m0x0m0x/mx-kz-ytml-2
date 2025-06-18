@@ -24,7 +24,7 @@ log = logging.getLogger("rich")
 # ------------------------------------------------------
 
 
-def header1(text):
+def he1(text):
     panel = Panel.fit(
         f"""[green_yellow]{text}[/green_yellow]""",
         title="<:",

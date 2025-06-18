@@ -4,18 +4,16 @@
 
 # --- Imports ---
 
-from src.t1 import t1_main
-from src.utz import eline, tline
+from src.utz import eline, he1, tline
 
 # --- App Code ---
 
 
 def buty():
-    t1_main()
-    # t1_tez_main()
+    he1("Buty - A Simple Python Utility")
 
 
 if __name__ == "__main__":
-    tline()
+    tline("h1")
     buty()
     eline()
