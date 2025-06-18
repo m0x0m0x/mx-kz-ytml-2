@@ -59,3 +59,17 @@ def func1():
 
 def func2():
     header1("F2 - Following the tutorial")
+
+    model = HfApiModel(
+        model="meta-llama/Llama-3.1-8B-Instruct",
+        provider="hf-inference",
+        token=HF_T,
+    )
+    agent = CodeAgent(
+        tools=[DuckDuckGoSearchTool()],
+        model=model,
+        add_base_tools=True,
+    )
+    agent.run(
+        " Talk about safe booty dancing  "
+    )
