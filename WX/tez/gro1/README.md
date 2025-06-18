@@ -1,3 +1,3 @@
 # gro1
 
-> Testing out the groqueAPI here. General tests
+> Testing out the groqueAPI here. General tests. Sving ouput to MD

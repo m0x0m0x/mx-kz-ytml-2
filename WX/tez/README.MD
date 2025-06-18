@@ -9,5 +9,6 @@
 
 # DIRZ
 
-| Dir | What |
-| :-: | :--: |
+|        Dir        |        What         |
+| :---------------: | :-----------------: |
+| [`gro1`](./gro1/) | Simple Gro1 testing |

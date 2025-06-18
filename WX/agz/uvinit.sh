@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-# This bash srcript is for installing the KL docker image here
+
 clear
 
 # Colors
