@@ -55,7 +55,11 @@ def func1():
 
     agent.run("Compare and Contrast Booty Dancing and Booty Candy")
 
+
 # /// Fn2 ///
+"""
+This seems to be working but there is problem with the number of req/min,  smole agents sends out many requests, plus ur using uv which makes the number of requests being sent out even more per minute.
+"""
 
 
 def func2():
