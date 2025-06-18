@@ -62,7 +62,7 @@ def func2():
     header1("F2 - Testing agent run with Groq via litellm")
 
     model = LiteLLMModel(
-        model_id="groq/groq-llama-3-8b-instruct",
+        model_id="groq/llama-3.1-8b-instant",
         temperature=0.1,
         api_key=GQ_T,
     )
