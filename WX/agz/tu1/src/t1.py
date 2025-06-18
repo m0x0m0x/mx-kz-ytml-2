@@ -7,6 +7,7 @@
 import os
 
 from dotenv import load_dotenv
+from rich import print as rpr
 
 from .utz import header1
 
@@ -18,7 +19,7 @@ gq_t = os.getenv("GRQ")
 
 # --- Main Function ---
 def t1_main():
-    header1("Start Test")
+    brint_env()
 
 # --- Sub Function---
 
@@ -27,3 +28,4 @@ def t1_main():
 
 def brint_env():
     header1("env brint")
+    rpr(f"[green] GQ1: {gq_t} [/green]")
