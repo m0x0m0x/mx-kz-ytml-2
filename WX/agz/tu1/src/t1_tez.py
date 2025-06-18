@@ -8,7 +8,7 @@ import os
 
 from dotenv import load_dotenv
 from rich import print as rpr
-from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel
+from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel, LiteLLMModel
 
 from .utz import header1
 
@@ -20,9 +20,9 @@ HF_T = os.getenv("HF1")
 
 
 # --- Main Function ---
-def t1_main():
+def t1_tez_main():
     # brint_env()
-    func1()
+    func2()
 
 # --- Sub Function---
 
@@ -36,7 +36,7 @@ def brint_env():
 
 # /// Fn1 ///
 """
-This function will use hfapi , note that the token has to be explicity added as shown. Otehrwise is will search 
+This function will use hfapi , note that the token has to be explicity added as shown. Otehrwise is will search for .env in the root directory. For a token called - "hf_token"
 """
 
 
@@ -53,4 +53,23 @@ def func1():
         add_base_tools=True,
     )
 
+    agent.run("Compare and Contrast Booty Dancing and Booty Candy")
+
+# /// Fn2 ///
+
+
+def func2():
+    header1("F2 - Testing agent run with Groq via litellm")
+
+    model = LiteLLMModel(
+        model="groq/groq-llama-3-8b-instruct",
+        provider="groq",
+        token=GQ_T,
+    )
+
+    agent = CodeAgent(
+        tools=[DuckDuckGoSearchTool()],
+        model=model,
+        add_base_tools=True,
+    )
     agent.run("Compare and Contrast Booty Dancing and Booty Candy")
