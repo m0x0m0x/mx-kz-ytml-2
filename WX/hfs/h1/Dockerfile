@@ -9,7 +9,6 @@ RUN apt-get update && apt-get install -y \
 
 # Install uv and check its location
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
-RUN ls -la /root/.cargo/bin  # List contents to verify uv installation
 RUN which uv  # Check where uv is installed
 
 # Make uv available to CMD using absolute path
