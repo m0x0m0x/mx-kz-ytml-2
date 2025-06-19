@@ -1,23 +1,22 @@
-FROM python:3.13-slim
+# 1. Use Rust base image (Rust pre-installed)
+FROM rust:1.80
 
-WORKDIR /app
-
-# Install system dependencies and uv
-RUN apt-get update && apt-get install -y \
-    curl build-essential libssl-dev \
-    && curl -LsSf https://astral.sh/uv/install.sh | sh \
-    && mv /root/.cargo/bin/uv /usr/local/bin/uv \
-    && apt-get clean \
+# 2. Install dependencies for curl, and uv
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-# Ensure PATH includes /usr/local/bin
-ENV PATH="/usr/local/bin:${PATH}"
+# 3. Install uv using the official script
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
-# Verify uv is installed
-RUN uv --version || { echo "uv not found"; exit 1; }
+# 4. Add uv to PATH
+ENV PATH="/root/.local/bin:${PATH}"
 
-# Copy application files
+# 5. Create working directory
+WORKDIR /app
+
+# 6. Copy your Python code
 COPY . .
 
-# Run with uv
-CMD ["uv", "run", "buty.py"]
+# 8. Default command to run your app
+CMD ["uv", "run", "app.py"]
