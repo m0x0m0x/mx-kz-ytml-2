@@ -19,4 +19,4 @@ WORKDIR /app
 COPY . .
 
 # 8. Default command to run your app
-CMD ["uv", "run", "app.py"]
+CMD ["uv", "run", "buty.py"]
