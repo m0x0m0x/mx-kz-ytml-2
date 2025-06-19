@@ -10,7 +10,7 @@ from src.utz import eline, he1, tline
 
 
 def buty():
-    he1("Buty - A Simple Python Utility")
+    he1("PantySmell")
 
 
 if __name__ == "__main__":
