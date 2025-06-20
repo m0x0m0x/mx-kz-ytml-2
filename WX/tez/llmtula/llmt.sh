@@ -36,9 +36,12 @@ cocomo1() {
 }
 
 # quagga - Combine files for llms
-cocomo1() {
+#
+quagga() {
     hea1 "quagga Use"
-    co1="cocomo ../../.."
+    co1="quagga \ 
+    --max-total-size=10485160 \
+    --" # 10MB = 10485760 bytes
     echo -e "${GREEN}Command: ${NC}${co1}"
     eval "$co1"
 }
