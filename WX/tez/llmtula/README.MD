@@ -7,6 +7,9 @@
 
 # Tula
 
+1. Note these are all rust tools
+2. Check bash file for how to run=
+
 |   Tula   |                          Description                          |
 | :------: | :-----------------------------------------------------------: |
 | `tokei`  |             Will give out varios code statistics              |
