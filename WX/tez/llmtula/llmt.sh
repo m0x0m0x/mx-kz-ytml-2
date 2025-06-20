@@ -22,7 +22,7 @@ hea1() {
 # Tokei Tooling use - Summay stats of code
 tokei1() {
     hea1 "Tokei Use"
-    co1="tokei ../../.."
+    co1="tokei -s Code ../../.."
     echo -e "${GREEN}Command: ${NC}${co1}"
     eval "$co1"
 }
@@ -50,4 +50,4 @@ quagga() {
 # --- Execution  ---
 tokei1
 cocomo1
-quagga
+# quagga
