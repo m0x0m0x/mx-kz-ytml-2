@@ -9,6 +9,7 @@
 
 # DIRZ
 
-|        Dir        |        What         |
-| :---------------: | :-----------------: |
-| [`gro1`](./gro1/) | Simple Gro1 testing |
+|           Dir           |        What         |
+| :---------------------: | :-----------------: |
+|    [`gro1`](./gro1/)    | Simple Gro1 testing |
+| [`llmtula`](./llmtula/) |  Testing llm tools  |
