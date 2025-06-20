@@ -39,9 +39,9 @@ cocomo1() {
 #
 quagga() {
     hea1 "quagga Use"
-    co1="quagga \ 
+    co1="quagga ../../ \ 
     --max-total-size=10485160 \
-    --" # 10MB = 10485760 bytes
+    " # 10MB = 10485760 bytes
     echo -e "${GREEN}Command: ${NC}${co1}"
     eval "$co1"
 }
@@ -49,3 +49,4 @@ quagga() {
 # --- Execution  ---
 tokei1
 cocomo1
+quagga
