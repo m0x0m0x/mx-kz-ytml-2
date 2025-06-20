@@ -19,8 +19,22 @@ hea1() {
     echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
 }
 
-# Tokei Tooling use
+# Tokei Tooling use - Summay stats of code
 tokei1() {
     hea1 "Tokei Use"
-    co1=""
+    co1="tokei ../../.."
+    echo -e "${GREEN}Command: ${NC}${co1}"
+    eval "$co1"
 }
+
+# cocomo - Like tokei but brief
+cocomo1() {
+    hea1 "cocomo Use"
+    co1="cocomo ../../.."
+    echo -e "${GREEN}Command: ${NC}${co1}"
+    eval "$co1"
+}
+
+# --- Execution  ---
+tokei1
+cocomo1
