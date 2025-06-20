@@ -19,8 +19,8 @@ hea1() {
     echo -e "${PURPLE}$1${NC}"
     echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
 }
-# UV Setup
 
+# Vercel Cli Install
 ver_cli() {
     hea1 "Install Verpanty"
 
@@ -32,6 +32,7 @@ ver_cli() {
     echo -e "${GREEN}***** Raping Completed *****${NC}"
 }
 
+# UV Setup
 uv_gr() {
     hea1 "UV Installation with gradio"
 
@@ -61,6 +62,14 @@ uv_gr() {
     echo -e "--- Executing ${CO4} ---"
     eval "$CO4"
     echo -e "${GREEN}***** Installation Completed *****${NC}"
+}
+
+# Initialize new nextjs project
+njs1() {
+    hea1 "NextJS Install - bunx"
+    co1="bunx create-next-app@latest"
+    echo -e "--- Executing ${co1} ---"
+    eval "$co1"
 }
 
 # Execution
