@@ -35,6 +35,14 @@ cocomo1() {
     eval "$co1"
 }
 
+# quagga - Combine files for llms
+cocomo1() {
+    hea1 "quagga Use"
+    co1="cocomo ../../.."
+    echo -e "${GREEN}Command: ${NC}${co1}"
+    eval "$co1"
+}
+
 # --- Execution  ---
 tokei1
 cocomo1
