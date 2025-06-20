@@ -1,5 +1,6 @@
 import { groq } from "@ai-sdk/groq"
 import { generateText } from "ai"
+import "dotenv/config"
 
 const { text } = await generateText({
   model: groq("gemma2-9b-it"),
