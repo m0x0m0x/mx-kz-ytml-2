@@ -1,0 +1,3141 @@
+======== PART 44 OF 46  ========
+
+
+------ FILE START ../../../mx/MakeforCargo ------
+
+SHELL := /bin/bash
+.PHONY: run build test doctest clean clippy help
+
+# ANSI color codes
+RED := \033[1;31m
+GREEN := \033[1;32m
+YELLOW := \033[1;33m
+BLUE := \033[1;34m
+CYAN := \033[1;36m
+RESET := \033[0m
+
+# Default target
+help: ## Show available commands
+	@echo -e "$(CYAN)Available Commands:$(RESET)"
+	@grep -E '^[a-zA-Z_-]+:' $(MAKEFILE_LIST) | sed 's/:.*##/:/g' | awk -F ': ' '{printf "  $(GREEN)%-12s$(RESET) %s\n", $$1, $$2}'
+
+run: ## Run the project
+	@echo -e "$(GREEN)Running project...$(RESET)"
+	@cargo run
+
+build: ## Build the project
+	@echo -e "$(YELLOW)Building project...$(RESET)"
+	@cargo build --release
+
+test: ## Run unit and integration tests
+	@echo -e "$(BLUE)Running tests...$(RESET)"
+	@cargo nextest run
+
+doctest: ## Run documentation tests
+	@echo -e "$(BLUE)Running documentation tests...$(RESET)"
+	@cargo test --doc
+
+clippy: ## Run Clippy (linter) and automatically fix issues
+	@echo -e "$(YELLOW)Running Clippy...$(RESET)"
+	@cargo clippy --fix --allow-dirty --allow-staged
+
+clean: ## Remove build artifacts
+	@echo -e "$(RED)Cleaning up...$(RESET)"
+	@cargo clean
+
+
+------ FILE END ../../../mx/MakeforCargo ------
+
+
+------ FILE START ../../../mx/NiceColors.txt ------
+
+Site from where colors are being used in this project
+
+https://colorhunt.co/palettes/neon
+
+------ FILE END ../../../mx/NiceColors.txt ------
+
+
+------ FILE START ../../../mx/README.md ------
+
+<img src="./mmm.mp4" width="1200" align="center">
+<img src="./nc11.gif" width="1200" align="center">
+
+
+------ FILE END ../../../mx/README.md ------
+
+
+------ FILE START ../../../mx/artemz.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+# Banner Function
+b1() {
+    echo -e "${CYAN} ====================="
+    echo -e "Artem Commands"
+    echo -e "===================== ${NC}"
+}
+
+# Artem function gfx rendering
+c1() {
+    FIL="g1.jpg"
+    CO="artem --border --background $FIL"
+    CO2="artem --border --background $FIL --output g1.ansi"
+    echo -e "${GREEN} Executin the command: ${CO} ${NC}"
+    $CO
+    echo -e "${GREEN} Executin the command: ${CO2} ${NC}"
+    $CO2
+}
+
+# Rotating image clockwise
+c3() {
+    CO="ffmpeg -i g.jpg -vf \"transpose=1\" g1.jpg"
+    echo -e "${GREEN} Executing the command: ${CO} ${NC}"
+    eval "$CO"
+}
+
+# Write to snips.sh
+c4() {
+    KEY="sniff"
+    FIL="g1.ansi"
+    CO="bat $FIL | ssh -i $KEY snips.sh"
+    echo -e "{GREEN}Pushing to snips.sh"
+    echo -e "Executing the command: ${CO} ${NC}"
+    $CO
+}
+
+# Viewing the file
+c5() {
+    ADY="https://snips.sh/f/vYOIhLB4A2"
+    CO="curl $ADY"
+    echo -e "${GREEN} Executing the command: ${CO} ${NC}"
+    $CO
+}
+
+# Execution
+b1
+c5
+
+
+------ FILE END ../../../mx/artemz.sh ------
+
+
+------ FILE START ../../../mx/aryt.fish ------
+
+#!/bin/fish
+
+echo -e "Installing these two fucks"
+echo -e "1. aria2c - pic downloader"
+echo -e " -usage = aria2c write in quotes bastard"
+echo -e "2. yt-dlp - video downloader"
+echo -e " -usage = yt-dlp write in quotes bastard"
+echo -e "- this bastard also needs ffmpeg installed"
+echo -e ""
+echo -e "3. spotdl - spotify downloader"
+echo -e " -usage = spotdl <url>"
+echo -e "- this bastard also needs ffmpeg installed"
+echo -e ""
+echo -e "Install aria"
+sudo apt install aria2 -y
+echo -e "Install ffmpeg and drink sweaty woman ass juices yt-dlp"
+sudo apt install ffmpeg -y
+echo -e "Install yt-dlp"
+pip install --upgrade pip
+pip install yt-dlp
+pip install spotdl
+echo -e ""
+echo -e (set_color FF55BB)"Woman ass candy ready !!! - usage - https://snips.sh/f/zlq994Dnw6"
+echo -e " aria2c \" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM78McgjNIAYWaR0Qu0s13AdO_BVpQ7QVaCA&usqp=CAU\" "
+echo -e " yt-dlp \" https://vdownload-41.sb-cd.com/1/3/13353270-720p.mp4?secure=9SgC4Oqkre6aAHME_UG0tQ,1690306932&m=41&d=1&_tid=13353270 \" "
+
+------ FILE END ../../../mx/aryt.fish ------
+
+
+------ FILE START ../../../mx/bal.fish ------
+
+function bal 
+
+    # This function is for getting the balances of all of your accounts 
+    # Wallets set 
+    # w1 0x0F971095798624F131Bc598E312420e37681773e
+    # w2 0x656C54eF377e15791956488a683Ade639019f7B0
+    # w3 0x9d0f5cf1614fB09fd55a9be0F444887Ac8aFBc6D
+    # w4 0x326C885267bfC530964e49a76aD8d9A6FE871F9C
+
+    # Set Variables - Just Jeep changin this all the
+    # Wallets 
+    set A1 0x0F971095798624F131Bc598E312420e37681773e
+    set A2 0x656C54eF377e15791956488a683Ade639019f7B0
+    set A3 0x9d0f5cf1614fB09fd55a9be0F444887Ac8aFBc6D
+    set A4 0x326C885267bfC530964e49a76aD8d9A6FE871F9C
+
+    # Set RPC here 
+    set GOE https://eth-goerli.g.alchemy.com/v2/wfowE284fYsqh-laeF5qmjOTQ3YTwuX_  
+    set MUM https://polygon-mumbai.g.alchemy.com/v2/DlxcFxU5u-OioYGMvKhwWsAzAknhvQYd
+    set SEP https://sepolia.infura.io/v3/4d9f7fa54ce44d1aa3319dca50aa3dd7
+    set BSC https://sparkling-boldest-brook.bsc-testnet.discover.quiknode.pro/9c0a1ccf523e238a5e6d574a36ea192f5fcfb747
+
+    # Actual Code starts here 
+
+    clear
+    # Displaying todays rates 
+    # Today Eth Rate
+    set today_eth_rate (curl -s rate.sx/1ETH)
+    set today_bnb_rate (curl -s rate.sx/1BNB)
+    
+    # Aesthetic Display
+    echo "---"
+    echo "Todays ETH Rate" $today_eth_rate
+    echo "Todays BNB Rate" $today_bnb_rate
+    echo ""
+    echo (set_color ff0000)"############################ Balances ##################################"
+    echo ""
+    echo (set_color 0000ff)"***********************************************************************"
+    echo (set_color 0000ff)""
+    echo (set_color 0000ff)"WRL1  : 0x0F971095798624F131Bc598E312420e37681773e "
+    echo (set_color 0000ff)"WRL1K : 0x80d01136bb692a0daf9dad81923668d0f91c1fe8b578cde4624f0e128caa48ae"
+    echo (set_color 0000ff)""
+    echo (set_color 0000ff)"***********************************************************************"
+    set w1g (cast balance $A1 --rpc-url $GOE ) 
+    set w1m (cast balance $A1 --rpc-url $MUM ) 
+    set w1s (cast balance $A1 --rpc-url $SEP ) 
+    set w1b (cast balance $A1 --rpc-url $BSC ) 
+    echo (set_color 0000ff)"Goerli    :" $w1g
+    echo (set_color 0000ff)"Matic     :" $w1m
+    echo (set_color 0000ff)"Sepolia   :" $w1s
+    echo (set_color 0000ff)"Binance   :" $w1b
+    echo ""
+    echo (set_color ff0000)"-----------------------------------------------------------------------"
+    echo " "
+    echo (set_color ee82ee)"***********************************************************************"
+    echo (set_color ee82ee)""
+    echo (set_color ee82ee)"WRL2  : 0x656C54eF377e15791956488a683Ade639019f7B0"
+    echo (set_color ee82ee)"WRL2K : 0x5f274ff41624e0c59333681266d4a8138bf5c9ce7fc9798414b9a7745365526c"
+    echo (set_color ee82ee)""
+    echo (set_color ee82ee)"***********************************************************************"
+    set w1g (cast balance $A2 --rpc-url $GOE )
+    set w1m (cast balance $A2 --rpc-url $MUM )
+    set w1s (cast balance $A2 --rpc-url $SEP )
+    set w1b (cast balance $A2 --rpc-url $BSC )
+    echo (set_color ee82ee)"Goerli    :" $w1g
+    echo (set_color ee82ee)"Matic     :" $w1m
+    echo (set_color ee82ee)"Sepolia   :" $w1s
+    echo (set_color ee82ee)"Binance   :" $w1b
+    echo ""
+    echo (set_color ff0000)"-------------------------------------------------------------------------"
+    echo ""
+    echo (set_color 3cb371)"***********************************************************************"
+    echo (set_color 3cb371)""
+    echo (set_color 3cb371)"WRL3  : 0x9d0f5cf1614fB09fd55a9be0F444887Ac8aFBc6D"
+    echo (set_color 3cb371)"WRL3K : 0x305a8df66f6651beee74d31cd612806ee7e3060071586e12c5f8a29b947e81a1"
+    echo (set_color 3cb371)""
+    echo (set_color 3cb371)"***********************************************************************"
+    set w1g (cast balance $A3 --rpc-url $GOE)
+    set w1m (cast balance $A3 --rpc-url $MUM)
+    set w1s (cast balance $A3 --rpc-url $SEP)
+    set w1b (cast balance $A3 --rpc-url $BSC)
+    echo (set_color 3cb371)"Goerli    :" $w1g
+    echo (set_color 3cb371)"Matic     :" $w1m
+    echo (set_color 3cb371)"Sepolia   :" $w1s
+    echo (set_color 3cb371)"Binance   :" $w1b
+    echo ""
+    echo (set_color ff0000)"-------------------------------------------------------------------------"
+    echo " "
+    echo (set_color ffa500)"***********************************************************************"
+    echo (set_color ffa500)""
+    echo (set_color ffa500)"WRL4  : 0x326C885267bfC530964e49a76aD8d9A6FE871F9C"
+    echo (set_color ffa500)"WRL4K : 0x45a8e7ed4f2f3bfbaf433fc7ef471cdf61e91d4135249b16aa51c39562b0aa29"
+    echo (set_color ffa500)""
+    echo (set_color ffa500)"***********************************************************************"
+    set w1g (cast balance $A4 --rpc-url $GOE)
+    set w1m (cast balance $A4 --rpc-url $MUM)
+    set w1s (cast balance $A4 --rpc-url $SEP)
+    set w1b (cast balance $A4 --rpc-url $BSC)
+    echo (set_color ffa500)"Goerli    :" $w1g
+    echo (set_color ffa500)"Matic     :" $w1m
+    echo (set_color ffa500)"Sepolia   :" $w1s
+    echo (set_color ffa500)"Binance   :" $w1b
+    echo ""
+    echo (set_color ff0000)"-------------------------------------------------------------------------"
+    echo " "
+    echo (set_color ff0000)"################################ END ####################################"
+
+
+end
+
+------ FILE END ../../../mx/bal.fish ------
+
+
+------ FILE START ../../../mx/bashscript.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+hea1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+b1() {
+    hea1 "UV Jupyter Lan Installation Commands"
+}
+
+c1() {
+    # Get name of Project
+    echo -e "Enter the name of the project: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # Commands to execute
+    CO1="uv init $name_of_project"
+    CO2="cd $name_of_project"
+    CO3="uv add --dev ipykernel"
+    CO4="uv tree"
+
+    # Show Commands
+    echo -e ""
+    echo -e "${GREEN}---Commands to execute:---"
+    echo -e ">$CO1"
+    echo -e ">$CO2"
+    echo -e ">$CO3"
+    echo -e ">$CO4"
+    echo -e "Executing....${NC}"
+
+    # Execution Commands
+    eval "$CO1"
+    eval "$CO2"
+    eval "$CO3"
+    eval "$CO4"
+
+}
+
+# Execution
+b1
+c1
+
+
+------ FILE END ../../../mx/bashscript.sh ------
+
+
+------ FILE START ../../../mx/bashuploadpussy.txt ------
+
+Upload form command line to server for download later 
+syntax 
+
+curl bashupload.com -T StinlyMistressWorship.txt
+
+------ FILE END ../../../mx/bashuploadpussy.txt ------
+
+
+------ FILE START ../../../mx/bun.fish ------
+
+#!/bin/fish
+echo " "
+echo " "
+echo " This will install bun on your sustem"
+echo " Main Website - https://bun.sh/"
+echo " "
+echo " Installation command"
+echo " --------------------"
+echo " curl -fsSL https://bun.sh/install | bash"
+echo ""
+echo ""
+curl -fsSL https://bun.sh/install | bash
+echo ""
+echo "Now exit out of shell and try again "
+
+
+------ FILE END ../../../mx/bun.fish ------
+
+
+------ FILE START ../../../mx/buni.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+hea1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+bun_pussy() {
+    # Bun init start 
+    hea1 "Buni: Sexy ass and pussy"
+
+    # Get Name of project
+    echo -e "Enter the name of the project: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # Commands and variables
+    CO1="mkdir -v $name_of_project && cd $name_of_project && bun init -y"
+    CO2="bun add chalk axios dotenv ora cli boxen progress openai inquirer"
+    CO3="bun add @types/bun @types/progress -D"
+    CO4="bun pm ls"
+
+    # RUN Above Commands
+    echo -e "--- Initiate ${CO1} ---"
+    eval "$CO1"
+    echo -e "--- Adding PKGS ${CO2} ---"
+    eval "$CO2" && eval "$CO3" && eval "$CO4"
+    echo -e "${GREEN}***** Installation Completed *****${NC}"
+}
+
+bun_basic() {
+    # Bare bones install 
+    hea1 "Bun Basic Install"
+
+    # Get Name of project
+    echo -e "Enter the name of the project: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # Commands and variables
+    CO1="mkdir -v $name_of_project && cd $name_of_project && bun init -y"
+    CO2="bun pm ls"
+
+    # RUN Above Commands
+    echo -e "--- Initiate ${CO1} ---"
+    eval "$CO1"
+    echo -e "--- Init Bun Basic ---"
+    eval "$CO2" 
+    echo -e "${GREEN}***** Installation Completed *****${NC}"
+}
+
+# Menu Function 
+menu_choice() {
+    clear
+    hea1 "Installation Menu"
+    echo -e "${YELLOW}Choose an option:${NC}"
+    echo -e "${GREEN}1) Bun with sexy ass and pussy${NC}"
+    echo -e "${GREEN}2) Bun Basic${NC}"
+    echo -e "${RED}3) AssFucking ${NC}"
+    echo -ne "${CYAN}Enter your choice: ${NC}"
+    read choice
+
+    case $choice in
+    1) bun_pussy ;;
+    2) bun_basic ;;
+    3)
+        echo -e "${RED}Raped !...${NC}"
+        exit 0
+        ;;
+    *)
+        echo -e "${RED}Batard ! Invalid choice, exiting.${NC}"
+        exit 1
+        ;;
+    esac
+}
+
+# Execution
+menu_choice
+
+
+------ FILE END ../../../mx/buni.sh ------
+
+
+------ FILE START ../../../mx/cabal.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for making cast accounts
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+hea1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+cwb() {
+    hea1 "Balance Checker"
+
+    # --- Configuration ---
+    # Wallet Addresses
+    local -a wallets=(
+        "0x420A8Fe13265Df3B9323C3D7681b2854B1309338"
+        "0x420fFfdA7565D31e9b4b7ebAF0269b5564644656"
+    )
+
+    # Network Configurations (Format: "NetworkName:RPC_URL")
+    local -a networks=(
+        "Sepolia:https://eth-sepolia.g.alchemy.com/v2/y-cD2hUWMXwa6cAWy7uplLSSoRQ5v7Fx"
+        "Holesky:https://eth-holesky.g.alchemy.com/v2/y-cD2hUWMXwa6cAWy7uplLSSoRQ5v7Fx"
+    )
+    # --- End Configuration ---
+
+    # Check for 'cast' command dependency
+    if ! command -v cast &>/dev/null; then
+        echo -e "${RED}Error: 'cast' command not found. Please install Foundry (https://getfoundry.sh).${NC}"
+        return 1 # Use return instead of exit for functions
+    fi
+
+    local overall_status=0 # 0 = success, 1 = failure occurred
+
+    # Loop through each wallet
+    for wallet_address in "${wallets[@]}"; do
+        echo -e "--- Checking Wallet: ${YELLOW}${wallet_address}${NC} ---"
+
+        # Loop through each network for the current wallet
+        for network_info in "${networks[@]}"; do
+            # Split network info into name and URL
+            IFS=':' read -r network_name rpc_url <<<"$network_info"
+
+            local balance_output
+            local exit_code
+
+            # Construct and execute the command directly
+            # Using 'cast balance --ether' (or 'cast b -e') to get balance in Ether
+            # Capture stderr along with stdout to see potential errors from cast/RPC
+            echo "Checking ${network_name}..."
+            balance_output=$(cast balance --ether "${wallet_address}" --rpc-url "${rpc_url}" 2>&1)
+            exit_code=$?
+
+            if [ $exit_code -ne 0 ]; then
+                # Report error but continue checking other networks/wallets
+                echo -e "${RED}Error:${NC} Failed to get ${network_name} balance."
+                echo -e "${RED}Details:${NC} ${balance_output}" # Show the error message from cast
+                overall_status=1                                # Mark that at least one failure occurred
+            else
+                # Report success
+                echo -e "${GREEN}${network_name} Balance:${NC} ${balance_output} ETH"
+            fi
+        done
+        echo "-------------------------------------------------------"
+    done
+
+    # Final status report
+    if [ $overall_status -ne 0 ]; then
+        echo -e "${YELLOW}Balance Check Completed with errors.${NC}"
+        return 1 # Indicate failure
+    else
+        echo -e "${GREEN}Balance Check Completed Successfully.${NC}"
+        return 0 # Indicate success
+    fi
+}
+
+# Sending function
+
+cas() {
+    echo -e "${GREEN}Sending function called${NC}"
+
+    # --- Configuration ---
+    local -a wallets=(
+        "0x420A8Fe13265Df3B9323C3D7681b2854B1309338"
+        "0x420fFfdA7565D31e9b4b7ebAF0269b5564644656"
+    )
+
+    local -a keyz=(
+        "0x6890220d6cc0218032cab963a528672d85643a2c7edf340de6e27861d1900958"
+        "0xff630bf91f95d3e7af70c12490b858cd5e0818b2bc6af6fccff9d933a1097bc4"
+
+    )
+
+    # Network Configurations (Format: "NetworkName:RPC_URL")
+    local -a networks=(
+        "https://eth-sepolia.g.alchemy.com/v2/y-cD2hUWMXwa6cAWy7uplLSSoRQ5v7Fx"
+        "https://eth-holesky.g.alchemy.com/v2/y-cD2hUWMXwa6cAWy7uplLSSoRQ5v7Fx"
+    )
+
+    # --- AmountSend ---
+    local amount_send=0.01 # Amount to send in ETH
+
+    CO1="cast send --rpc-url ${networks[0]} --private-key ${keyz[0]} ${wallets[1]} --value ${amount_send}ether"
+
+    echo -e "${GREEN}Sending ${amount_send} ETH from ${wallets[0]} to ${wallets[1]} on ${networks[0]}...${NC}"
+    send_output=$(eval "$CO1" 2>&1)
+    if [ $? -ne 0 ]; then
+        echo -e "${RED}Error: ${send_output}${NC}"
+        return 1 # Indicate failure
+    fi
+    echo -e "${GREEN}Transaction successful: ${send_output}${NC}"
+    echo -e "${GREEN}Transaction hash: ${send_output}${NC}"
+}
+
+# Execution
+cwb
+
+
+------ FILE END ../../../mx/cabal.sh ------
+
+
+------ FILE START ../../../mx/cargoinit.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+hea1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+cargo_main_install() {
+    hea1 "Cargo New Initialization with yansi and cfonts"
+    # Get name of Project
+    echo -e "Enter the name of the project: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # Commands to execute
+    CO1="cargo new $name_of_project"
+    CO2="cd $name_of_project"
+    CO3="cargo add yansi cfonts"
+    CO4="cargo tree"
+
+    # Show Commands
+    echo -e ""
+    echo -e "${GREEN}---Commands to execute:---"
+    echo -e ">$CO1"
+    echo -e ">$CO2"
+    echo -e ">$CO3"
+    echo -e ">$CO4"
+    echo -e "Executing....${NC}"
+
+    # Execution Commands
+    eval "$CO1"
+    eval "$CO2"
+    eval "$CO3"
+    eval "$CO4"
+
+}
+
+cargo_installz() {
+    hea1 "Cargo Install"
+
+    # Commands to execute
+    DEPS="bacon cargo-show-asm "
+    CO1="cargo install $DEPS "
+
+    # Show Commands
+    echo -e ""
+    echo -e "${GREEN}---Commands to execute:---"
+    echo -e ">$CO1"
+    echo -e "Executing....${NC}"
+
+    # Execution Commands
+    eval "$CO1"
+}
+
+cargo_lib() {
+    hea1 "Cargo New Initialization with yansi and cfonts"
+    # Get name of Project
+    echo -e "Enter the name of the cargo Library: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # Commands to execute
+    CO1="cargo init --lib $name_of_project"
+    CO2="cd $name_of_project"
+    CO3="cargo add yansi cfonts"
+    CO4="cargo tree"
+
+    # Show Commands
+    echo -e ""
+    echo -e "${GREEN}---Commands to execute:---"
+    echo -e ">$CO1"
+    echo -e ">$CO2"
+    echo -e ">$CO3"
+    echo -e ">$CO4"
+    echo -e "Executing....${NC}"
+
+    # Execution Commands
+    eval "$CO1"
+    eval "$CO2"
+    eval "$CO3"
+    eval "$CO4"
+
+}
+
+show_menu() {
+    clear
+    hea1 "Cargo Project Management"
+    echo -e "${GREEN}1.${NC} Create new Cargo binary project"
+    echo -e "${GREEN}2.${NC} Create new Cargo library project"
+    echo -e "${GREEN}3.${NC} Install cargo tools (bacon, cargo-show-asm)"
+    echo -e "${GREEN}4.${NC} Exit"
+    echo -e ""
+    echo -e "Enter your choice [1-4]: "
+}
+
+# Main execution loop
+while true; do
+    show_menu
+    read choice
+    case $choice in
+    1) cargo_main_install ;;
+    2) cargo_lib ;;
+    3) cargo_installz ;;
+    4)
+        echo -e "${YELLOW}Exiting...${NC}"
+        exit 0
+        ;;
+    *)
+        echo -e "${RED}Invalid option! Please try again.${NC}"
+        sleep 2
+        ;;
+    esac
+    echo -e "\n${YELLOW}Press any key to return to menu...${NC}"
+    read -n 1 -s
+done
+
+
+------ FILE END ../../../mx/cargoinit.sh ------
+
+
+------ FILE START ../../../mx/cast_enc_txt.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+hea1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+b1() {
+    hea1 "UV Jupyter Lan Installation Commands"
+}
+
+# Function will ask for an input and convert to hex
+encode_to_hex_input() {
+    hea1 "Use cast to convert UTF8 to hex"
+    echo -e ""
+    echo -e "${BLUE}Write Text to encode: "
+    echo -e "--------------------------------${NC}"
+    read -r dataz
+    if [ -z "$dataz" ]; then
+        echo -e "${RED}BASTARD! PutSomething!${NC}"
+        exit 1
+    fi
+
+    cmd1="cast fa \"$dataz\""
+    hex_out=$(eval "$cmd1")
+    cmd2="cast tas $hex_out"
+    hex_in=$(eval "$cmd2")
+    file_name="out.txt"
+
+    echo -e "${CYAN}---Output---${NC}"
+    echo -e "${GREEN} ${hex_out} ${NC}"
+    echo "---Output---" >${file_name}
+    echo "$hex_out" >>${file_name}
+    echo -e ""
+    echo -e "${YELLOW}---Input---${NC}"
+    echo -e "${GREEN} ${hex_in} ${NC}"
+    echo "---input---" >>${file_name}
+    echo "$hex_in" >>${file_name}
+}
+
+#Function that will convert data stored in variable to hex
+encodedata__to_hex_input() {
+    hea1 "Use cast to convert UTF8 Data to hex"
+
+    read -r -d '' dataz <<'EOF'
+
+ ███████╗ ███╗   ███╗ ███████╗ ██╗      ██╗      ██████╗   █████╗  ███╗   ██╗ ████████╗ ██╗   ██╗
+ ██╔════╝ ████╗ ████║ ██╔════╝ ██║      ██║      ██╔══██╗ ██╔══██╗ ████╗  ██║ ╚══██╔══╝ ╚██╗ ██╔╝
+ ███████╗ ██╔████╔██║ █████╗   ██║      ██║      ██████╔╝ ███████║ ██╔██╗ ██║    ██║     ╚████╔╝ 
+ ╚════██║ ██║╚██╔╝██║ ██╔══╝   ██║      ██║      ██╔═══╝  ██╔══██║ ██║╚██╗██║    ██║      ╚██╔╝  
+ ███████║ ██║ ╚═╝ ██║ ███████╗ ███████╗ ███████╗ ██║      ██║  ██║ ██║ ╚████║    ██║       ██║   
+ ╚══════╝ ╚═╝     ╚═╝ ╚══════╝ ╚══════╝ ╚══════╝ ╚═╝      ╚═╝  ╚═╝ ╚═╝  ╚═══╝    ╚═╝       ╚═╝   
+
+EOF
+
+    cmd1="cast fa \"$dataz\""
+    hex_out=$(eval "$cmd1")
+    file_name="out.txt"
+
+    echo -e "${CYAN}---Output---${NC}"
+    echo -e "${GREEN} ${hex_out} ${NC}"
+    echo "---Output---" >${file_name}
+    echo "$hex_out" >>${file_name}
+    echo -e ""
+}
+
+# Send data with the transaction
+ca_send_hex() {
+    hea1 "Use cast to send hex data"
+
+    # === 1. Define the ASCII or payload ===
+    read -r -d '' dataz <<'EOF'
+
+⠈⠁⡀⠀⠠⢄⡀⠀⢸⣿⣿⣿⣿⣿⣸⣿⣼⣷⣄⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀⢁⡴⠂⠀⢠⠜⠉⢀⣀⣀⡤⠤⠄⠀⠀⠠⡨⠶⢄⣦⣄⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠈⢆⠀⠀⠈⠁⠸⣿⣿⣿⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⠀⠀⢀⠔⢠⠞⠀⢀⡴⠛⠒⠋⠉⠀⠀⡀⠀⠈⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠙⠛⠲⣤⢤⡀⡀
+⣆⡄⡀⠀⢳⡄⠀⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⢀⣴⠋⢀⣴⠋⠀⠀⠀⠀⠀⠀⠀⠉⠑⢂⠀⢠⠀⠀⠀⠀⠈⠒⣤⣀⠀⠀⠀⠐⠀⣀⣠⣿⣿⣶
+⠙⢿⡡⢀⠀⠙⢧⡀⣠⣿⠿⢿⢻⠛⣏⡝⣏⠻⣍⢟⡛⢯⢻⢿⣧⡀⠀⠀⠀⠘⠁⣠⠟⢁⢀⢀⠀⠀⠀⠠⠀⠀⠀⠀⠈⠘⠈⠀⢀⢀⠸⢀⠇⡘⠙⠧⠄⠀⣘⣼⣿⣿⣿⡿⣽
+⠀⠀⠉⠳⣆⡄⣠⣿⣿⣯⣟⣯⢏⣟⡾⣼⢎⡿⣼⢮⣽⢫⣟⢮⣷⣻⣦⡄⠀⡠⢾⠁⣄⣶⣿⣿⣿⣶⣦⣄⡀⠀⠄⠀⠀⠀⠀⠠⢂⠐⣈⠢⠐⠀⢀⡀⣠⣶⣾⣿⣿⣿⣿⡵⣏
+⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⡾⣽⣻⢾⡽⣞⣯⣟⡾⣽⣞⡿⣞⡿⣞⣿⣿⣿⣯⡀⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣀⡀⠀⡀⠀⠈⠀⠀⠀⣅⣫⡶⠟⠛⠋⠉⠀⠈⠛⣿⣗⢮
+⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣽⣿⣽⣯⣿⣟⣾⣽⣟⣷⣯⣿⣻⣽⣿⣿⣿⣿⣿⣿⡗⡊⣿⡿⠋⠁⠀⠀⠀⠉⠉⠓⠻⠽⣽⣻⣿⣿⡿⠿⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠁⣿⡜⣯
+⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣯⣿⣿⣾⣿⣿⣿⣾⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⣵⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣽⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡸⣷⢎
+⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⠏⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⢑⣿⢬
+⠀⠀⢸⣿⣿⣿⡿⠿⠟⠛⠛⠛⠋⠉⠉⠙⣿⠛⠉⠉⠉⠉⠉⠉⠛⠛⠛⠿⢿⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣾⡟⣿⢹⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠾⣹⣿
+⠀⠀⣿⢟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣹⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⢙⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠿⣽⡿⠿⢿⡅⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠆⡳⣿
+⠀⠀⡟⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⡾⢤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠨⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣆⠀⠀⠀⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢄⡱⣿
+⠀⠀⡇⠂⠀⠀⠀⠀⠀⠐⠒⠒⠊⠉⠀⠻⡉⢹⠇⠀⠀⠈⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡄⠀⢸⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⢀⠞⣿
+⠀⠀⠇⡈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣇⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡇⡀⢼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠊⡜⣿
+⠀⠀⠐⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡇⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣧⣤⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠌⠰⣸⣿
+⠀⠀⠈⠰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣯⣷⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⢨⠱⣼⣷
+⠀⠀⠀⢁⠂⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢨⡇⠌⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢨⣿⣶⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢂⠅⠪⣽⣷
+⠀⠀⠀⠰⡈⢁⠂⠀⠀⠀⠀⠀⠀⠀⠀⠠⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⢷⢂⠡⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣯⣿⠐⡀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠌⠰⣈⢳⠀⡙
+⠀⠀⠀⠀⡕⢂⠐⠀⠀⠀⠀⠀⠀⠀⠀⠐⣿⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡈⠄⢸⡎⠄⠡⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⠂⠀⠀⠀⠀⠀⠀⠀⠀⠠⢀⠃⡅⢢⡹⢠⠱
+
+EOF
+
+    # === 2. Encode the data to hex using cast abi-encode ===
+    echo -e "${BLUE}Encoding ASCII to hex...${NC}"
+    make_data="cast fa \"$dataz\""
+    hex_out=$(eval "$make_data")
+
+    # === 3. Setup ===
+    local -a wallets=(
+        "0x420A8Fe13265Df3B9323C3D7681b2854B1309338"
+        "0x420fFfdA7565D31e9b4b7ebAF0269b5564644656"
+    )
+
+    local -a keyz=(
+        "0x6890220d6cc0218032cab963a528672d85643a2c7edf340de6e27861d1900958"
+        "0xff630bf91f95d3e7af70c12490b858cd5e0818b2bc6af6fccff9d933a1097bc4"
+    )
+
+    local -a networks=(
+        "https://eth-sepolia.g.alchemy.com/v2/y-cD2hUWMXwa6cAWy7uplLSSoRQ5v7Fx"
+        "https://eth-holesky.g.alchemy.com/v2/y-cD2hUWMXwa6cAWy7uplLSSoRQ5v7Fx"
+    )
+
+    mkdir -p logs
+    LOG_FILE="logs/cast_send_$(date +%Y%m%d_%H%M%S).log"
+
+    # === 4. Sepolia Transaction ===
+    echo -e "\n${BLUE}Sending transaction on Sepolia...${NC}" | tee -a "$LOG_FILE"
+
+    CO1="cast send \
+        --chain sepolia \
+        --rpc-url ${networks[0]} \
+        --private-key ${keyz[0]} \
+        ${wallets[1]} ${hex_out}"
+
+    eval "$CO1" 2>&1 | tee -a "$LOG_FILE"
+    if [ "${PIPESTATUS[0]}" -ne 0 ]; then
+        echo -e "${RED}Sepolia transaction failed.${NC}" | tee -a "$LOG_FILE"
+        return 1
+    else
+        echo -e "${GREEN}Sepolia transaction successful!${NC}" | tee -a "$LOG_FILE"
+    fi
+
+    # === 5. Holesky Transaction ===
+    echo -e "\n${BLUE}Sending transaction on Holesky...${NC}" | tee -a "$LOG_FILE"
+
+    CO2="cast send \
+        --chain holesky \
+        --rpc-url ${networks[1]} \
+        --private-key ${keyz[0]} \
+        ${wallets[1]} ${hex_out}"
+
+    eval "$CO2" 2>&1 | tee -a "$LOG_FILE"
+    if [ "${PIPESTATUS[0]}" -ne 0 ]; then
+        echo -e "${RED}Holesky transaction failed.${NC}" | tee -a "$LOG_FILE"
+        return 1
+    else
+        echo -e "${GREEN}Holesky transaction successful!${NC}" | tee -a "$LOG_FILE"
+    fi
+
+    echo -e "\n${YELLOW}Full log saved to: ${LOG_FILE}${NC}"
+}
+
+# Execution
+ca_send_hex
+
+
+------ FILE END ../../../mx/cast_enc_txt.sh ------
+
+
+------ FILE START ../../../mx/comp.fish ------
+
+#!/bin/fish
+function comp
+    echo ""
+    echo ""
+    echo " The following commands will b executed with this "
+    echo (set_color FF55BB) " tar cvf - * | xz -T0 -9e -c > panty.tar.xz "
+    echo (set_color 16FF00) " xz --list panty.tar.xz "
+    tar cvf - * | xz -T0 -9e -c > panty.tar.xz
+    xz --list panty.tar.xz
+    ls -al panty.tar.xz
+    curl  https://snips.sh/f/5d1unzQuUf
+    echo " Decompresss= : tar -xvf panty.tar.xz -C <sniff - makedirectoryfirst>  "
+    echo ""
+    echo " # To Split the file use this syntax "
+    echo " split -b 10M -d pan1.tar.xz pan1.tar.xz.part"
+    echo " # Reassemble with "
+    echo " cat pty.tar.xz.* > pty.tar.xz "
+    echo " Then DC normally liek above "
+    echo " # Send the file for sharing via cli"
+    echo " curl bashupload.com -T StinkyMistressWorship.txt"
+
+end
+
+
+------ FILE END ../../../mx/comp.fish ------
+
+
+------ FILE START ../../../mx/condaCommands.md ------
+
+
+----
+
+1. [Conda Commands which you use all the time](#conda-commands-which-you-use-all-the-time)
+   1. [Creating a new env](#creating-a-new-env)
+   2. [Create new env with specific version of panty](#create-new-env-with-specific-version-of-panty)
+   3. [Activate Conda](#activate-conda)
+   4. [List all conda env](#list-all-conda-env)
+   5. [List all installed pkg in current env](#list-all-installed-pkg-in-current-env)
+   6. [Install into conda](#install-into-conda)
+   7. [Remove a pkg from conda](#remove-a-pkg-from-conda)
+   8. [Update Conda](#update-conda)
+   9. [Update all packages in current env](#update-all-packages-in-current-env)
+
+
+----
+
+# Conda Commands which you use all the time 
+
+
+## Creating a new env 
+```sh
+conda create --name myenv
+```
+
+## Create new env with specific version of panty 
+```sh 
+conda create --name myenv python=3.8
+```
+
+## Activate Conda 
+```sh 
+conda activate <env>
+```
+
+## List all conda env
+```sh 
+conda env list
+```
+## List all installed pkg in current env
+```sh 
+conda list
+```
+
+## Install into conda 
+
+```sh 
+conda install panty_sniff
+```
+
+## Remove a pkg from conda 
+```sh 
+conda remove panty_sniff
+```
+
+## Update Conda 
+```sh
+conda update conda
+```
+
+## Update all packages in current env
+```sh 
+conda update --all
+```
+
+
+------ FILE END ../../../mx/condaCommands.md ------
+
+
+------ FILE START ../../../mx/config.fish ------
+
+# Location of this is https://snips.sh/f/leQYOwBiIc
+# You will call i for writing wih this code
+# curl https://snips.sh/f/leQYOwBiIc > ~/.config/fish/config.fish
+starship init fish | source
+
+# --- This section is for fish --- #
+
+# eza
+alias e="eza -lahHo --git --git-repos --icons --color-scale --color-scale-mode=gradient --color=always --group-directories-first --time-style=long-iso --total-size"
+
+# Command Aliases
+alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+
+# Github aliases
+alias gl="git log --oneline --decorate --graph"
+alias gp="git add . && git commit && git push"
+alias gb="git branch -a"
+alias gsb="gb && git switch"
+alias gpp="git add . && git commit --allow-empty --allow-empty-message && git push --progress"
+alias pd="pnpm run dev --turbo"
+alias gor="go run"
+
+
+
+
+
+------ FILE END ../../../mx/config.fish ------
+
+
+------ FILE START ../../../mx/config2.fish ------
+
+# Location of this is https://snips.sh/f/leQYOwBiIc
+# You will call i for writing wih this code
+# curl https://snips.sh/f/leQYOwBiIc > ~/.config/fish/config.fish
+starship init fish | source
+starship preset pure-preset > ~/.config/starship.toml
+# --- This section is for fish --- #
+
+# eza
+alias e="eza -lahHo --git --git-repos --icons --color-scale --color-scale-mode=gradient --color=always --group-directories-first --time-style=long-iso --total-size"
+
+# Command Aliases
+alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+
+# Github aliases
+alias gl="git log --oneline --decorate --graph"
+alias gp="git add . && git commit && git push"
+alias gb="git branch -a"
+alias gsb="gb && git switch"
+alias gpp="git add . && git commit --allow-empty --allow-empty-message && git push --progress"
+alias pd="pnpm run dev --turbo"
+alias gor="go run"
+
+# bash Shell 
+eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+
+
+------ FILE END ../../../mx/config2.fish ------
+
+
+------ FILE START ../../../mx/div.txt ------
+
+Dividers 
+
+•• ━━━━━ ••●•• ━━━━━ •• 
+
+https://emojicombos.com/dividers
+- Bunch of them to choose 
+
+---- 
+
+Code for starship 
+
+```Code
+[•• ━━━━━ ••●•• ━━━━━ ••](fg:165)
+```
+
+--- 
+
+Another diverider 
+
+```code 
+[◣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◢](fg:165)
+```
+
+Another Dividers
+
+```dic
+[__________________________________________](fg:165)
+```
+
+```code
+[⋆﹥━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━﹤⋆](fg:165)
+```
+
+------ FILE END ../../../mx/div.txt ------
+
+
+------ FILE START ../../../mx/docker-compose.yml ------
+
+# This will spin up a docker image with postgres and pgadmin
+version: "3"
+
+services:
+  # Database server
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: password
+    volumes:
+      - .:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  # PgAdmin4  Db Management
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: a@a.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+
+
+------ FILE END ../../../mx/docker-compose.yml ------
+
+
+------ FILE START ../../../mx/dotNetBuilz.sh ------
+
+#!/usr/bin/bash
+# This bash script builds a .NET project as a single executable for Windows and Linux.
+
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Function to display a header
+header() {
+    echo -e "${CYAN}=============== "
+    echo -e "$1"
+    echo -e "===============${NC}"
+}
+
+# Function to display a waiting animation
+waiting_animation() {
+    local pid=$1
+    local delay=0.75
+    local spinstr='|/-\'
+    while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
+        local temp=${spinstr#?}
+        printf " [%c]  " "$spinstr"
+        local spinstr=$temp${spinstr%"$temp"}
+        sleep $delay
+        printf "\b\b\b\b\b\b"
+    done
+    printf "    \b\b\b\b"
+}
+
+# Function to clean the project
+clean_project() {
+    echo -e "${PURPLE}[-] Cleaning the project... ${NC}"
+    dotnet clean >/dev/null 2>&1 &
+    local clean_pid=$!
+
+    # Display a waiting animation while the clean process is running
+    waiting_animation $clean_pid
+
+    # Wait for the clean process to finish
+    wait $clean_pid
+    local exit_status=$?
+
+    if [ $exit_status -eq 0 ]; then
+        echo -e "${GREEN}[+] Project cleaned successfully ${NC}"
+        return 0
+    else
+        echo -e "${RED}[!] Failed to clean the project ${NC}"
+        return 1
+    fi
+}
+
+# Function to build for a specific runtime
+build_for_runtime() {
+    local runtime=$1
+    local platform_name=$2
+    local build_command="dotnet publish -c Release -r $runtime --self-contained /p:PublishSingleFile=true /p:PublishTrimmed=true /p:TrimMode=link"
+
+    echo -e ""
+    echo -e "${PURPLE}[-] Building for $platform_name ${NC}"
+
+    # Start the build process in the background
+    $build_command >/dev/null 2>&1 &
+    local build_pid=$!
+
+    # Display a waiting animation while the build is running
+    waiting_animation $build_pid
+
+    # Wait for the build process to finish
+    wait $build_pid
+    local exit_status=$?
+
+    if [ $exit_status -eq 0 ]; then
+        echo -e "${GREEN}[+] $platform_name Build Finished Successfully ${NC}"
+        return 0
+    else
+        echo -e "${RED}[!] $platform_name Build Failed ${NC}"
+        return 1
+    fi
+}
+
+# Main execution
+header "Building Single Executable File for Windows and Linux"
+
+# Clean the project before building
+if clean_project; then
+    echo -e "${GREEN}[+] Project cleaned successfully. Proceeding with builds... ${NC}"
+else
+    echo -e "${RED}[!] Clean step failed. Builds may not proceed correctly. ${NC}"
+fi
+
+# Build for Windows
+if build_for_runtime "win-x64" "Windows"; then
+    windows_success=true
+else
+    windows_success=false
+fi
+
+# Build for Linux
+if build_for_runtime "linux-x64" "Linux"; then
+    linux_success=true
+else
+    linux_success=false
+fi
+
+# Display summary
+header "Build Summary"
+if $windows_success && $linux_success; then
+    echo -e "${GREEN}[+] Both Windows and Linux builds completed successfully! ${NC}"
+elif $windows_success; then
+    echo -e "${YELLOW}[!] Windows build succeeded, but Linux build failed. ${NC}"
+elif $linux_success; then
+    echo -e "${YELLOW}[!] Linux build succeeded, but Windows build failed. ${NC}"
+else
+    echo -e "${RED}[!] Both Windows and Linux builds failed. ${NC}"
+fi
+
+header "List Executable Files"
+find . -type f -name "*.exe" -exec ls -lh {} \; 2>/dev/null
+
+echo -e ""
+
+
+------ FILE END ../../../mx/dotNetBuilz.sh ------
+
+
+------ FILE START ../../../mx/dotNetInit.sh ------
+
+#!/usr/bin/bash
+# This bash script is for setting up a new .NET project or adding a project to an existing solution.
+
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Function to display a header
+header() {
+    echo -e "${CYAN}=============== "
+    echo -e "$1"
+    echo -e "===============${NC}"
+}
+
+# Function to create a new project and solution
+create_new_project_and_solution() {
+    echo -e "${GREEN}[-] Enter the name of the new project (default: MyNewProject): ${NC}"
+    read -r project_name
+    project_name=${project_name:-MyNewProject}
+
+    echo -e "${GREEN}[-] Enter the name of the solution (default: MyNewSolution): ${NC}"
+    read -r solution_name
+    solution_name=${solution_name:-MyNewSolution}
+
+    # Create the project
+    header "Creating new project: $project_name"
+    dotnet new console -n "$project_name"
+    if [ $? -ne 0 ]; then
+        echo -e "${RED}[!] Failed to create project '$project_name' ${NC}"
+        return 1
+    fi
+    echo -e "${GREEN}[+] Project '$project_name' created successfully ${NC}"
+
+    # Create the solution
+    header "Creating new solution: $solution_name"
+    dotnet new sln -n "$solution_name"
+    if [ $? -ne 0 ]; then
+        echo -e "${RED}[!] Failed to create solution '$solution_name' ${NC}"
+        return 1
+    fi
+    echo -e "${GREEN}[+] Solution '$solution_name' created successfully ${NC}"
+
+    # Add the project to the solution
+    header "Adding project '$project_name' to solution '$solution_name'"
+    dotnet sln "$solution_name.sln" add "$project_name/$project_name.csproj"
+    if [ $? -ne 0 ]; then
+        echo -e "${RED}[!] Failed to add project '$project_name' to solution '$solution_name' ${NC}"
+        return 1
+    fi
+    echo -e "${GREEN}[+] Project '$project_name' added to solution '$solution_name' successfully ${NC}"
+
+    # List the solution contents
+    list_solution_contents "$solution_name.sln"
+}
+
+# Function to add a new project to an existing solution
+add_project_to_existing_solution() {
+    echo -e "${GREEN}[-] Enter the name of the new project (default: MyNewProject): ${NC}"
+    read -r project_name
+    project_name=${project_name:-MyNewProject}
+
+    echo -e "${GREEN}[-] Enter the path to the existing solution file (.sln) (default: ./MyExistingSolution.sln): ${NC}"
+    read -r solution_path
+    solution_path=${solution_path:-./MyExistingSolution.sln}
+
+    # Check if the solution file exists
+    if [ ! -f "$solution_path" ]; then
+        echo -e "${RED}[!] Solution file '$solution_path' does not exist.${NC}"
+        return 1
+    fi
+
+    # Create the new project
+    header "Creating new project: $project_name"
+    dotnet new console -n "$project_name"
+    if [ $? -ne 0 ]; then
+        echo -e "${RED}[!] Failed to create project '$project_name' ${NC}"
+        return 1
+    fi
+    echo -e "${GREEN}[+] Project '$project_name' created successfully ${NC}"
+
+    # Add the project to the existing solution
+    header "Adding project '$project_name' to solution '$solution_path'"
+    dotnet sln "$solution_path" add "$project_name/$project_name.csproj"
+    if [ $? -ne 0 ]; then
+        echo -e "${RED}[!] Failed to add project '$project_name' to solution '$solution_path' ${NC}"
+        return 1
+    fi
+    echo -e "${GREEN}[+] Project '$project_name' added to solution '$solution_path' successfully ${NC}"
+
+    # List the solution contents
+    list_solution_contents "$solution_path"
+}
+
+# Function to list the contents of a solution
+list_solution_contents() {
+    local solution_path=$1
+    header "Listing projects in solution: $solution_path"
+    dotnet sln "$solution_path" list
+    if [ $? -ne 0 ]; then
+        echo -e "${RED}[!] Failed to list projects in solution '$solution_path' ${NC}"
+        return 1
+    fi
+}
+
+# Main menu
+main_menu() {
+    header "Welcome to the .NET Project Setup Script"
+    echo -e "${GREEN}[?] Choose an option:"
+    echo -e "1) Create a new project and solution"
+    echo -e "2) Add a new project to an existing solution"
+    echo -e "3) Exit${NC}"
+    echo -e "${PURPLE}[*] Enter your choice (1, 2, or 3): ${NC}"
+    read -r choice
+
+    case "$choice" in
+    1)
+        create_new_project_and_solution
+        ;;
+    2)
+        add_project_to_existing_solution
+        ;;
+    3)
+        echo -e "${GREEN}[+] Exiting...${NC}"
+        exit 0
+        ;;
+    *)
+        echo -e "${RED}[!] Invalid choice. Please enter 1, 2, or 3.${NC}"
+        main_menu
+        ;;
+    esac
+}
+
+# Start the script
+main_menu
+
+
+------ FILE END ../../../mx/dotNetInit.sh ------
+
+
+------ FILE START ../../../mx/dotaddpkg.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+headerz() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+# Packages installer
+nu_pkg_install() {
+    headerz "Installing NuGet Packages"
+    echo -e "${YELLOW}Installing NuGet Packages..."
+    echo -e "Pastel = Color Terminal"
+    echo -e "Newtonsoft.Json = Serialize JSON$"
+    echo -e "LiteDB = Embedded DB written in C#${NC}"
+
+    PACKAGES=(
+        "Newtonsoft.Json --version 13.0.3"
+        "Pastel --version 6.0.1"
+        "LiteDB --version 5.0.21"
+    )
+
+    for package in "${PACKAGES[@]}"; do
+        echo -e "${GREEN}Installing $package${NC}"
+        dotnet add package $package
+        if [ $? -ne 0 ]; then
+            echo "Error installing $package"
+            exit 1
+        fi
+    done
+
+    dotnet list package
+
+}
+
+# Execution
+nu_pkg_install
+
+
+------ FILE END ../../../mx/dotaddpkg.sh ------
+
+
+------ FILE START ../../../mx/fe.fish ------
+
+#!/usr/bin/env fish
+echo ""
+echo (set_color FEDB39)"***"
+echo (set_color FEDB39)"This script is for downloading this folder"
+echo (set_color FEDB39)"without git clone bastar"
+echo (set_color FEDB39)"***"
+echo (set_color FEDB39)"https://github.com/sniffowomo/sn-solbf-1/tree/ns/y"
+echo (set_color FEDB39)"***"
+echo (set_color FEDB39)"Installer fetch"
+echo (set_color blue) ">brew install fetch "
+brew install fetch
+echo ""
+echo (set_color 16FF00)"DONE--DONE--DONE"
+echo ""
+echo
+echo (set_color B3005E)"2 - Actual Downnload"
+echo (set_color blue) ">brew install fetch "
+echo ""
+echo "Where to download ?:"
+read -l diro
+echo (set_color blue ) "fetch \\"
+echo (set_color blue ) "    --repo="https://github.com/sniffowomo/sn-solbf-1 \\" "
+echo (set_color blue ) "    --branch="ns" \\"
+echo (set_color blue ) "    --source-path="y" \\"
+echo (set_color blue ) "    --progress \\ "
+echo (set_color blue ) "    $diro "
+fetch \
+    --repo="https://github.com/sniffowomo/sn-solbf-1" \
+    --branch="ns" \
+    --source-path="y" \
+    --progress \
+    $diro
+ls -al $diro
+chmod +x $diro/*.sh
+chmod +x $dir/*.fish
+rm $dir/*.webp
+echo (set_color 16FF00)"DONE--DONE--DONE"
+
+
+
+------ FILE END ../../../mx/fe.fish ------
+
+
+------ FILE START ../../../mx/fishy.fish ------
+
+#!/bin/bash
+
+# Install fish
+echo ""
+echo "Installing Fish..."
+sudo apt-add-repository ppa:fish-shell/release-3 -y
+sudo apt install libwebkit2gtk-4.0-dev libgtk-3-dev libappindicator3-dev -y
+sudo apt-get install fish -y
+echo ""
+echo ""
+
+
+------ FILE END ../../../mx/fishy.fish ------
+
+
+------ FILE START ../../../mx/fixrs.fish ------
+
+#!/bin/fish 
+cargo --version
+rm -rf $HOME/.rustup/toolchains/
+yes | curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup update
+cargo --version
+
+
+
+------ FILE END ../../../mx/fixrs.fish ------
+
+
+------ FILE START ../../../mx/fo.sh ------
+
+#!/bin/bash
+curl -L https://foundry.paradigm.xyz | bash
+foundrup
+mkdir -p $HOME/.config/fish/completions
+forge completions fish >$HOME/.config/fish/completions/forge.fish
+cast completions fish >$HOME/.config/fish/completions/cast.fish
+anvil completions fish >$HOME/.config/fish/completions/anvil.fish
+source $HOME/.config/fish/config.fish
+
+
+------ FILE END ../../../mx/fo.sh ------
+
+
+------ FILE START ../../../mx/foca.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for making cast accounts
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+hea1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+cast_wallet_mnemonic() {
+    hea1 "Create Wallets Using cast and menmonic"
+    # Get name of Project
+    echo -e "Enter Number Of Wallets to create with cast starting with 12"
+    read number_of_wallets
+
+    # Validate numeric input and minimum value
+    if ! [[ "$number_of_wallets" =~ ^[0-9]+$ ]]; then
+        echo -e "${RED}FUKR: NUMBER ONL${NC}"
+        exit 1
+    fi
+
+    if [ -z "$number_of_wallets" ]; then
+        echo -e "${RED}BASTARD ! Can be empty{NC}"
+        exit 1
+    fi
+
+    # Commands to execute
+    output_file="wallets_${number_of_wallets}.txt"
+    CO1="cast w nm -a ${number_of_wallets}"
+
+    # Execute command and save output
+    if ! eval "$CO1" >"$output_file"; then
+        echo -e "${RED}Error: Failed to create wallets${NC}"
+        exit 1
+    else
+        echo -e "${GREEN}Successfully created $number_of_wallets wallets"
+        echo -e "Output saved to: $output_file${NC}"
+    fi
+
+}
+
+cast_wallet_van_starts_with() {
+    hea1 "Create Wallets Using cast and menmonic"
+
+    startsWith="999999"
+
+    # Get name of Project
+    echo -e "Enter Number Of Wallets to create with cast starting with ${startsWith}"
+    read -r number_of_wallets
+
+    # Validate numeric input and minimum value
+    if ! [[ "$number_of_wallets" =~ ^[0-9]+$ ]]; then
+        echo -e "${RED}FUKR: NUMBER ONL${NC}"
+        exit 1
+    fi
+
+    if [ -z "$number_of_wallets" ]; then
+        echo -e "${RED}BASTARD ! Can be empty{NC}"
+        exit 1
+    fi
+
+    # Commands to execute - include startsWith in filename
+    output_file="wallets_${startsWith}_${number_of_wallets}.txt"
+
+    # Create or clear the output file
+    >"$output_file"
+
+    # Loop through the number of wallets
+    for ((i = 1; i <= number_of_wallets; i++)); do
+        echo -e "Creating wallet $i of $number_of_wallets..."
+        if ! cast w va --starts-with ${startsWith} >>"$output_file"; then
+            echo -e "${RED}Error: Failed to create wallet $i${NC}"
+            exit 1
+        fi
+
+        # Add a divider after each wallet (except the last one)
+        if [ $i -lt $number_of_wallets ]; then
+            echo -e "----------------------------------------" >>"$output_file"
+            echo -e "" >>"$output_file" # Add an empty line for better readability
+        fi
+    done
+
+    echo -e "${GREEN}Successfully created $number_of_wallets wallets"
+    echo -e "Output saved to: $output_file${NC}"
+}
+
+cast_wallet_van_ends_with() {
+    hea1 "Create Wallets Using cast and menmonic"
+
+    endsWith="999999"
+
+    # Get name of Project
+    echo -e "Enter Number Of Wallets to create with cast starting with ${endsWith}"
+    read -r number_of_wallets
+
+    # Validate numeric input and minimum value
+    if ! [[ "$number_of_wallets" =~ ^[0-9]+$ ]]; then
+        echo -e "${RED}FUKR: NUMBER ONL${NC}"
+        exit 1
+    fi
+
+    if [ -z "$number_of_wallets" ]; then
+        echo -e "${RED}BASTARD ! Can be empty{NC}"
+        exit 1
+    fi
+
+    # Commands to execute - include endsWith in filename
+    output_file="wallets_ends_${endsWith}_${number_of_wallets}.txt"
+
+    # Create or clear the output file
+    >"$output_file"
+
+    # Loop through the number of wallets
+    for ((i = 1; i <= number_of_wallets; i++)); do
+        echo -e "Creating wallet $i of $number_of_wallets..."
+        if ! cast w va --starts-with ${endsWith} >>"$output_file"; then
+            echo -e "${RED}Error: Failed to create wallet $i${NC}"
+            exit 1
+        fi
+
+        # Add a divider after each wallet (except the last one)
+        if [ $i -lt $number_of_wallets ]; then
+            echo -e "----------------------------------------" >>"$output_file"
+            echo -e "" >>"$output_file" # Add an empty line for better readability
+        fi
+    done
+
+    echo -e "${GREEN}Successfully created $number_of_wallets wallets"
+    echo -e "Output saved to: $output_file${NC}"
+}
+
+cast_wallet_van_start_end_with() {
+    hea1 "Create Wallets Using cast and menmonic"
+
+    startsWith="6666"
+    endsWith="9999"
+
+    # Get name of Project
+    echo -e "Enter Number Of Wallets to create with cast starting with ${startsWith} and endswith ${endsWith}"
+    read -r number_of_wallets
+
+    # Validate numeric input and minimum value
+    if ! [[ "$number_of_wallets" =~ ^[0-9]+$ ]]; then
+        echo -e "${RED}FUKR: NUMBER ONL${NC}"
+        exit 1
+    fi
+
+    if [ -z "$number_of_wallets" ]; then
+        echo -e "${RED}BASTARD ! Cant be empty{NC}"
+        exit 1
+    fi
+
+    # Commands to execute - include endsWith in filename
+    output_file="wallets_starts_${startsWith}__ends_${endsWith}_${number_of_wallets}.txt"
+
+    # Create or clear the output file
+    >"$output_file"
+
+    # Loop through the number of wallets
+    for ((i = 1; i <= number_of_wallets; i++)); do
+        echo -e "Creating wallet $i of $number_of_wallets..."
+        if ! cast w va --starts-with ${startsWith} --ends-with ${endsWith} >>"$output_file"; then
+            echo -e "${RED}Error: Failed to create wallet $i${NC}"
+            exit 1
+        fi
+
+        # Add a divider after each wallet (except the last one)
+        if [ $i -lt $number_of_wallets ]; then
+            echo -e "----------------------------------------" >>"$output_file"
+            echo -e "" >>"$output_file" # Add an empty line for better readability
+        fi
+    done
+
+    echo -e "${GREEN}Successfully created $number_of_wallets wallets"
+    echo -e "Output saved to: $output_file${NC}"
+}
+
+# Execution
+cast_wallet_van_start_end_with
+
+
+------ FILE END ../../../mx/foca.sh ------
+
+
+------ FILE START ../../../mx/focmd.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+hea1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+foset() {
+    hea1 "Setup a foundry project, setup uv venv and install slither"
+    # Get name of Project
+    echo -e "Enter the name of the project: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # Commands to execute
+    CO1="forge init --no-commit --no-git --force --vscode $name_of_project && cd $name_of_project "
+    CO2="uv venv && source venv/bin/activate.fish"
+    CO3="uv pip install slither-analyzer"
+    CO4="solc-select install 0.8.13 && solc-select use 0.8.13"
+
+    # Execution Commands
+    eval "$CO1"
+    eval "$CO2"
+    eval "$CO3"
+    eval "$CO4"
+
+    echo -e "${GREEN}Now run ${CO4}${NC}"
+}
+
+fo_only() {
+    hea1 "Setup a foundry project, setup uv venv and install slither"
+    # Get name of Project
+    echo -e "Enter the name of the project: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # Commands to execute
+    CO1="forge init --no-commit --no-git --force --vscode $name_of_project && cd $name_of_project "
+
+    # Execution Commands
+    eval "$CO1"
+
+    echo -e "${GREEN}Foundry Only Install ${CO4}${NC}"
+}
+
+######### Foundry Executions ############
+
+# Declare the rpc and key arrays
+rpcz=(
+    "https://eth-sepolia.g.alchemy.com/v2/y-cD2hUWMXwa6cAWy7uplLSSoRQ5v7Fx"
+    "https://eth-holesky.g.alchemy.com/v2/y-cD2hUWMXwa6cAWy7uplLSSoRQ5v7Fx"
+)
+keyz=(
+    "0x6890220d6cc0218032cab963a528672d85643a2c7edf340de6e27861d1900958"
+    "0xff630bf91f95d3e7af70c12490b858cd5e0818b2bc6af6fccff9d933a1097bc4"
+
+)
+accz=(
+    "0x420A8Fe13265Df3B9323C3D7681b2854B1309338"
+    "0x420fFfdA7565D31e9b4b7ebAF0269b5564644656"
+
+)
+ETHERSCAN_API_KEY="2JEANQYC4C9S6PKDFWNGVT2UER24T32D2M"
+
+# Testing
+fo_test() {
+    hea1 "Foundry Run"
+    CO1="forge test"
+    eval "$CO1"
+}
+
+###############################################
+# Forge Create
+################################################
+CONTRACT_PATH_CREATE="src/SimpleStorage.sol:SimpleStorage"
+
+fo_create_holeksy() {
+    hea1 "Foundry Create - One of contract deployment"
+
+    LOG_FILE="logs/deploy_create_holesky.log"
+    mkdir -p logs
+
+    echo -e "██╗  ██╗  ██████╗  ██╗      ███████╗ ███████╗ ██╗  ██╗ ██╗   ██╗"
+    echo -e "██║  ██║ ██╔═══██╗ ██║      ██╔════╝ ██╔════╝ ██║ ██╔╝ ╚██╗ ██╔╝"
+    echo -e "███████║ ██║   ██║ ██║      █████╗   ███████╗ █████╔╝   ╚████╔╝ "
+    echo -e "██╔══██║ ██║   ██║ ██║      ██╔══╝   ╚════██║ ██╔═██╗    ╚██╔╝  "
+    echo -e "██║  ██║ ╚██████╔╝ ███████╗ ███████╗ ███████║ ██║  ██╗    ██║   "
+    echo -e "╚═╝  ╚═╝  ╚═════╝  ╚══════╝ ╚══════╝ ╚══════╝ ╚═╝  ╚═╝    ╚═╝   "
+
+    CO1="forge create ${CONTRACT_PATH_CREATE} \
+        --rpc-url ${rpcz[1]} \
+        --private-key ${keyz[0]} \
+        --etherscan-api-key ${ETHERSCAN_API_KEY} \
+        --optimize true \
+        --optimizer-runs 999\
+        --build-info --build-info-path outz/ \
+        --verify --broadcast \
+        --out outz/"
+
+    echo -e "${BLUE}Running: $CO1${NC}"
+
+    # Run and log to file
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
+
+    echo -e "${GREEN}Successfully deployed contract${NC}"
+    echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
+}
+
+fo_create_sepolia() {
+    hea1 "Foundry Create - One of contract deployment"
+
+    LOG_FILE="logs/deploy_create_sepolia.log"
+    mkdir -p logs
+
+    echo -e "███████╗ ███████╗ ██████╗   ██████╗  ██╗      ██╗  █████╗ "
+    echo -e "██╔════╝ ██╔════╝ ██╔══██╗ ██╔═══██╗ ██║      ██║ ██╔══██╗"
+    echo -e "███████╗ █████╗   ██████╔╝ ██║   ██║ ██║      ██║ ███████║"
+    echo -e "╚════██║ ██╔══╝   ██╔═══╝  ██║   ██║ ██║      ██║ ██╔══██║"
+    echo -e "███████║ ███████╗ ██║      ╚██████╔╝ ███████╗ ██║ ██║  ██║"
+    echo -e "╚══════╝ ╚══════╝ ╚═╝       ╚═════╝  ╚══════╝ ╚═╝ ╚═╝  ╚═╝"
+
+    CO1="forge create ${CONTRACT_PATH_CREATE} \
+        --rpc-url ${rpcz[0]} \
+        --private-key ${keyz[0]} \
+        --optimize true \
+        --optimizer-runs 999\
+        --build-info --build-info-path outz/ \
+        --etherscan-api-key ${ETHERSCAN_API_KEY} \
+        --verify --broadcast \
+        --out outz/"
+
+    echo -e "${BLUE}Running: $CO1${NC}"
+
+    # Run and log to file
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
+
+    echo -e "${GREEN}Successfully deployed contract${NC}"
+    echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
+}
+
+fo_create_anvil() {
+    hea1 "Foundry Create - One of contract deployment"
+
+    LOG_FILE="logs/deploy_create_avil.log"
+    mkdir -p logs
+
+    echo -e " █████╗  ███╗   ██╗ ██╗   ██╗ ██╗ ██╗     "
+    echo -e "██╔══██╗ ████╗  ██║ ██║   ██║ ██║ ██║     "
+    echo -e "███████║ ██╔██╗ ██║ ██║   ██║ ██║ ██║     "
+    echo -e "██╔══██║ ██║╚██╗██║ ╚██╗ ██╔╝ ██║ ██║     "
+    echo -e "██║  ██║ ██║ ╚████║  ╚████╔╝  ██║ ███████╗"
+    echo -e "╚═╝  ╚═╝ ╚═╝  ╚═══╝   ╚═══╝   ╚═╝ ╚══════╝"
+
+    ANVIL_RPC="127.0.0.1:8545"
+    ANVIL_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+
+    CO1="forge create ${CONTRACT_PATH_CREATE} \
+        --rpc-url  ${ANVIL_RPC}\
+        --private-key ${ANVIL_KEY} \
+        --broadcast \
+        --out outz/"
+
+    echo -e "${BLUE}Running: $CO1${NC}"
+
+    # Run and log to file
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
+
+    echo -e "${GREEN}Successfully deployed contract${NC}"
+    echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
+}
+
+fo_create_anvil_nochain() {
+    hea1 "Foundry Create - One of contract deployment"
+
+    LOG_FILE="logs/deploy_create_avil.log"
+    mkdir -p logs
+
+    echo -e " █████╗  ███╗   ██╗ ██╗   ██╗ ██╗ ██╗     "
+    echo -e "██╔══██╗ ████╗  ██║ ██║   ██║ ██║ ██║     "
+    echo -e "███████║ ██╔██╗ ██║ ██║   ██║ ██║ ██║     "
+    echo -e "██╔══██║ ██║╚██╗██║ ╚██╗ ██╔╝ ██║ ██║     "
+    echo -e "██║  ██║ ██║ ╚████║  ╚████╔╝  ██║ ███████╗"
+    echo -e "╚═╝  ╚═╝ ╚═╝  ╚═══╝   ╚═══╝   ╚═╝ ╚══════╝"
+
+    CO1="forge create ${CONTRACT_PATH_CREATE} \
+        --out outz/"
+
+    echo -e "${BLUE}Running: $CO1${NC}"
+
+    # Run and log to file
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
+
+    echo -e "${GREEN}Successfully deployed contract${NC}"
+    echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
+}
+
+###############################################
+# Forge Script
+################################################
+
+# Common Variables
+CONTRACT_PATH_SCRIPT="script/DeploySimpleStorage.s.sol:DeploySimpleStorage"
+
+fo_script_holeksy() {
+    hea1 "Foundry Script - One of contract deployment"
+
+    LOG_FILE="logs/deploy_script._holesky.log"
+
+    mkdir -p logs
+
+    echo -e "██╗  ██╗  ██████╗  ██╗      ███████╗ ███████╗ ██╗  ██╗ ██╗   ██╗"
+    echo -e "██║  ██║ ██╔═══██╗ ██║      ██╔════╝ ██╔════╝ ██║ ██╔╝ ╚██╗ ██╔╝"
+    echo -e "███████║ ██║   ██║ ██║      █████╗   ███████╗ █████╔╝   ╚████╔╝ "
+    echo -e "██╔══██║ ██║   ██║ ██║      ██╔══╝   ╚════██║ ██╔═██╗    ╚██╔╝  "
+    echo -e "██║  ██║ ╚██████╔╝ ███████╗ ███████╗ ███████║ ██║  ██╗    ██║   "
+    echo -e "╚═╝  ╚═╝  ╚═════╝  ╚══════╝ ╚══════╝ ╚══════╝ ╚═╝  ╚═╝    ╚═╝   "
+
+    CO1="forge script ${CONTRACT_PATH_SCRIPT} \
+        --rpc-url ${rpcz[1]} \
+        --private-key ${keyz[0]} \
+        --optimize true \
+        --optimizer-runs 999\
+        --build-info --build-info-path outz/ \
+        --etherscan-api-key ${ETHERSCAN_API_KEY} \
+        --verify \
+        --broadcast \
+        --out outz/"
+
+    echo -e "${BLUE}Running: $CO1${NC}"
+
+    # Run and log to file
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
+
+    echo -e "${GREEN}Successfully deployed contract${NC}"
+    echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
+}
+
+fo_script_sepolia() {
+    hea1 "Foundry Script - One of contract deployment"
+
+    LOG_FILE="logs/deploy_script_sepolia.log"
+    mkdir -p logs
+
+    echo -e "███████╗ ███████╗ ██████╗   ██████╗  ██╗      ██╗  █████╗ "
+    echo -e "██╔════╝ ██╔════╝ ██╔══██╗ ██╔═══██╗ ██║      ██║ ██╔══██╗"
+    echo -e "███████╗ █████╗   ██████╔╝ ██║   ██║ ██║      ██║ ███████║"
+    echo -e "╚════██║ ██╔══╝   ██╔═══╝  ██║   ██║ ██║      ██║ ██╔══██║"
+    echo -e "███████║ ███████╗ ██║      ╚██████╔╝ ███████╗ ██║ ██║  ██║"
+    echo -e "╚══════╝ ╚══════╝ ╚═╝       ╚═════╝  ╚══════╝ ╚═╝ ╚═╝  ╚═╝"
+
+    CO1="forge script ${CONTRACT_PATH_SCRIPT} \
+        --rpc-url ${rpcz[0]} \
+        --private-key ${keyz[0]} \
+        --optimize true \
+        --optimizer-runs 999\
+        --build-info --build-info-path outz/ \
+        --etherscan-api-key ${ETHERSCAN_API_KEY} \
+        --verify \
+        --broadcast \
+        --out outz/"
+
+    echo -e "${BLUE}Running: $CO1${NC}"
+
+    # Run and log to file
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
+
+    echo -e "${GREEN}Successfully deployed contract${NC}"
+    echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
+}
+
+fo_script_anvil() {
+    hea1 "Foundry Script - One of contract deployment"
+    LOG_FILE="logs/deploy_create_avil.log"
+    mkdir -p logs
+
+    echo -e " █████╗  ███╗   ██╗ ██╗   ██╗ ██╗ ██╗     "
+    echo -e "██╔══██╗ ████╗  ██║ ██║   ██║ ██║ ██║     "
+    echo -e "███████║ ██╔██╗ ██║ ██║   ██║ ██║ ██║     "
+    echo -e "██╔══██║ ██║╚██╗██║ ╚██╗ ██╔╝ ██║ ██║     "
+    echo -e "██║  ██║ ██║ ╚████║  ╚████╔╝  ██║ ███████╗"
+    echo -e "╚═╝  ╚═╝ ╚═╝  ╚═══╝   ╚═══╝   ╚═╝ ╚══════╝"
+
+    ANVIL_RPC="127.0.0.1:8545"
+    ANVIL_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+
+    CO1="forge script ${CONTRACT_PATH_SCRIPT} \
+        --rpc-url ${ANVIL_RPC} \
+        --private-key ${ANVIL_KEY} \
+        --broadcast \
+        --out outz/"
+
+    echo -e "${BLUE}Running: $CO1${NC}"
+
+    # Run and log to file
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
+
+    echo -e "${GREEN}Successfully deployed contract${NC}"
+    echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
+}
+
+fo_script_anvil_nochain() {
+    hea1 "Foundry Script - One of contract deployment"
+    LOG_FILE="logs/deploy_create_avil.log"
+    mkdir -p logs
+
+    echo -e " █████╗  ███╗   ██╗ ██╗   ██╗ ██╗ ██╗     "
+    echo -e "██╔══██╗ ████╗  ██║ ██║   ██║ ██║ ██║     "
+    echo -e "███████║ ██╔██╗ ██║ ██║   ██║ ██║ ██║     "
+    echo -e "██╔══██║ ██║╚██╗██║ ╚██╗ ██╔╝ ██║ ██║     "
+    echo -e "██║  ██║ ██║ ╚████║  ╚████╔╝  ██║ ███████╗"
+    echo -e "╚═╝  ╚═╝ ╚═╝  ╚═══╝   ╚═══╝   ╚═╝ ╚══════╝"
+
+    CO1="forge script ${CONTRACT_PATH_SCRIPT} \
+        --out outz/"
+
+    echo -e "${BLUE}Running: $CO1${NC}"
+
+    # Run and log to file
+    eval "$CO1" 2>&1 | tee "$LOG_FILE"
+
+    echo -e "${GREEN}Successfully deployed contract${NC}"
+    echo -e "${YELLOW}Log saved to $LOG_FILE${NC}"
+}
+
+###############################################
+# Manual
+################################################
+
+main_menu() {
+    echo -e "${CYAN}┌──────────────────────────────────────────┐${NC}"
+    echo -e "${CYAN}│${NC}       ${PURPLE}🔥 Foundry Launcher Menu 🔥 ${CYAN}${NC}"
+    echo -e "${CYAN}├──────────────────────────────────────────┤${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}1)${NC} ${WHITE}Full Foundry + Slither Setup ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}2)${NC} ${WHITE}Foundry Only Setup {CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}3)${NC} ${WHITE}Run Forge Tests                                 ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}4)${NC} ${WHITE}Create Contract on ${BLUE}Holesky${WHITE}       ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}5)${NC} ${WHITE}Create Contract on ${BLUE}Sepolia${WHITE}       ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}6)${NC} ${WHITE}Create Contract on ${BLUE}Anvil${WHITE}       ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}7)${NC} ${WHITE}Create Contract on ${BLUE}Anvil-NoChain${WHITE}       ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}8)${NC} ${WHITE}Script Deploy on ${BLUE}Holesky${WHITE}         ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}9)${NC} ${WHITE}Script Deploy on ${BLUE}Sepolia${WHITE}         ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}10)${NC} ${WHITE}Script Deploy on ${BLUE}Anvil${WHITE}         ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${GREEN}11)${NC} ${WHITE}Script Deploy on ${BLUE}Anvil-NoChain${WHITE}         ${CYAN}${NC}"
+    echo -e "${CYAN}│${NC}  ${RED}0)${NC} ${WHITE}Exit                                              ${CYAN}${NC}"
+    echo -e "${CYAN}└──────────────────────────────────────────┘${NC}"
+
+    echo -ne "${YELLOW}Enter your choice [0-7]: ${NC}"
+    read choice
+
+    case $choice in
+    1) foset ;;
+    2) fo_only ;;
+    3) fo_test ;;
+    4) fo_create_holeksy ;;
+    5) fo_create_sepolia ;;
+    6) fo_create_anvil ;;
+    7) fo_create_anvil_nochain ;;
+    8) fo_script_holeksy ;;
+    9) fo_script_sepolia ;;
+    10) fo_script_anvil ;;
+    11) fo_script_anvil_nochain ;;
+    0)
+        echo -e "${GREEN}👋 Exiting. Have a productive dev sesh!${NC}"
+        exit 0
+        ;;
+    *)
+        echo -e "${RED}❌ Invalid choice. Try again.${NC}"
+        exit 1
+        ;;
+    esac
+}
+
+# Run it
+main_menu
+
+
+------ FILE END ../../../mx/focmd.sh ------
+
+
+------ FILE START ../../../mx/foinit.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+hea1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+foset() {
+    hea1 "Setup a foundry project, setup uv venv and install slither"
+    # Get name of Project
+    echo -e "Enter the name of the project: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # Commands to execute
+    CO1="forge init --no-commit --no-git --force --vscode $name_of_project && cd $name_of_project "
+    CO2="uv venv && source venv/bin/activate.fish"
+    CO3="uv pip install slither-analyzer"
+    CO4="solc-select install 0.8.13 && solc-select use 0.8.13"
+
+    # Execution Commands
+    eval "$CO1"
+    eval "$CO2"
+    eval "$CO3"
+    eval "$CO4"
+
+    echo -e "${GREEN}Now run ${CO4}${NC}"
+}
+
+fo_only() {
+    hea1 "Setup a foundry project, setup uv venv and install slither"
+    # Get name of Project
+    echo -e "Enter the name of the project: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # Commands to execute
+    CO1="forge init --no-commit --no-git --force --vscode $name_of_project && cd $name_of_project "
+
+    # Execution Commands
+    eval "$CO1"
+
+    echo -e "${GREEN}Foundry Only Install ${CO4}${NC}"
+}
+
+# UV Setup
+fo_only
+
+
+------ FILE END ../../../mx/foinit.sh ------
+
+
+------ FILE START ../../../mx/foucmd.sh ------
+
+#!/usr/bin/bash
+# System Commands
+
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# --- Important Variables ---
+
+rpcz=(
+    "https://eth-sepolia.g.alchemy.com/v2/y-cD2hUWMXwa6cAWy7uplLSSoRQ5v7Fx"
+    "https://eth-holesky.g.alchemy.com/v2/y-cD2hUWMXwa6cAWy7uplLSSoRQ5v7Fx"
+)
+keyz=(
+    "0x6890220d6cc0218032cab963a528672d85643a2c7edf340de6e27861d1900958"
+    "0xff630bf91f95d3e7af70c12490b858cd5e0818b2bc6af6fccff9d933a1097bc4"
+
+)
+accz=(
+    "0x420A8Fe13265Df3B9323C3D7681b2854B1309338"
+    "0x420fFfdA7565D31e9b4b7ebAF0269b5564644656"
+
+)
+ETHERSCAN_API_KEY="2JEANQYC4C9S6PKDFWNGVT2UER24T32D2M"
+
+# Commands
+
+h1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+# Commands
+
+# --- Function that finds file pattern and deletes it
+fd_find_delete() {
+    h1 "Finding files with fd and delete"
+    co1="fd -g 'counters*.sol' -X rm -i"
+    echo -e "${GREEN}Command: ${NC}${co1}"
+    eval "$co1"
+}
+
+# --- Cast - get contract bytecode
+cast_bytecode() {
+    h1 "Cast Get Contract Bytecode"
+
+    KONTRACT="0xDb441F74E8B7307220823e228659415fFB7A59aa"
+
+    # Create filename with date appended (format: YYYYMMDD_HHMMSS)
+    DATE_STAMP=$(date '+%Y%m%d_%H%M%S')
+    OUTPUT_FILE="cmdrun/cast_bytecode_run_${DATE_STAMP}.txt"
+
+    co1="cast code $KONTRACT -r ${rpcz[1]}"
+    echo -e "${GREEN}Command: ${NC}${co1}"
+
+    # First write the date to the file
+    echo "Date: $(date '+%Y-%m-%d %H:%M:%S')" >"$OUTPUT_FILE"
+    echo "Command: $co1" >>"$OUTPUT_FILE"
+    echo "-------------------------------------------" >>"$OUTPUT_FILE"
+
+    # Now append the command output to the file that already has the date
+    output=$(eval "$co1" | tee -a "$OUTPUT_FILE")
+
+    echo -e "${GREEN}Output: ${NC} \n----\n $output $" # Show first 60 chars
+
+    echo -e "\n${GREEN}Bytecode saved to:${NC} $OUTPUT_FILE"
+}
+
+# Executions
+# fd_find_delete
+cast_bytecode
+
+
+------ FILE END ../../../mx/foucmd.sh ------
+
+
+------ FILE START ../../../mx/foundryinit.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+hea1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+foset() {
+    hea1 "Setup a foundry project, setup uv venv and install slither"
+    # Get name of Project
+    echo -e "Enter the name of the project: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # Commands to execute
+    CO1="forge init --no-commit --no-git --force --vscode $name_of_project && cd $name_of_project "
+    CO2="uv venv && source venv/bin/activate.fish"
+    CO3="uv pip install slither-analyzer"
+    CO4="solc-select install 0.8.13 && solc-select use 0.8.13"
+
+    # Execution Commands
+    eval "$CO1"
+    eval "$CO2"
+    eval "$CO3"
+    eval "$CO4"
+
+    echo -e "${GREEN}Now run ${CO4}${NC}"
+}
+
+# UV Setup
+foset
+
+
+------ FILE END ../../../mx/foundryinit.sh ------
+
+
+------ FILE START ../../../mx/g.sh ------
+
+#!/bin/bash 
+echo "==================="
+echo ""
+echo "git add -all && git commit -m <addurshit>&& git push"
+git add --all 
+git commit -m "🫦"
+git push --progress
+echo ""
+echo "=========PUSH DONE========="
+echo ""
+echo "==================="
+echo "View Git log last 10"
+echo ""
+git log --oneline --graph --decorate -10 
+echo ""
+echo "=========LOGDONE========="
+echo ""
+echo " View all branches "
+echo ""
+git branch -a 
+echo ""
+echo "=========BranchesDone========="
+echo ""
+echo "View Status "
+git status 
+echo ""
+echo "=========StatusDone========="
+
+------ FILE END ../../../mx/g.sh ------
+
+
+------ FILE START ../../../mx/genwal.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+b1() {
+    echo -e "${CYAN}===================================="
+    echo -e "Generating wallets with cast"
+    echo -e "===================================${NC}"
+}
+
+c1() {
+    echo -e "${GREEN}[?] How many wallets to generate with cast? : ${NC}"
+    read num
+
+    # Create a filename that includes the number of wallets
+    output_file="${num}_wallets.txt"
+
+    # Clear the file if it already exists
+    >"$output_file"
+
+    # Generate wallets and append to the file
+    for ((i = 1; i <= num; i++)); do
+        cast w va --starts-with 69 >>"$output_file"
+        echo -e "\n" >>"$output_file" # Add a newline after each wallet
+    done
+
+    echo -e "${GREEN}[+] Generated $num wallets and saved to $output_file ${NC}"
+}
+
+# Execution
+b1
+c1
+
+
+------ FILE END ../../../mx/genwal.sh ------
+
+
+------ FILE START ../../../mx/goCompress.txt ------
+
+These are ways to make smallest possible go executable size 
+
+Step1 : Compiling by removing libraries and others 
+> go build -ldflags="-s -w" -o src/main.go 
+
+Step2 : Futher Compress with upx 
+> upx --best main -o newMain 
+
+------ FILE END ../../../mx/goCompress.txt ------
+
+
+------ FILE START ../../../mx/gop.fish ------
+
+#!/bin/sh
+
+echo "Delete the old version which is located in /home/gitpod/go/"
+rm -rf /home/gitpod/go
+echo "Get the latest binary from https://go.dev/dl/ a the time of writing it is 1.21.4 which will be downloaded "
+echo " 1.21.4 - https://go.dev/dl/go1.21.4.linux-amd64.tar.gz"
+echo ""
+wget https://go.dev/dl/go1.21.4.linux-amd64.tar.gz
+echo "Unzip to location /usr/local"
+sudo tar -C /home/gitpod/ -xzf go1.21.2.linux-amd64.tar.gz
+echo "#Go Path" >> ~/.config/fish/config.fish
+echo "set -gx PATH /home/gitpod/go/bin:$PATH" >> ~/.config/fish/config.fish
+export PATH=$PATH:/home/gitpod/go/bin
+rm go1.21.4.linux-amd64.tar.gz
+
+------ FILE END ../../../mx/gop.fish ------
+
+
+------ FILE START ../../../mx/gopGITHUB.fish ------
+
+#!/bin/sh
+
+echo "Delete the old version which is located in /usr/local/go"
+sudo rm -rf /usr/local/go
+echo "Get the latest binary from https://go.dev/dl/ a the time of writing it is 1.21.4 which will be downloaded "
+echo " 1.21.1 - https://go.dev/dl/go1.21.4.linux-amd64.tar.gz"
+echo ""
+wget https://go.dev/dl/go1.21.4.linux-amd64.tar.gz
+echo "Unzip to location /usr/local"
+sudo tar -C /usr/local/ -xzf go1.21.4.linux-amd64.tar.gz
+echo "#Go Path" >> ~/.config/fish/config.fish
+echo "set -gx PATH /usr/local/go/bin:$PATH" >> ~/.config/fish/config.fish
+export PATH=$PATH:/home/gitpod/go/bin
+rm go1.21.4.linux-amd64.tar.gz
+
+------ FILE END ../../../mx/gopGITHUB.fish ------
+
+
+------ FILE START ../../../mx/gopGITPOD.fish ------
+
+#!/bin/sh
+
+echo "Delete the old version which is located in /home/gitpod/go/"
+rm -rf /home/gitpod/go
+echo "Get the latest binary from https://go.dev/dl/ a the time of writing it is 1.20 which will be downloaded "
+echo " 1.21.4 - https://go.dev/dl/go1.21.4.linux-amd64.tar.gz"
+echo ""
+wget https://go.dev/dl/go1.21.4.linux-amd64.tar.gz
+echo "Unzip to location /usr/local"
+sudo tar -C /home/gitpod/ -xzf go1.21.4.linux-amd64.tar.gz 
+echo "#Go Path" >> ~/.config/fish/config.fish
+echo "set -gx PATH /home/gitpod/go/bin:$PATH" >> ~/.config/fish/config.fish
+export PATH=$PATH:/home/gitpod/go/bin
+rm go1.21.4.linux-amd64.tar.gz
+
+------ FILE END ../../../mx/gopGITPOD.fish ------
+
+
+------ FILE START ../../../mx/helix.md ------
+
+1. [Helix Editor Setup](#helix-editor-setup)
+2. [Config](#config)
+
+---
+
+# Helix Editor Setup
+
+1. This is going to be the setup script for the helix editor which you use all the time
+
+# Config
+
+```rs
+hx ~/.config/helix/config.toml
+```
+
+- This to edit the correct file
+
+```rs
+theme = "doom_acario_dark"
+
+[editor]
+true-color = true
+cursorline = true
+gutters = ["diagnostics","line-numbers"]
+
+[editor.indent-guides]
+render = true
+character = "╎"
+
+[editor.whitespace]
+render = "all"
+```
+
+
+------ FILE END ../../../mx/helix.md ------
+
+
+------ FILE START ../../../mx/hfu1/README.md ------
+
+# hfu1
+
+2. This python file is for creating and uploading files to repos and spaces in huggingface
+3. This is the professional way of doing things.
+4. So this will have lengthy drawn our code for this purpose
+
+
+------ FILE END ../../../mx/hfu1/README.md ------
+
+
+------ FILE START ../../../mx/hfu1/TEMP/BIZKKIT.TXT ------
+
+SNIFF and Lick
+
+------ FILE END ../../../mx/hfu1/TEMP/BIZKKIT.TXT ------
+
+
+------ FILE START ../../../mx/hfu1/panty.py ------
+
+# Main entry point for all huggingface operations
+
+from src.hfspace import hf_space_ops
+
+
+def main():
+    hf_space_ops()
+    # hf_repo_ops()
+
+
+if __name__ == "__main__":
+    main()
+
+
+------ FILE END ../../../mx/hfu1/panty.py ------
+
+
+------ FILE START ../../../mx/hfu1/pyproject.toml ------
+
+[project]
+name = "hfu1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "huggingface-hub>=0.31.4",
+    "python-dotenv>=1.1.0",
+    "rich>=14.0.0",
+]
+
+
+------ FILE END ../../../mx/hfu1/pyproject.toml ------
+
+
+------ FILE START ../../../mx/hfu1/runz.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+h1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+ru_ma() {
+    h1 "Running MCP Server 1"
+    co1="uv run panty.py"
+
+    echo -e "${GREEN}SmellPanty...${NC}"
+    echo -e "${YELLOW}Command: ${NC}${co1}"
+    echo -e ""
+    echo -e ""
+    eval "$co1"
+}
+
+# Execution
+ru_ma
+
+
+------ FILE END ../../../mx/hfu1/runz.sh ------
+
+
+------ FILE START ../../../mx/hfu1/src/hfrepo.py ------
+
+# This python file is for creating and uploading files to huggingface
+
+from src.utz import header1, header2
+import os
+from dotenv import load_dotenv
+from huggingface_hub import (
+    create_repo,
+    SpaceHardware,
+    SpaceStorage,
+    upload_folder,
+    delete_repo,
+)
+
+# Loading the env file
+load_dotenv("src/.env")
+hf_token = os.getenv("HF")
+
+
+# Main function that will call the sub functions
+def hf_repo_ops():
+    """
+    Main function for Hugging Face repository operations.
+    """
+    # hf_create_repo()
+    # hf_upload_dirz()
+    hf_delete_repos()
+
+# --- Function for creating a repo ---
+
+
+def hf_create_repo():
+    header1("Creating a Hugging Face Repository - Model")
+    """
+    Create a Hugging Face repository with secrets from an .env file.
+
+    Parameters:
+    - token (str): Hugging Face token for authentication. 
+    - repo_id (str): A namespace (user or an organization) and a repo name separated by a /.
+    - repo_type (str): Type of the repo ("model", "dataset", "space"). Default is "space".
+    - private (bool): Whether to make the repo private. Default is False.
+    - space_sdk (str): Choice of SDK to use if repo_type is "space". Default is "gradio".
+    - space_hardware (SpaceHardware): Choice of hardware if repo_type is "space". Default is SpaceHardware.CPU_SMALL.
+    - space_storage (SpaceStorage): Choice of persistent storage tier. Default is SpaceStorage.SMALL.
+    - space_sleep_time (int): Number of seconds of inactivity to wait before a Space is put to sleep.
+    - env_file (str): Path to the .env file containing secrets. Default is ".env".
+    """
+
+    # Name of the repo
+    repo_name = "Liqo/MakefromPy2"
+
+    # Create the repository
+    make_repo_model = create_repo(repo_id=repo_name, repo_type="model", token=hf_token)
+
+    header2(f"{repo_name}")
+    return make_repo_model
+
+
+# --- Uploading files to repo ---
+
+
+def hf_upload_dirz():
+    header1("Uploading a Folder to Hugging Face Repository")
+    """
+    Upload a folder to a Hugging Face repository.
+
+    Parameters Reference for upload_folder:
+    ---------------------------------------
+    - repo_id (str): The repository to upload to (e.g., "username/my-model")
+    - folder_path (str | Path): Path to the local folder you want to upload
+    - path_in_repo (str, optional): Target directory in the repo (default: root)
+    - token (str | bool | None): Hugging Face token (None uses default local auth)
+    - repo_type (str, optional): "model", "dataset", or "space" (default: "model")
+    - revision (str, optional): Git branch or commit SHA (default: "main")
+    - commit_message (str, optional): Short commit summary/title
+    - commit_description (str, optional): Longer commit body/description
+    - create_pr (bool, optional): If True, opens a pull request instead of committing directly
+    - parent_commit (str, optional): Expected parent commit SHA (to prevent race conditions)
+    - allow_patterns (list[str] or str, optional): Only upload files matching these glob patterns
+    - ignore_patterns (list[str] or str, optional): Skip files matching these glob patterns
+    - delete_patterns (list[str] or str, optional): Remove remote files matching these patterns
+    - run_as_future (bool, optional): If True, runs in background and returns Future
+
+    Returns:
+        CommitInfo or Future: The result of the upload.
+    """
+
+    # Folder to upload
+    local_folder_path = "TEMP/"  # Path to your local folder
+    repo_id = "Liqo/MakefromPy2"  # Your Hugging Face repo
+    path_in_repo = ""  # Upload to repo root (change to subdir like "folder/" if needed)
+
+    # Upload the folder
+    upload_result = upload_folder(
+        folder_path=local_folder_path,
+        path_in_repo=path_in_repo,
+        repo_id=repo_id,
+        token=hf_token,
+        repo_type="model",  # Change to "dataset" or "space" if needed
+        commit_message="Smell Panty",
+        commit_description="bootySmelling Now",
+        create_pr=False,  # Set to True if you want to create a PR instead
+    )
+
+    print(f"✅ Uploaded folder to: {upload_result.commit_url}")
+    return upload_result
+
+
+# --- Deleteing Spaces ---
+
+
+def hf_delete_repos():
+    header1("Deleting Multiple Hugging Face Repositories")
+
+    """
+    Delete multiple Hugging Face repositories.
+
+    Parameters:
+    - repo_ids (list[str]): List of repos in "namespace/repo" format
+    - token (str): Hugging Face token
+    - repo_type (str): "model", "dataset", or "space"
+    - missing_ok (bool): Skip error if repo is missing
+
+    Returns:
+    - None
+    """
+
+    # Config
+    repo_ids = ["Liqo/MakefromPy1", "Liqo/but1", "Liqo/buty1"]
+    repo_type = "model"
+    token = hf_token
+    missing_ok = True
+
+    for repo_id in repo_ids:
+        try:
+            delete_repo(
+                repo_id=repo_id, token=token, repo_type=repo_type, missing_ok=missing_ok
+            )
+            print(f"✅ Deleted: {repo_id}")
+        except Exception as e:
+            print(f"❌ Failed to delete {repo_id}: {e}")
+
+
+------ FILE END ../../../mx/hfu1/src/hfrepo.py ------
+
+
+------ FILE START ../../../mx/hfu1/src/hfspace.py ------
+
+# These python functions are for making a space and uploading to a space
+
+import os
+
+from dotenv import load_dotenv
+from huggingface_hub import (
+    create_repo,
+    delete_repo,
+    upload_folder,
+)
+from src.utz import header1, header2
+
+# Loading the env file
+load_dotenv("src/.env")
+hf_token = os.getenv("HF")
+
+# Main Repo ID here
+REPO_ID = "Wornu/privid"
+
+
+#  ███████╗ ██╗   ██╗ ███╗   ██╗  ██████╗
+#  ██╔════╝ ██║   ██║ ████╗  ██║ ██╔════╝
+#  █████╗   ██║   ██║ ██╔██╗ ██║ ██║
+#  ██╔══╝   ██║   ██║ ██║╚██╗██║ ██║
+#  ██║      ╚██████╔╝ ██║ ╚████║ ╚██████╗
+#  ╚═╝       ╚═════╝  ╚═╝  ╚═══╝  ╚═════╝
+
+# Main function that will call the sub functions
+def hf_space_ops():
+    """
+    Main function for Hugging Face repository operations.
+    """
+    # hf_delete_spaces()
+    hf_create_space()
+    hf_upload_dirz()
+
+
+# --- Function for creating a repo ---
+
+# Note this function is the same as used in hfrepo. But added with some
+
+#  ███╗   ███╗  █████╗  ██╗  ██╗ ███████╗
+#  ████╗ ████║ ██╔══██╗ ██║ ██╔╝ ██╔════╝
+#  ██╔████╔██║ ███████║ █████╔╝  █████╗
+#  ██║╚██╔╝██║ ██╔══██║ ██╔═██╗  ██╔══╝
+#  ██║ ╚═╝ ██║ ██║  ██║ ██║  ██╗ ███████╗
+#  ╚═╝     ╚═╝ ╚═╝  ╚═╝ ╚═╝  ╚═╝ ╚══════╝
+
+def hf_create_space():
+    header1("Creating a Hugging Face Repository - Model")
+    """
+    Create a Hugging Face repository with secrets from an .env file.
+
+    Parameters:
+    - token (str): Hugging Face token for authentication. 
+    - repo_id (str): A namespace (user or an organization) and a repo name separated by a /.
+    - repo_type (str): Type of the repo ("model", "dataset", "space"). Default is "space".
+    - private (bool): Whether to make the repo private. Default is False.
+    - space_sdk (str): Choice of SDK to use if repo_type is "space". Default is "gradio".
+    - space_hardware (SpaceHardware): Choice of hardware if repo_type is "space". Default is SpaceHardware.CPU_SMALL.
+    - space_storage (SpaceStorage): Choice of persistent storage tier. Default is SpaceStorage.SMALL.
+    - space_sleep_time (int): Number of seconds of inactivity to wait before a Space is put to sleep.
+    - env_file (str): Path to the .env file containing secrets. Default is ".env".
+    """
+    # Create the repository
+    make_repo_model = create_repo(
+        token=hf_token,
+        repo_id=REPO_ID,
+        repo_type="space",
+        space_sdk="gradio",
+        private="True"
+    )
+
+    header2(f"{REPO_ID}")
+    return make_repo_model
+
+
+# --- Uploaading files to space ---
+
+#  ██╗   ██╗ ██╗
+#  ██║   ██║ ██║
+#  ██║   ██║ ██║
+#  ██║   ██║ ██║
+#  ╚██████╔╝ ███████╗
+#   ╚═════╝  ╚══════╝
+
+def hf_upload_dirz():
+    header1("Uploading a Folder to Hugging Face Repository")
+    """
+    Upload a folder to a Hugging Face repository.
+
+    Parameters Reference for upload_folder:
+    ---------------------------------------
+    - repo_id (str): The repository to upload to (e.g., "username/my-model")
+    - folder_path (str | Path): Path to the local folder you want to upload
+    - path_in_repo (str, optional): Target directory in the repo (default: root)
+    - token (str | bool | None): Hugging Face token (None uses default local auth)
+    - repo_type (str, optional): "model", "dataset", or "space" (default: "model")
+    - revision (str, optional): Git branch or commit SHA (default: "main")
+    - commit_message (str, optional): Short commit summary/title
+    - commit_description (str, optional): Longer commit body/description
+    - create_pr (bool, optional): If True, opens a pull request instead of committing directly
+    - parent_commit (str, optional): Expected parent commit SHA (to prevent race conditions)
+    - allow_patterns (list[str] or str, optional): Only upload files matching these glob patterns
+    - ignore_patterns (list[str] or str, optional): Skip files matching these glob patterns
+    - delete_patterns (list[str] or str, optional): Remove remote files matching these patterns
+    - run_as_future (bool, optional): If True, runs in background and returns Future
+
+    Returns:
+        CommitInfo or Future: The result of the upload.
+    """
+
+    # Folder to upload
+    local_folder_path = "../WX/mywo/vg1/UL/"  # Path to your local folder
+    # Upload to repo root (change to subdir like "folder/" if needed)
+    path_in_repo = ""
+
+    # Upload the folder
+    upload_result = upload_folder(
+        folder_path=local_folder_path,
+        path_in_repo=path_in_repo,
+        repo_id=REPO_ID,
+        token=hf_token,
+        ignore_patterns=[
+            ".venv",
+            ".venv/*",
+            "__pycache__",
+            "*.pyc",
+            ".env",
+            ".env/*",
+            "node_modules/",
+            ".gitignore",
+            "eslint*",
+            ".vercel/",
+            "*.toml",
+            "uv.lock",
+            ".python-version",
+        ],  # Ignore these patterns
+        repo_type="space",  # Change to "dataset" or "space" if needed
+        commit_message="SmellPantySpace",
+        commit_description="SpaceUploadPantyAddiuct",
+        create_pr=False,  # Set to True if you want to create a PR instead
+    )
+
+    print(f"✅ Uploaded folder to: {upload_result.commit_url}")
+    return upload_result
+
+
+# --- Deleteing Spaces ---
+
+#  ██████╗  ███████╗ ██╗
+#  ██╔══██╗ ██╔════╝ ██║
+#  ██║  ██║ █████╗   ██║
+#  ██║  ██║ ██╔══╝   ██║
+#  ██████╔╝ ███████╗ ███████╗
+#  ╚═════╝  ╚══════╝ ╚══════╝
+
+
+def hf_delete_spaces():
+    header1("Deleting Multiple Hugging Face Repositories")
+
+    """
+    Delete multiple Hugging Face repositories.
+
+    Parameters:
+    - repo_ids (list[str]): List of repos in "namespace/repo" format
+    - token (str): Hugging Face token
+    - repo_type (str): "model", "dataset", or "space"
+    - missing_ok (bool): Skip error if repo is missing
+
+    Returns:
+    - None
+    """
+
+    # Config
+    repo_ids = [
+        "Wornu/vitest_private_test_1"
+    ]
+    repo_type = "space"
+    token = hf_token
+    missing_ok = True
+
+    for repo_id in repo_ids:
+        try:
+            delete_repo(
+                repo_id=repo_id, token=token, repo_type=repo_type, missing_ok=missing_ok
+            )
+            print(f"✅ Deleted: {repo_id}")
+        except Exception as e:
+            print(f"❌ Failed to delete {repo_id}: {e}")
+
+
+------ FILE END ../../../mx/hfu1/src/hfspace.py ------
+
+
+------ FILE START ../../../mx/hfu1/src/utz.py ------
+
+# Rich Prettifier Code
+# ------------------------------------------------------
+import logging
+
+from rich.console import Console  # For console.print
+from rich.logging import RichHandler
+from rich.panel import Panel  # For Panel()
+from rich.traceback import install
+
+console = Console()  # Standard code to access console
+install(show_locals=True)
+
+# Setting up rich logger with color
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(message)s",
+    datefmt="[%X]",
+    handlers=[RichHandler(rich_tracebacks=True, markup=True)],
+)
+log = logging.getLogger("rich")
+
+# ------------------------------------------------------
+
+
+def header1(text):
+    panel = Panel.fit(
+        f"""[green_yellow]{text}[/green_yellow]""",
+        title="<:",
+        subtitle=":>",
+        style="Italic",
+        border_style="magenta",
+    )
+    # Print the Panel
+    console.print(panel)
+
+def header2(text):
+    panel = Panel.fit(
+        f"""[green_yellow]{text}[/green_yellow]""",
+        title="Making Repo",
+        subtitle="Made",
+        style="Italic",
+        border_style="magenta",
+    )
+    # Print the Panel
+    console.print(panel)
+
+
+
+def l_debug(text):
+    log.debug(f"[green]{text}[/green]")
+
+
+def l_info(text):
+    log.info(f"[blue]{text}[/blue]")
+
+
+def l_warning(text):
+    log.warning(f"[yellow]{text}[/yellow]")
+
+
+def l_error(text):
+    log.error(f"[red]{text}[/red]")
+
+
+def l_critical(text):
+    log.critical(f"[white on red bold]{text}[/white on red bold]")
+
+
+------ FILE END ../../../mx/hfu1/src/utz.py ------
+
+
+======== END OF PART 44 OF 46  ========
+
+This is only a part of the code. Please do not respond until I provide all parts (2 remaining).

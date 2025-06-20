@@ -1,0 +1,550 @@
+======== PART 24 OF 46  ========
+
+
+------ FILE START ../../../kz-ytml-1/WX/tezt/neby/n1/rez/Qwen_Qwen2.5-Coder-7B_2025-06-16_08-38-20.md ------
+
+# Generated on 2025-06-16 08:38:20
+
+- ##Model: Qwen/Qwen2.5-Coder-7B
+- ##Endpoint: https://api.studio.nebius.com/v1
+- ##Question: Describe booty dancing
+
+Describe booty dancing
+
+Booty dancing refers to a type of dance that focuses on the buttocks and hips. It is a popular form of dance that can be done to various genres of music, including pop, hip-hop, and electronic dance music.
+
+The booty dancing style involves isolating the hips and buttocks while moving them in a rhythmic and fluid motion. It often includes movements such as hip thrusts, hip circles, and hip swings. The dance can be performed in a variety of ways, including solo performances, group dances, and choreographed routines.
+
+Booty dancing can be a great way to exercise and get in shape, as it involves using the muscles in the hips and buttocks. It is also a fun and energetic form of dance that can be enjoyed by people of all ages and fitness levels.
+
+Overall, booty dancing is a popular and enjoyable form of dance that focuses on the hips and buttocks, and can be performed to a variety of music genres.
+
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.
+
+------ FILE END ../../../kz-ytml-1/WX/tezt/neby/n1/rez/Qwen_Qwen2.5-Coder-7B_2025-06-16_08-38-20.md ------
+
+
+------ FILE START ../../../kz-ytml-1/WX/tezt/neby/n1/rez/meta-llama_Meta-Llama-3.1-8B-Instruct_2025-06-16_08-37-09.md ------
+
+# Generated on 2025-06-16 08:37:09
+
+- ##Model: meta-llama/Meta-Llama-3.1-8B-Instruct
+- ##Endpoint: https://api.studio.nebius.com/v1
+- ##Question: Describe booty dancing
+
+Booty dancing! It's a style of dance that originated in the 1990s and has since become a popular form of expression in hip-hop and pop culture. Here's a breakdown of what booty dancing is all about:
+
+**Characteristics:**
+
+1. **Isolations:** Booty dancing involves isolating different parts of the body, particularly the hips, thighs, and buttocks. Dancers move these body parts independently, creating fluid and dynamic movements.
+2. **Hip action:** The hips are the foundation of booty dancing. Dancers use their hips to create a range of movements, from simple bounces to complex, fluid motions.
+3. **Bouncy, sensual movements:** Booty dancing often features bouncy, sensual movements that emphasize the dancer's hips, thighs, and buttocks. These movements can be slow and seductive or fast and energetic.
+4. **Emphasis on rhythm:** Booty dancing is deeply rooted in hip-hop and R&B music. Dancers often focus on the rhythm and beat of the music, using their movements to emphasize the syncopated rhythms and basslines.
+
+**Types of booty dancing:**
+
+1. **Hip hop booty dancing:** This style of booty dancing is closely tied to hip-hop culture. Dancers often incorporate breakdancing and popping movements into their routines.
+2. **Sexy booty dancing:** This style of booty dancing emphasizes sensual, seductive movements. Dancers often use their bodies to convey confidence, sensuality, and energy.
+3. **Club-style booty dancing:** This style of booty dancing is often performed in nightclubs and bars. Dancers typically focus on simple, energetic movements that get the crowd pumped up.
+
+**Notable booty dancing styles:**
+
+1. **The "pop" or "bump":** A classic booty dancing move where the dancer bounces their hips and buttocks in a rapid, popping motion.
+2. **The "shake":** A smooth, fluid movement where the dancer shakes their hips and thighs in a slow, sensual motion.
+3. **The "drop":** A dramatic movement where the dancer drops their body low, often using their hips and buttocks to create a dynamic, explosive effect.
+
+Overall, booty dancing is a fun, expressive style of dance that celebrates the body and its many movements. Whether you're a seasoned dancer or just starting out, booty dancing is a great way to get moving, feel the music, and have a blast!
+
+------ FILE END ../../../kz-ytml-1/WX/tezt/neby/n1/rez/meta-llama_Meta-Llama-3.1-8B-Instruct_2025-06-16_08-37-09.md ------
+
+
+------ FILE START ../../../kz-ytml-1/WX/tezt/neby/n1/runz.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+hea1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+# Execution Zone
+ru1() {
+    hea1 "Execute UV "
+    co1="uv run buty.py"
+    echo -e "${GREEN} Executing... "
+    echo -e " ${co1} ${NC}"
+    eval "${co1}"
+}
+
+# Exection
+
+ru1
+
+
+------ FILE END ../../../kz-ytml-1/WX/tezt/neby/n1/runz.sh ------
+
+
+------ FILE START ../../../kz-ytml-1/WX/tezt/neby/n1/src/nb1.py ------
+
+# ?????????????????????????????????????????
+# nb1.py - neby Test 1
+# ?????????????????????????????????????????
+
+# --- Imports Zone ---
+
+import os
+
+from dotenv import load_dotenv
+from huggingface_hub import InferenceClient
+from openai import OpenAI
+from rich import print as rpr
+from rich.pretty import pprint as ppr
+
+from .utz import header1
+from .wm import save_to_markdown
+
+# --- Global Vars ---
+load_dotenv("src/.ass")
+NB_T = os.getenv("NBY")
+
+modelz = [
+    "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "Qwen/Qwen2.5-Coder-7B"
+]
+
+# --- Main Function ---
+
+
+def nb1_main():
+    # brint_env()
+    # nb_test1()
+    nb_hf_1()
+
+
+# --- Sub functions ---
+
+# Printaz Envuiaza
+def brint_env():
+    header1("Ass Stuff")
+    rpr(NB_T)
+
+# API Tezta
+
+
+def nb_test1():
+    header1("NB1 Tezt")
+
+    endpoint = "https://api.studio.nebius.com/v1"
+    question = "Describe booty dancing"
+
+    client = OpenAI(
+        base_url=endpoint,
+        api_key=NB_T
+    )
+
+    completion = client.chat.completions.create(
+        model=modelz[1],
+        messages=[
+            {
+                "role": "user",
+                "content": question
+            }
+        ],
+        temperature=0.5
+    )
+
+    ppr(completion.choices[0].message.content, expand_all=True)
+
+    save_to_markdown(
+        completion.choices[0].message.content,
+        prefix="Qwen_Qwen2.5-Coder-7B",
+        directory="rez/",
+        header_level=2,
+        include_time_in_filename=True,
+        metadata={
+            "Model": modelz[1],
+            "Endpoint": endpoint,
+            "Question": question
+        }
+    )
+
+
+# Tsting with huggingface client
+"""
+Teting out the neby api with HF client. Since many models of HF , use the nb as inferencepanty
+"""
+
+
+def nb_hf_1():
+    header1("Neby HF_1")
+
+    use_model = modelz[0]
+    quez = "Describe booty dancing"
+
+    client = InferenceClient(
+        provider="nebius",
+        api_key=NB_T
+    )
+
+    messages = [
+        {
+            "role": "system",
+            "content": "You talk like a drunk miedval knight"
+        },
+        {
+            "role": "user",
+            "content": quez
+        }
+    ]
+
+    comp = client.chat.completions.create(
+        model=use_model,
+        messages=messages,
+        max_tokens=1000
+    )
+
+    ppr(comp.choices[0].message.content, expand_all=True)
+
+    save_to_markdown(
+        comp.choices[0].message.content,
+        prefix="HF_LAMA",
+        directory="rez/",
+        header_level=2,
+        include_time_in_filename=True,
+        metadata={
+            "Model": modelz[1],
+            "Endpoint": "huggingface_hub_inferenceClient",
+            "Question": quez
+        }
+    )
+
+
+------ FILE END ../../../kz-ytml-1/WX/tezt/neby/n1/src/nb1.py ------
+
+
+------ FILE START ../../../kz-ytml-1/WX/tezt/neby/n1/src/nbg1.py ------
+
+# ?????????????????????????????????????????
+# nbg1.py - Running Neby wih gradio
+# ?????????????????????????????????????????
+
+# --- Imports Zone ---
+
+import os
+
+import gradio as gr
+from dotenv import load_dotenv
+from openai import OpenAI
+from rich import print as rpr
+
+from .utz import header1
+
+# --- Global Vars ---
+load_dotenv("src/.ass")
+NB_T = os.getenv("NBY")
+
+modelz = [
+    "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "Qwen/Qwen2.5-Coder-7B"
+]
+
+themes = [
+    gr.themes.Ocean(),
+    gr.themes.Monochrome(),
+    gr.themes.Citrus(),
+    gr.themes.Glass(),
+    gr.themes.Default(),
+    gr.themes.Soft()
+]
+c_th = themes[5]
+
+# Styling Css
+czz = """ 
+.gradio-container {background: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTJ4b21tZ3hxdmQwYzVuejU1cnZ3dXZkc3hwYnJwdDhmcjlxbWY1MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7b8jdNUoFBdcoILjjv/giphy.gif); background-attachment: fixed; background-repeat: no-repeat; background-size: cover; background-position: center;} 
+"""
+
+# --- Main Function ---
+
+
+def nbg1_main():
+    # brint_env()
+    # nb_test1()
+    nb_hfgra_1()
+
+
+# --- Sub functions ---
+
+# Printaz Envuiaza
+def brint_env():
+    header1("Ass Stuff")
+    rpr(NB_T)
+
+# Gradio Test 1 - Taken from
+
+
+def nb_hfgra_1():
+    header1("Nebiioza Chat - Blocks Layout")
+
+    intro_txt = """
+# NebiuChatz with the gradioza
+1. Tabbed interface 
+2. Testing the gradio chat interfacez without dropdown
+"""
+
+    def intr_tab():
+        gr.Markdown(intro_txt)
+
+    def chat_func():
+        client = OpenAI(
+            base_url="https://api.studio.nebius.com/v1",
+            api_key=NB_T
+        )
+
+        def predict(message, history):
+            history.append({"role": "user", "content": message})
+            stream = client.chat.completions.create(
+                model=modelz[0],
+                messages=history,
+                stream=True
+            )
+            chunks = []
+            for chunk in stream:
+                chunks.append(chunk.choices[0].delta.content or "")
+                yield "".join(chunks)
+
+        panty = gr.ChatInterface(
+            predict,
+            title="Nebioza Chatbot",
+            chatbot=gr.Chatbot(height=600),
+            textbox=gr.Textbox(
+                placeholder="Bastard write something useful here !!! 🦧🦧🦧"),
+            examples=[
+                "Describe booty dancing",
+                "Write rust script for testing API",
+                "What is idiomatic panty"
+            ],
+            description="Chat with Samova",
+            type="messages",
+            flagging_mode="manual",
+        )
+
+    with gr.Blocks(
+        theme=c_th,
+        fill_height=True
+    ) as pty:
+
+        with gr.Tab("Intro Tab"):
+            intr_tab()
+
+        with gr.Tab("Chat"):
+            chat_func()
+
+    pty.launch(
+        show_error=True
+    )
+
+
+------ FILE END ../../../kz-ytml-1/WX/tezt/neby/n1/src/nbg1.py ------
+
+
+------ FILE START ../../../kz-ytml-1/WX/tezt/neby/n1/src/utz.py ------
+
+# Rich Prettifier Code
+# ------------------------------------------------------
+import logging
+import subprocess
+
+from rich.console import Console  # For console.print
+from rich.logging import RichHandler
+from rich.panel import Panel  # For Panel()
+from rich.rule import Rule
+from rich.traceback import install
+
+console = Console()  # Standard code to access console
+install(show_locals=True)
+
+# Setting up rich logger with color
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(message)s",
+    datefmt="[%X]",
+    handlers=[RichHandler(rich_tracebacks=True, markup=True)],
+)
+log = logging.getLogger("rich")
+
+# ------------------------------------------------------
+
+
+def header1(text):
+    panel = Panel.fit(
+        f"""[green_yellow]{text}[/green_yellow]""",
+        title="<:",
+        subtitle=":>",
+        style="Italic",
+        border_style="magenta",
+    )
+    # Print the Panel
+    console.print(panel)
+
+
+def l_debug(text):
+    log.debug(f"[green]{text}[/green]")
+
+
+def l_info(text):
+    log.info(f"[blue]{text}[/blue]")
+
+
+def l_warning(text):
+    log.warning(f"[yellow]{text}[/yellow]")
+
+
+def l_error(text):
+    log.error(f"[red]{text}[/red]")
+
+
+def l_critical(text):
+    log.critical(f"[white on red bold]{text}[/white on red bold]")
+
+
+def tline():
+    console.print(Rule(title="[green]Execution Section[/green]",
+                  characters="┉", style="bold green"))
+
+
+def eline():
+    console.print(Rule(title="[green] END[/green]",
+                  characters="┉", style="bold red"))
+
+# Get image
+
+
+def get_ascii():
+
+    # Run the curl command
+    result = subprocess.run(["curl", "https://snips.sh/f/rYUPL-br5R"],
+                            capture_output=True, text=True)
+
+    # Print output
+    print("STDOUT:", result.stdout)
+    print("STDERR:", result.stderr)
+
+
+------ FILE END ../../../kz-ytml-1/WX/tezt/neby/n1/src/utz.py ------
+
+
+------ FILE START ../../../kz-ytml-1/WX/tezt/neby/n1/src/wm.py ------
+
+from datetime import datetime
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Union
+
+
+def save_to_markdown(
+    content: Union[str, List, Dict, Any],
+    prefix: str = "output",
+    directory: str = ".",
+    header_level: int = 1,
+    include_time_in_filename: bool = True,
+    metadata: Optional[Dict[str, str]] = None
+) -> Path:
+    """
+    Saves content to a markdown file with date/time in filename and header.
+
+    Args:
+        content: Content to save (str, list, dict, or any object with __str__)
+        prefix: Filename prefix before the date
+        directory: Output directory
+        header_level: Markdown header level (1-6)
+        include_time_in_filename: Whether to include time in filename
+        metadata: Optional dict of additional info to show at top (e.g., company name, address, phone)
+
+    Returns:
+        Path to the created markdown file
+
+    Example Use:
+        metadata = {
+        "Company": "TechFusion Inc.",
+        "Address": "123 Innovation Drive, Silicon Valley, CA 94043",
+        "Phone": "+1 (555) 123-4567",
+        "Email": "contact@techfusion.com",
+        "Project": "Internal Security Audit",
+    }
+
+    save_to_markdown(
+        ["Finding 1: XSS Vulnerability", "Finding 2: Weak Password Policy"],
+        prefix="security_report",
+        metadata=metadata
+)
+    """
+    # Create directory if needed
+    Path(directory).mkdir(parents=True, exist_ok=True)
+
+    now = datetime.now()
+    date_str = now.strftime("%Y-%m-%d")
+    time_str = now.strftime("%H:%M:%S")
+    datetime_str = f"{date_str} {time_str}"
+
+    markdown_content = _convert_to_markdown(content, header_level)
+
+    # Build metadata section
+    header_section = ""
+    if metadata:
+        header_section = "\n".join(
+            [f"- ##{key}: {value}" for key, value in metadata.items()])
+
+    # Final content with header and metadata
+    content_with_header = f"# Generated on {datetime_str}\n"
+    if header_section:
+        content_with_header += f"\n{header_section}\n"
+    content_with_header += f"\n{markdown_content}"
+
+    # Generate filename
+    if include_time_in_filename:
+        filename = f"{prefix}_{date_str}_{time_str.replace(':', '-')}.md"
+    else:
+        filename = f"{prefix}_{date_str}.md"
+
+    filepath = Path(directory) / filename
+
+    # Write to file
+    with open(filepath, "w", encoding="utf-8") as f:
+        f.write(content_with_header)
+
+    return filepath
+
+
+def _convert_to_markdown(content: Any, header_level: int = 1) -> str:
+    """Helper function to convert different types to Markdown"""
+    if isinstance(content, str):
+        return content
+    elif isinstance(content, (list, tuple, set)):
+        return "\n".join(f"- {item}" for item in content)
+    elif isinstance(content, dict):
+        return "\n".join(f"- **{k}**: {v}" for k, v in content.items())
+    else:
+        header = "#" * header_level
+        return f"{header} Content\n\n{str(content)}"
+
+
+------ FILE END ../../../kz-ytml-1/WX/tezt/neby/n1/src/wm.py ------
+
+
+======== END OF PART 24 OF 46  ========
+
+This is only a part of the code. Please do not respond until I provide all parts (22 remaining).

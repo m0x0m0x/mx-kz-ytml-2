@@ -1,0 +1,2557 @@
+======== PART 45 OF 46  ========
+
+
+------ FILE START ../../../mx/hfu1/uv.lock ------
+
+version = 1
+revision = 2
+requires-python = ">=3.13"
+
+[[package]]
+name = "certifi"
+version = "2025.4.26"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e8/9e/c05b3920a3b7d20d3d3310465f50348e5b3694f4f88c6daf736eef3024c4/certifi-2025.4.26.tar.gz", hash = "sha256:0a816057ea3cdefcef70270d2c515e4506bbc954f417fa5ade2021213bb8f0c6", size = 160705, upload-time = "2025-04-26T02:12:29.51Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4a/7e/3db2bd1b1f9e95f7cddca6d6e75e2f2bd9f51b1246e546d88addca0106bd/certifi-2025.4.26-py3-none-any.whl", hash = "sha256:30350364dfe371162649852c63336a15c70c6510c2ad5015b21c2345311805f3", size = 159618, upload-time = "2025-04-26T02:12:27.662Z" },
+]
+
+[[package]]
+name = "charset-normalizer"
+version = "3.4.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e4/33/89c2ced2b67d1c2a61c19c6751aa8902d46ce3dacb23600a283619f5a12d/charset_normalizer-3.4.2.tar.gz", hash = "sha256:5baececa9ecba31eff645232d59845c07aa030f0c81ee70184a90d35099a0e63", size = 126367, upload-time = "2025-05-02T08:34:42.01Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ea/12/a93df3366ed32db1d907d7593a94f1fe6293903e3e92967bebd6950ed12c/charset_normalizer-3.4.2-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:926ca93accd5d36ccdabd803392ddc3e03e6d4cd1cf17deff3b989ab8e9dbcf0", size = 199622, upload-time = "2025-05-02T08:32:56.363Z" },
+    { url = "https://files.pythonhosted.org/packages/04/93/bf204e6f344c39d9937d3c13c8cd5bbfc266472e51fc8c07cb7f64fcd2de/charset_normalizer-3.4.2-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:eba9904b0f38a143592d9fc0e19e2df0fa2e41c3c3745554761c5f6447eedabf", size = 143435, upload-time = "2025-05-02T08:32:58.551Z" },
+    { url = "https://files.pythonhosted.org/packages/22/2a/ea8a2095b0bafa6c5b5a55ffdc2f924455233ee7b91c69b7edfcc9e02284/charset_normalizer-3.4.2-cp313-cp313-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:3fddb7e2c84ac87ac3a947cb4e66d143ca5863ef48e4a5ecb83bd48619e4634e", size = 153653, upload-time = "2025-05-02T08:33:00.342Z" },
+    { url = "https://files.pythonhosted.org/packages/b6/57/1b090ff183d13cef485dfbe272e2fe57622a76694061353c59da52c9a659/charset_normalizer-3.4.2-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:98f862da73774290f251b9df8d11161b6cf25b599a66baf087c1ffe340e9bfd1", size = 146231, upload-time = "2025-05-02T08:33:02.081Z" },
+    { url = "https://files.pythonhosted.org/packages/e2/28/ffc026b26f441fc67bd21ab7f03b313ab3fe46714a14b516f931abe1a2d8/charset_normalizer-3.4.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6c9379d65defcab82d07b2a9dfbfc2e95bc8fe0ebb1b176a3190230a3ef0e07c", size = 148243, upload-time = "2025-05-02T08:33:04.063Z" },
+    { url = "https://files.pythonhosted.org/packages/c0/0f/9abe9bd191629c33e69e47c6ef45ef99773320e9ad8e9cb08b8ab4a8d4cb/charset_normalizer-3.4.2-cp313-cp313-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:e635b87f01ebc977342e2697d05b56632f5f879a4f15955dfe8cef2448b51691", size = 150442, upload-time = "2025-05-02T08:33:06.418Z" },
+    { url = "https://files.pythonhosted.org/packages/67/7c/a123bbcedca91d5916c056407f89a7f5e8fdfce12ba825d7d6b9954a1a3c/charset_normalizer-3.4.2-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:1c95a1e2902a8b722868587c0e1184ad5c55631de5afc0eb96bc4b0d738092c0", size = 145147, upload-time = "2025-05-02T08:33:08.183Z" },
+    { url = "https://files.pythonhosted.org/packages/ec/fe/1ac556fa4899d967b83e9893788e86b6af4d83e4726511eaaad035e36595/charset_normalizer-3.4.2-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:ef8de666d6179b009dce7bcb2ad4c4a779f113f12caf8dc77f0162c29d20490b", size = 153057, upload-time = "2025-05-02T08:33:09.986Z" },
+    { url = "https://files.pythonhosted.org/packages/2b/ff/acfc0b0a70b19e3e54febdd5301a98b72fa07635e56f24f60502e954c461/charset_normalizer-3.4.2-cp313-cp313-musllinux_1_2_ppc64le.whl", hash = "sha256:32fc0341d72e0f73f80acb0a2c94216bd704f4f0bce10aedea38f30502b271ff", size = 156454, upload-time = "2025-05-02T08:33:11.814Z" },
+    { url = "https://files.pythonhosted.org/packages/92/08/95b458ce9c740d0645feb0e96cea1f5ec946ea9c580a94adfe0b617f3573/charset_normalizer-3.4.2-cp313-cp313-musllinux_1_2_s390x.whl", hash = "sha256:289200a18fa698949d2b39c671c2cc7a24d44096784e76614899a7ccf2574b7b", size = 154174, upload-time = "2025-05-02T08:33:13.707Z" },
+    { url = "https://files.pythonhosted.org/packages/78/be/8392efc43487ac051eee6c36d5fbd63032d78f7728cb37aebcc98191f1ff/charset_normalizer-3.4.2-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:4a476b06fbcf359ad25d34a057b7219281286ae2477cc5ff5e3f70a246971148", size = 149166, upload-time = "2025-05-02T08:33:15.458Z" },
+    { url = "https://files.pythonhosted.org/packages/44/96/392abd49b094d30b91d9fbda6a69519e95802250b777841cf3bda8fe136c/charset_normalizer-3.4.2-cp313-cp313-win32.whl", hash = "sha256:aaeeb6a479c7667fbe1099af9617c83aaca22182d6cf8c53966491a0f1b7ffb7", size = 98064, upload-time = "2025-05-02T08:33:17.06Z" },
+    { url = "https://files.pythonhosted.org/packages/e9/b0/0200da600134e001d91851ddc797809e2fe0ea72de90e09bec5a2fbdaccb/charset_normalizer-3.4.2-cp313-cp313-win_amd64.whl", hash = "sha256:aa6af9e7d59f9c12b33ae4e9450619cf2488e2bbe9b44030905877f0b2324980", size = 105641, upload-time = "2025-05-02T08:33:18.753Z" },
+    { url = "https://files.pythonhosted.org/packages/20/94/c5790835a017658cbfabd07f3bfb549140c3ac458cfc196323996b10095a/charset_normalizer-3.4.2-py3-none-any.whl", hash = "sha256:7f56930ab0abd1c45cd15be65cc741c28b1c9a34876ce8c17a2fa107810c0af0", size = 52626, upload-time = "2025-05-02T08:34:40.053Z" },
+]
+
+[[package]]
+name = "colorama"
+version = "0.4.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44", size = 27697, upload-time = "2022-10-25T02:36:22.414Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335, upload-time = "2022-10-25T02:36:20.889Z" },
+]
+
+[[package]]
+name = "filelock"
+version = "3.18.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/0a/10/c23352565a6544bdc5353e0b15fc1c563352101f30e24bf500207a54df9a/filelock-3.18.0.tar.gz", hash = "sha256:adbc88eabb99d2fec8c9c1b229b171f18afa655400173ddc653d5d01501fb9f2", size = 18075, upload-time = "2025-03-14T07:11:40.47Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4d/36/2a115987e2d8c300a974597416d9de88f2444426de9571f4b59b2cca3acc/filelock-3.18.0-py3-none-any.whl", hash = "sha256:c401f4f8377c4464e6db25fff06205fd89bdd83b65eb0488ed1b160f780e21de", size = 16215, upload-time = "2025-03-14T07:11:39.145Z" },
+]
+
+[[package]]
+name = "fsspec"
+version = "2025.5.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f2/77/deb99b97981e2e191913454da82d406702405178631c31cd623caebaf1b1/fsspec-2025.5.0.tar.gz", hash = "sha256:e4f4623bb6221f7407fd695cc535d1f857a077eb247580f4ada34f5dc25fd5c8", size = 300989, upload-time = "2025-05-20T15:46:22.484Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2c/a9/a7022f58e081149ec0184c31ea81dcee605e1d46380b48122e1ef94ac24e/fsspec-2025.5.0-py3-none-any.whl", hash = "sha256:0ca253eca6b5333d8a2b8bd98c7326fe821f1f0fdbd34e1b445bddde8e804c95", size = 196164, upload-time = "2025-05-20T15:46:20.89Z" },
+]
+
+[[package]]
+name = "hfu1"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "huggingface-hub" },
+    { name = "python-dotenv" },
+    { name = "rich" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "huggingface-hub", specifier = ">=0.31.4" },
+    { name = "python-dotenv", specifier = ">=1.1.0" },
+    { name = "rich", specifier = ">=14.0.0" },
+]
+
+[[package]]
+name = "huggingface-hub"
+version = "0.31.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "filelock" },
+    { name = "fsspec" },
+    { name = "packaging" },
+    { name = "pyyaml" },
+    { name = "requests" },
+    { name = "tqdm" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/05/a0/7445e07427a917399db619e3c7383de3cd723c20d3b3a8a527a096c49a44/huggingface_hub-0.31.4.tar.gz", hash = "sha256:5a7bc710b9f9c028aee5b1476867b4ec5c1b92f043cb364d5fdc54354757e4ce", size = 407736, upload-time = "2025-05-19T09:37:13.73Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/33/c7/852d4473788cfd7d79b73951244b87a6d75fdac296c90aeb5e85dbb2fb5e/huggingface_hub-0.31.4-py3-none-any.whl", hash = "sha256:4f70704760296cc69b612916056e9845f5490a33782b924fc531767967acc15d", size = 489319, upload-time = "2025-05-19T09:37:11.506Z" },
+]
+
+[[package]]
+name = "idna"
+version = "3.10"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f1/70/7703c29685631f5a7590aa73f1f1d3fa9a380e654b86af429e0934a32f7d/idna-3.10.tar.gz", hash = "sha256:12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9", size = 190490, upload-time = "2024-09-15T18:07:39.745Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/76/c6/c88e154df9c4e1a2a66ccf0005a88dfb2650c1dffb6f5ce603dfbd452ce3/idna-3.10-py3-none-any.whl", hash = "sha256:946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3", size = 70442, upload-time = "2024-09-15T18:07:37.964Z" },
+]
+
+[[package]]
+name = "markdown-it-py"
+version = "3.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "mdurl" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/38/71/3b932df36c1a044d397a1f92d1cf91ee0a503d91e470cbd670aa66b07ed0/markdown-it-py-3.0.0.tar.gz", hash = "sha256:e3f60a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb", size = 74596, upload-time = "2023-06-03T06:41:14.443Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/42/d7/1ec15b46af6af88f19b8e5ffea08fa375d433c998b8a7639e76935c14f1f/markdown_it_py-3.0.0-py3-none-any.whl", hash = "sha256:355216845c60bd96232cd8d8c40e8f9765cc86f46880e43a8fd22dc1a1a8cab1", size = 87528, upload-time = "2023-06-03T06:41:11.019Z" },
+]
+
+[[package]]
+name = "mdurl"
+version = "0.1.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba", size = 8729, upload-time = "2022-08-14T12:40:10.846Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8", size = 9979, upload-time = "2022-08-14T12:40:09.779Z" },
+]
+
+[[package]]
+name = "packaging"
+version = "25.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz", hash = "sha256:d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f", size = 165727, upload-time = "2025-04-19T11:48:59.673Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl", hash = "sha256:29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484", size = 66469, upload-time = "2025-04-19T11:48:57.875Z" },
+]
+
+[[package]]
+name = "pygments"
+version = "2.19.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz", hash = "sha256:61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f", size = 4968581, upload-time = "2025-01-06T17:26:30.443Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8a/0b/9fcc47d19c48b59121088dd6da2488a49d5f72dacf8262e2790a1d2c7d15/pygments-2.19.1-py3-none-any.whl", hash = "sha256:9ea1544ad55cecf4b8242fab6dd35a93bbce657034b0611ee383099054ab6d8c", size = 1225293, upload-time = "2025-01-06T17:26:25.553Z" },
+]
+
+[[package]]
+name = "python-dotenv"
+version = "1.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/88/2c/7bb1416c5620485aa793f2de31d3df393d3686aa8a8506d11e10e13c5baf/python_dotenv-1.1.0.tar.gz", hash = "sha256:41f90bc6f5f177fb41f53e87666db362025010eb28f60a01c9143bfa33a2b2d5", size = 39920, upload-time = "2025-03-25T10:14:56.835Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1e/18/98a99ad95133c6a6e2005fe89faedf294a748bd5dc803008059409ac9b1e/python_dotenv-1.1.0-py3-none-any.whl", hash = "sha256:d7c01d9e2293916c18baf562d95698754b0dbbb5e74d457c45d4f6561fb9d55d", size = 20256, upload-time = "2025-03-25T10:14:55.034Z" },
+]
+
+[[package]]
+name = "pyyaml"
+version = "6.0.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/54/ed/79a089b6be93607fa5cdaedf301d7dfb23af5f25c398d5ead2525b063e17/pyyaml-6.0.2.tar.gz", hash = "sha256:d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e", size = 130631, upload-time = "2024-08-06T20:33:50.674Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ef/e3/3af305b830494fa85d95f6d95ef7fa73f2ee1cc8ef5b495c7c3269fb835f/PyYAML-6.0.2-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:efdca5630322a10774e8e98e1af481aad470dd62c3170801852d752aa7a783ba", size = 181309, upload-time = "2024-08-06T20:32:43.4Z" },
+    { url = "https://files.pythonhosted.org/packages/45/9f/3b1c20a0b7a3200524eb0076cc027a970d320bd3a6592873c85c92a08731/PyYAML-6.0.2-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:50187695423ffe49e2deacb8cd10510bc361faac997de9efef88badc3bb9e2d1", size = 171679, upload-time = "2024-08-06T20:32:44.801Z" },
+    { url = "https://files.pythonhosted.org/packages/7c/9a/337322f27005c33bcb656c655fa78325b730324c78620e8328ae28b64d0c/PyYAML-6.0.2-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0ffe8360bab4910ef1b9e87fb812d8bc0a308b0d0eef8c8f44e0254ab3b07133", size = 733428, upload-time = "2024-08-06T20:32:46.432Z" },
+    { url = "https://files.pythonhosted.org/packages/a3/69/864fbe19e6c18ea3cc196cbe5d392175b4cf3d5d0ac1403ec3f2d237ebb5/PyYAML-6.0.2-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:17e311b6c678207928d649faa7cb0d7b4c26a0ba73d41e99c4fff6b6c3276484", size = 763361, upload-time = "2024-08-06T20:32:51.188Z" },
+    { url = "https://files.pythonhosted.org/packages/04/24/b7721e4845c2f162d26f50521b825fb061bc0a5afcf9a386840f23ea19fa/PyYAML-6.0.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:70b189594dbe54f75ab3a1acec5f1e3faa7e8cf2f1e08d9b561cb41b845f69d5", size = 759523, upload-time = "2024-08-06T20:32:53.019Z" },
+    { url = "https://files.pythonhosted.org/packages/2b/b2/e3234f59ba06559c6ff63c4e10baea10e5e7df868092bf9ab40e5b9c56b6/PyYAML-6.0.2-cp313-cp313-musllinux_1_1_aarch64.whl", hash = "sha256:41e4e3953a79407c794916fa277a82531dd93aad34e29c2a514c2c0c5fe971cc", size = 726660, upload-time = "2024-08-06T20:32:54.708Z" },
+    { url = "https://files.pythonhosted.org/packages/fe/0f/25911a9f080464c59fab9027482f822b86bf0608957a5fcc6eaac85aa515/PyYAML-6.0.2-cp313-cp313-musllinux_1_1_x86_64.whl", hash = "sha256:68ccc6023a3400877818152ad9a1033e3db8625d899c72eacb5a668902e4d652", size = 751597, upload-time = "2024-08-06T20:32:56.985Z" },
+    { url = "https://files.pythonhosted.org/packages/14/0d/e2c3b43bbce3cf6bd97c840b46088a3031085179e596d4929729d8d68270/PyYAML-6.0.2-cp313-cp313-win32.whl", hash = "sha256:bc2fa7c6b47d6bc618dd7fb02ef6fdedb1090ec036abab80d4681424b84c1183", size = 140527, upload-time = "2024-08-06T20:33:03.001Z" },
+    { url = "https://files.pythonhosted.org/packages/fa/de/02b54f42487e3d3c6efb3f89428677074ca7bf43aae402517bc7cca949f3/PyYAML-6.0.2-cp313-cp313-win_amd64.whl", hash = "sha256:8388ee1976c416731879ac16da0aff3f63b286ffdd57cdeb95f3f2e085687563", size = 156446, upload-time = "2024-08-06T20:33:04.33Z" },
+]
+
+[[package]]
+name = "requests"
+version = "2.32.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "certifi" },
+    { name = "charset-normalizer" },
+    { name = "idna" },
+    { name = "urllib3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz", hash = "sha256:55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760", size = 131218, upload-time = "2024-05-29T15:37:49.536Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f9/9b/335f9764261e915ed497fcdeb11df5dfd6f7bf257d4a6a2a686d80da4d54/requests-2.32.3-py3-none-any.whl", hash = "sha256:70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6", size = 64928, upload-time = "2024-05-29T15:37:47.027Z" },
+]
+
+[[package]]
+name = "rich"
+version = "14.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "markdown-it-py" },
+    { name = "pygments" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a1/53/830aa4c3066a8ab0ae9a9955976fb770fe9c6102117c8ec4ab3ea62d89e8/rich-14.0.0.tar.gz", hash = "sha256:82f1bc23a6a21ebca4ae0c45af9bdbc492ed20231dcb63f297d6d1021a9d5725", size = 224078, upload-time = "2025-03-30T14:15:14.23Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0d/9b/63f4c7ebc259242c89b3acafdb37b41d1185c07ff0011164674e9076b491/rich-14.0.0-py3-none-any.whl", hash = "sha256:1c9491e1951aac09caffd42f448ee3d04e58923ffe14993f6e83068dc395d7e0", size = 243229, upload-time = "2025-03-30T14:15:12.283Z" },
+]
+
+[[package]]
+name = "tqdm"
+version = "4.67.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a8/4b/29b4ef32e036bb34e4ab51796dd745cdba7ed47ad142a9f4a1eb8e0c744d/tqdm-4.67.1.tar.gz", hash = "sha256:f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2", size = 169737, upload-time = "2024-11-24T20:12:22.481Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d0/30/dc54f88dd4a2b5dc8a0279bdd7270e735851848b762aeb1c1184ed1f6b14/tqdm-4.67.1-py3-none-any.whl", hash = "sha256:26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2", size = 78540, upload-time = "2024-11-24T20:12:19.698Z" },
+]
+
+[[package]]
+name = "typing-extensions"
+version = "4.13.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f6/37/23083fcd6e35492953e8d2aaaa68b860eb422b34627b13f2ce3eb6106061/typing_extensions-4.13.2.tar.gz", hash = "sha256:e6c81219bd689f51865d9e372991c540bda33a0379d5573cddb9a3a23f7caaef", size = 106967, upload-time = "2025-04-10T14:19:05.416Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8b/54/b1ae86c0973cc6f0210b53d508ca3641fb6d0c56823f288d108bc7ab3cc8/typing_extensions-4.13.2-py3-none-any.whl", hash = "sha256:a439e7c04b49fec3e5d3e2beaa21755cadbbdc391694e28ccdd36ca4a1408f8c", size = 45806, upload-time = "2025-04-10T14:19:03.967Z" },
+]
+
+[[package]]
+name = "urllib3"
+version = "2.4.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz", hash = "sha256:414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466", size = 390672, upload-time = "2025-04-10T15:23:39.232Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6b/11/cc635220681e93a0183390e26485430ca2c7b5f9d33b15c74c2861cb8091/urllib3-2.4.0-py3-none-any.whl", hash = "sha256:4e16665048960a0900c702d4a66415956a584919c03361cac9f1df5c5dd7e813", size = 128680, upload-time = "2025-04-10T15:23:37.377Z" },
+]
+
+
+------ FILE END ../../../mx/hfu1/uv.lock ------
+
+
+------ FILE START ../../../mx/in.sh ------
+
+#!/bin/bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /home/codespace/.profile
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/codespace/.profile
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+sudo apt-get install build-essential
+brew install gcc
+echo "Now run - fish shell - source ~/.profile"
+echo "Now run - Fish shell - source $HOME/.cargo.env" 
+source "/home/codespace/.profile"
+source "$HOME/.cargo/env"
+
+------ FILE END ../../../mx/in.sh ------
+
+
+------ FILE START ../../../mx/jupyset.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+hea1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+b1() {
+    hea1 "UV Jupyter Lan Installation Commands"
+}
+
+c1() {
+    # Get name of Project
+    echo -e "Enter the name of the project: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # Commands to execute
+    CO1="uv init $name_of_project"
+    CO2="cd $name_of_project"
+    CO3="uv add --dev ipykernel"
+    CO4="uv tree"
+
+    # Show Commands
+    echo -e ""
+    echo -e "${GREEN}---Commands to execute:---"
+    echo -e ">$CO1"
+    echo -e ">$CO2"
+    echo -e ">$CO3"
+    echo -e ">$CO4"
+    echo -e "Executing....${NC}"
+
+    # Execution Commands
+    eval "$CO1"
+    eval "$CO2"
+    eval "$CO3"
+    eval "$CO4"
+
+}
+
+# Execution
+b1
+c1
+
+
+------ FILE END ../../../mx/jupyset.sh ------
+
+
+------ FILE START ../../../mx/kch.fish ------
+
+#!/bin/fish
+/workspace/addbannrzzz/wz/pnp.fish
+/workspace/addbannrzzz/wz/fixrs.fish
+/workspace/addbannrzzz/wz/st.sh
+/workspace/addbannrzzz/wz/aryt.fish
+/workspace/addbannrzzz/wz/tgpt.fish
+/workspace/addbannrzzz/wz/bun.fish
+/workspace/addbannrzzz/wz/uv.fish
+/workspace/addbannrzzz/wz/tmuxx.fish
+
+
+
+
+------ FILE END ../../../mx/kch.fish ------
+
+
+------ FILE START ../../../mx/klinstall.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+b1() {
+    echo -e "${CYAN} ======================"
+    echo -e "Setup up KaliLinux Docker Image"
+    echo -e " ======================${NC}"
+}
+
+c1() {
+    COM1="docker run -it --privileged -v .:/panty kalilinux/kali-rolling:latest bash"
+    echo -e "${GREEN} ${COM1} "
+    echo -e "execute - apt update && apt -y install kali-linux-headless when done${NC}"
+    eval ${COM1}
+}
+
+# Execution
+b1
+c1
+
+
+------ FILE END ../../../mx/klinstall.sh ------
+
+
+------ FILE START ../../../mx/kronz.sh ------
+
+#!/bin/bash
+
+# Function to execute every minute
+minute_task() {
+    while true; do
+        # Get the current timestamp
+        timestamp=$(date "+%Y-%m-%d %H:%M:%S")
+
+        # Perform your desired task here (e.g., check a log file, update a database)
+        echo "[$timestamp] Minute task executed " >>time.txt
+        ./g
+
+        sleep 10 # Sleep for 60 seconds (1 minute)
+    done
+}
+minute_task
+
+
+------ FILE END ../../../mx/kronz.sh ------
+
+
+------ FILE START ../../../mx/lickxx.txt ------
+
+---
+
+
+_________________________$$$$$$$________________
+________________________$$$$$$$$$$______________
+________________________$$$$$$$$$$$_____________
+_________________________$$$$$$$$$$$$$$_________
+__________________________$$$$$$$$$$$___________
+_____________________________$$$$$$$$$$$$$______
+___________________________$$$$$$$$$$___________
+_________________________$$$$$$$$$$$$$$$________
+________________$$$______$$$$$$$$$$$$$$_________
+______________$$$$$$$$_____$$$$$$__$$$$$________
+_____________$$$$$$$$$$_____$$$$____$$$$$_______
+___________$$$$$$_$$$$$$$$__$$$$______$$$$______
+__________$$$$$_____$$$$$$$$_$$$$_______$$$_____
+________$$$$$_________$$$$$$$$$$$$_______$$$____
+_______$$$_____________$$$$$$$$$$$________$$$___
+_____$$$________________$$$$$$$$$$________$$$$$$
+__$$$$$$__________________$$$$$$$_______________
+
+---
+
+------ FILE END ../../../mx/lickxx.txt ------
+
+
+------ FILE START ../../../mx/lix.fish ------
+
+#!/usr/bin/env fish
+echo -e ""
+echo -e "This will install the following"
+echo -e "1. Rust "
+echo -e "2. Fish "
+echo -e "3. Rust - eza fd-find starship"
+echo -e ""
+# Rust Installation
+yes | curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup update
+cargo --version
+
+# Fish Install
+sudo apt-add-repository ppa:fish-shell/release-4 -y
+sudo apt update -y
+sudo apt install fish -y
+sudo apt install shellcheck
+
+# Brwe Install
+brew install fzf
+yes | /home/linuxbrew/.linuxbrew/opt/fzf/install
+fzf_key_bindings
+
+# Cargo Installs
+echo "Cargo Installs "
+echo "eza = exa alternative"
+echo "fd-find = find alternative"
+echo "starship = starship prompt"
+echo "ripgrep = grep alternative"
+echo "cfonts = Text banner"
+echo "artem = Image to color ascii"
+echo "bat = cat alternative"
+echo "lolcrab = Rainbow text generator"
+echo "bottom = Alternative to btop in rust"
+
+cargo install eza fd-find starship ripgrep cfonts artem bat lolcrab image-to-ascii bottom
+
+# Starship init and preset
+echo "starship init fish | source" >~/.config/fish/config.fish
+starship preset pure-preset >~/.config/starship.toml
+cp ./mx/config2.fish ~/.config/fish/config.fish
+
+# Installing UV and BUN
+curl -LsSf https://astral.sh/uv/install.sh | sh
+echo 'uv generate-shell-completion fish | source' >>~/.config/fish/config.fish
+echo 'uvx --generate-shell-completion fish | source' >>~/.config/fish/config.fish
+curl -fsSL https://bun.sh/install | bash
+source ~/.bashrc && source ~/,profile
+
+
+------ FILE END ../../../mx/lix.fish ------
+
+
+------ FILE START ../../../mx/manim.fish ------
+
+#!/bin/fish 
+echo "
+ ███╗   ███╗  █████╗  ███╗   ██╗ ██╗ ███╗   ███╗
+ ████╗ ████║ ██╔══██╗ ████╗  ██║ ██║ ████╗ ████║
+ ██╔████╔██║ ███████║ ██╔██╗ ██║ ██║ ██╔████╔██║
+ ██║╚██╔╝██║ ██╔══██║ ██║╚██╗██║ ██║ ██║╚██╔╝██║
+ ██║ ╚═╝ ██║ ██║  ██║ ██║ ╚████║ ██║ ██║ ╚═╝ ██║
+ ╚═╝     ╚═╝ ╚═╝  ╚═╝ ╚═╝  ╚═══╝ ╚═╝ ╚═╝     ╚═╝"
+echo " ====================================== "
+echo " Make custom animations in python, have mistress fart in your nose"
+echo "This will install manim in your system"
+echo " Main Website - https://docs.manim.community/en/stable/installation/linux.html "
+echo " This fish will run the following commands "
+echo "  - sudo apt update"
+echo "  - sudo apt install build-essential python3-dev libcairo2-dev libpango1.0-dev ffmpeg"
+echo "  - pip3 install manim "
+sudo apt install build-essential python3-dev libcairo2-dev libpango1.0-dev ffmpeg -y
+pip3 install manim
+manim 
+
+------ FILE END ../../../mx/manim.fish ------
+
+
+------ FILE START ../../../mx/mong.fish ------
+
+#!/usr/bin/env fish 
+echo ""
+echo "Install mongosh - mongodb cli"
+echo ""
+echo " Commands to be run"
+echo "--------------------"
+echo ""
+echo (set_color magenta)"wget https://downloads.mongodb.com/compass/mongodb-mongosh_2.1.0_amd64.deb"
+echo (set_color magenta)"sudo dpkg -i mongodb-mongosh_2.1.0_amd64.deb"
+echo (set_color magenta)"mongosh --version"
+echo (set_color white)""
+wget https://downloads.mongodb.com/compass/mongodb-mongosh_2.1.0_amd64.deb
+sudo dpkg -i mongodb-mongosh_2.1.0_amd64.deb
+mongosh --version
+rm mongodb-mongosh_2.1.0_amd64.deb
+echo "Done Lick her pussy!"
+echo ""
+
+------ FILE END ../../../mx/mong.fish ------
+
+
+------ FILE START ../../../mx/mw.fish ------
+
+#!/bin/fish 
+echo "Command for making wallets"
+echo ""
+echo "**************************************************"
+echo ""
+echo "How Many wallets to create ? - txt File will be created with the input number"
+read -l wax
+echo ""
+echo "**************************************************"
+for i in (seq 1 $wax)
+    echo ""
+    echo "---------------------------------------"
+    echo "New Wallet $i"
+    cast w n 
+    echo "---------------------------------------"
+end &> $wax.txt 
+
+------ FILE END ../../../mx/mw.fish ------
+
+
+------ FILE START ../../../mx/nu.md ------
+
+# Installation of starship with nushell
+
+Step 1
+
+```rs
+hx $nu.env-path
+```
+
+then add
+
+```rs
+mkdir ~/.cache/starship
+starship init nu | save ~/.cache/starship/init.nu
+```
+
+After doing this we have to make sure that it gets sourced by nushell.
+
+Step 2
+
+```rs
+hx $nu.config-path
+```
+
+Then
+
+```rs
+starship preset pure-preset > ~/.config/starship.toml
+```
+
+- Some times there can be problems with this method.
+- So dont add it , and just source it every time
+
+Step 3
+
+```rs
+source ~/.cache/starship/init.nu
+```
+
+
+------ FILE END ../../../mx/nu.md ------
+
+
+------ FILE START ../../../mx/nu.sh ------
+
+
+
+------ FILE END ../../../mx/nu.sh ------
+
+
+------ FILE START ../../../mx/nvi.fish ------
+
+#!/bin/fish
+
+# Downlad binary from here 
+# https://github.com/neovim/neovim/releases/tag/nightly 
+
+
+
+wget https://github.com/neovim/neovim/releases/tag/nightly 
+
+# Them make app image executable 
+
+./nvim.appimage --appimage-extract 
+
+# Copy ./squashfs-root/usr/bin/nvim to bin
+
+sudo cp ./squashfs-root/usr/bin/nvim /bin
+
+------ FILE END ../../../mx/nvi.fish ------
+
+
+------ FILE START ../../../mx/ollam_ai.txt ------
+
+https://ollama.ai/
+- This lets you run models locally, so far they have best models including mistral 
+
+Installation instruction - 
+This is taken from their official github repo 
+https://github.com/jmorganca/ollama
+> curl https://ollama.ai/install.sh | sh 
+
+Once installation is over 
+Open two terminals 
+Terminal 1         Terminal 2 
+>ollama serve      > ollama run mistral
+
+- Now in the second terminal you can type and chat with the model
+- There must be some way of running models in google collab , but larger models require more ram 
+or there is a hugging face method of running install
+
+Note Uncensore Model List 
+https://erichartford.com/uncensored-models
+
+Also here is a cheaper GPu Service 
+https://www.runpod.io/
+
+------ FILE END ../../../mx/ollam_ai.txt ------
+
+
+------ FILE START ../../../mx/pdtmz.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+h1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+# pdtm installz
+
+pd_all() {
+    h1 "PDTM Install via pdtm"
+
+    co1="go install -v github.com/projectdiscovery/pdtm/cmd/pdtm@latest"
+    co2="pdtm -ia"
+    co3="sudo apt install -y libpcap-dev"
+
+    echo -e "${GREEN}Installing PDTM Manager....${NC}"
+    echo -e "${GREEN}$co1${NC}"
+    eval "$co3"
+    eval "$co1"
+
+    echo -e "${GREEN}Running PDTM Manager....${NC}"
+    echo -e "${GREEN}$co2${NC}"
+    eval "$co2"
+
+}
+
+# --- make and move massdns into /urs/local/bin - needed for shuffle dns in pj
+massdnsinstall() {
+    h1 "Build MassDns and install in /usr/local/bing"
+    c1="git clone https://github.com/blechschmidt/massdns"
+    c2="cd massdns && make"
+    c3="sudo cp bin/massdns /usr/local/bin"
+    echo -e "${GREEN}$c1${NC}"
+    eval "$c1"
+    echo -e "${GREEN}$c2${NC}"
+    eval "$c2"
+    echo -e "${GREEN}$c3${NC}"
+    eval "$c3"
+}
+
+# Rustscan - nmap faster alternative installation
+# https://github.com/bee-san/RustScan - Official Repo
+rustscan1() {
+    h1 "Rustscan Install"
+    co1="brew install rustscan"
+    echo -e "${GREEN}$co1${NC}"
+    eval "$co1"
+}
+
+# Function to install Nmap, Ncat, and Nping
+install_nmap_tools() {
+    # Update package lists
+    sudo apt-get update
+
+    # Install alien and dpkg if not already installed
+    sudo apt-get install -y alien dpkg wget
+
+    # Define the base URL for Nmap downloads
+    BASE_URL="https://nmap.org/dist"
+
+    # Define the versions and packages to download
+    declare -A packages=(
+        ["nmap"]="nmap-7.92-1.x86_64.rpm"
+        ["ncat"]="ncat-7.92-1.x86_64.rpm"
+        ["nping"]="nping-0.7.92-1.x86_64.rpm"
+    )
+
+    # Loop through each package, download, convert, and install
+    for tool in "${!packages[@]}"; do
+        rpm_file="${packages[$tool]}"
+        deb_file="${rpm_file%.rpm}.deb"
+
+        # Download the RPM package
+        wget "${BASE_URL}/${rpm_file}"
+
+        # Convert RPM to DEB
+        sudo alien --to-deb "${rpm_file}"
+
+        # Install the DEB package
+        sudo dpkg --install "${deb_file}"
+
+        # Clean up downloaded and converted files
+        rm "${rpm_file}" "${deb_file}"
+    done
+
+    echo "Installation of Nmap, Ncat, and Nping is complete."
+}
+
+# Execution
+massdnsinstall
+pd_all
+rustscan1
+install_nmap_tools
+
+
+------ FILE END ../../../mx/pdtmz.sh ------
+
+
+------ FILE START ../../../mx/pnp.fish ------
+
+#!/bin/fish 
+npm install -g npm@latest
+npm update -g pnpm
+pnpm add -g pnpm
+pnpm --version 
+pnpm config set auto-install-peers true
+
+------ FILE END ../../../mx/pnp.fish ------
+
+
+------ FILE START ../../../mx/redis.fish ------
+
+#!/bin/fish
+echo "Installing redis , so you eat her snots !"
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+sudo apt-get update -y 
+sudo apt-get install redis -y 
+
+------ FILE END ../../../mx/redis.fish ------
+
+
+------ FILE START ../../../mx/repomix.sh ------
+
+#!/bin/bash
+
+# Install fish
+echo ""
+echo "Installing Repmix"
+echo " Website Method - https://repomix.com/"
+echo ""
+echo ""
+bun install -g repomix
+
+
+------ FILE END ../../../mx/repomix.sh ------
+
+
+------ FILE START ../../../mx/rp.fish ------
+
+#!/bin/fish 
+
+#*******************************************DRINKHERPISS***********************************************************************
+
+### SCANS API ### 
+
+set LETH Q1D5Z7Q7B5EP84IGT69EA3E92STYGP45RR
+set LMUM HEGDN2R3N7684K6M9B983ZQMGAMWMQHEZ3
+set LSEP CWPJSZX9EA1ZDTATM4D5PJXJ8U8T2KR57C 
+
+### ALCHEMY RPCS ### 
+
+set LAETH https://eth-mainnet.g.alchemy.com/v2/nab-2AFbLteBD46nMZeHKW--lkmQmlNa
+set LAGOE https://eth-goerli.g.alchemy.com/v2/wfowE284fYsqh-laeF5qmjOTQ3YTwuX_
+set LAMUM https://polygon-mumbai.g.alchemy.com/v2/DlxcFxU5u-OioYGMvKhwWsAzAknhvQYd
+set LAARG https://arb-goerli.g.alchemy.com/v2/-6a6qvz5RGQhqJD5q9CUw25LRoNa-N5t
+
+### MORALIS ### 
+set LMORA yL8KDGXJrrRXwRrgZMAEUvCUM13sCXmNuBwUYvAmMl2BVER5kNn8zz3CQmJv3b1A
+
+### INFURA RPC ### 
+set LIETH https://mainnet.infura.io/v3/4d9f7fa54ce44d1aa3319dca50aa3dd7
+set LIGOE https://goerli.infura.io/v3/4d9f7fa54ce44d1aa3319dca50aa3dd7
+set LISEP https://sepolia.infura.io/v3/4d9f7fa54ce44d1aa3319dca50aa3dd7
+set LIFIL https://2L00pf1WwNdm3vcCFp7oH74MK48:8a72b1099ec87787c160d5a488c6b972@filecoin.infura.io
+
+### QuickNode BSC ### 
+set LQBSCT https://sparkling-boldest-brook.bsc-testnet.discover.quiknode.pro/9c0a1ccf523e238a5e6d574a36ea192f5fcfb747
+
+### PUBIC RPC ### 
+# ANKR PUBLIC RPC - https://www.ankr.com/rpc/
+# CHAINLIST RPC - https://chainlist.org/
+
+#*******************************************SMELLHERFART***********************************************************************  
+
+# Set Bastard Walley from l/l/4.txt
+
+set LW1 0x498b302db295199b81af90Df66F330D5dA2776D0
+set LW1K 0x608a510934421f52fa4636080a8765f742122c527aec807fb83900ae4ed57a64
+
+
+set LW2 0xfB4E8AfEaB22c5a7AC8F4c719D2D75b93bdc5CFa
+set LW2K 0xbfd81cadf97bed4c4a5f75b12f1b5e9315eee787f24a9b14b1c94dde2f139bba
+
+set LW3 0x9436E627D55c5c7d8247bEa3d5E35B9ab8e44006
+set LW3K 0x49643a1fac5e213c767dad6f7654d5288b564b5bda1c39c2c340e184649f0a71
+
+set LW4 0xFB4086b4Ae138B2e91B64f47385ffdac8112f526
+set LW4K 0x8e6362e5d9a4a281680161a50c8fb5898929095b18ebbd58c716d844814cce24
+
+
+
+------ FILE END ../../../mx/rp.fish ------
+
+
+------ FILE START ../../../mx/runfo.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+hea1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+foset() {
+    hea1 "Setup a foundry project, setup uv venv and install slither"
+    # Get name of Project
+    echo -e "Enter the name of the project: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # Commands to execute
+    CO1="forge init --no-commit --no-git --force --vscode $name_of_project && cd $name_of_project "
+    CO2="uv venv && source venv/bin/activate.fish"
+    CO3="uv pip install slither-analyzer"
+    CO4="solc-select install 0.8.13 && solc-select use 0.8.13"
+
+    # Execution Commands
+    eval "$CO1"
+    eval "$CO2"
+    eval "$CO3"
+    eval "$CO4"
+
+    echo -e "${GREEN}Now run ${CO4}${NC}"
+}
+
+fo_only() {
+    hea1 "Setup a foundry project, setup uv venv and install slither"
+    # Get name of Project
+    echo -e "Enter the name of the project: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # Commands to execute
+    CO1="forge init --no-commit --no-git --force --vscode $name_of_project && cd $name_of_project "
+
+    # Execution Commands
+    eval "$CO1"
+
+    echo -e "${GREEN}Foundry Only Install ${CO4}${NC}"
+}
+
+######### Foundry Executions ############
+
+# Declare the rpc and key arrays
+rpcz=(
+    "https://eth-sepolia.g.alchemy.com/v2/YfG5-esHajH3FpsLvC4eMFMEFYl9Lqcg"
+    "https://eth-holesky.g.alchemy.com/v2/YfG5-esHajH3FpsLvC4eMFMEFYl9Lqcg"
+)
+keyz=(
+    "0x3f03926cdb1f85a7b189060f53b0d055eb8c0cc9a838e929525eded8d7440dde"
+    "0x6ce075e337c519ed35567152183557bbfec6d8c33d480464539a1fa2fd53dc04"
+    "0xf66f5d4d5e2c7477f1139c94308732eb962309c2808838be8d7331f1a0b6806c"
+)
+accz=(
+    "0x2ce40e5d9BC00dA5f397690E83E88183c4d4b23F"
+    "0x5508D7e21f7B096481AfCc9bA2e2a405Be96b878"
+    "0x2C1381655097598Bae22c5326b0F3B43220a18c4"
+)
+ETHERSCAN_API_KEY="2JEANQYC4C9S6PKDFWNGVT2UER24T32D2M"
+
+# Testing
+fo_test() {
+    hea1 "Foundry Run"
+    CO1="forge test"
+    eval "$CO1"
+}
+
+# Contract Deploy with verfication
+fo_create() {
+
+    hea1 "Foundry Create - One of contract deployment"
+
+    CONTRACT_PATH="src/Counter.sol:Counter"
+
+    # RPC_URL="https://eth-sepolia.g.alchemy.com/v2/YfG5-esHajH3FpsLvC4eMFMEFYl9Lqcg"
+    # PRIVATE_KEY="0x3f03926cdb1f85a7b189060f53b0d055eb8c0cc9a838e929525eded8d7440dde"
+    # ETHERSCAN_API_KEY="2JEANQYC4C9S6PKDFWNGVT2UER24T32D2M"
+
+    CO1="forge create ${CONTRACT_PATH} \
+  --rpc-url ${rpcz[1]} \
+  --private-key ${keyz[1]} \
+  --etherscan-api-key ${ETHERSCAN_API_KEY} \
+  --verify --broadcast"
+
+    eval "$CO1"
+    echo -e "${GREEN}Successfully deployed contract${NC}"
+
+}
+
+fo_script() {
+    hea1 "Foundry Script - One of contract deployment"
+
+    CO1="forge script script/Counter.s.sol:CounterScript \
+        --rpc-url ${rpcz[1]} \
+        --private-key ${keyz[1]} \
+        --broadcast"
+
+    eval "$CO1"
+    echo -e "${GREEN}Successfully deployed contract${NC}"
+}
+
+# Execution
+# foset # Setup a new foundry project with slither
+# fo_only # Setup only foundry project
+# fo_test # Run the tests
+# fo_create # Deploy the contract with verification
+# fo_script # Run the script
+
+
+------ FILE END ../../../mx/runfo.sh ------
+
+
+------ FILE START ../../../mx/solp.fish ------
+
+#!/usr/bin/env fish 
+echo -e ""
+echo -e ""
+echo -e (set_color 02FEEC) "----------------------"
+echo -e ""
+echo -e " Installing Solidity Panty"
+echo -e ""
+echo -e " Foundry : curl -L https://foundry.paradigm.xyz | bash"
+echo -e " Aderyn  : curl -L https://raw.githubusercontent.com/Cyfrin/aderyn/dev/cyfrinup/install | bash "
+echo -e " Soldeer : cargo install soldeer"
+echo -e ""
+echo -e "----------------------"
+echo -e (set_color 06D001)""
+echo -e " Installing Foundry..."
+curl -L https://foundry.paradigm.xyz | bash 
+foundrup
+mkdir -p $HOME/.config/fish/completions
+forge completions fish > $HOME/.config/fish/completions/forge.fish
+cast completions fish > $HOME/.config/fish/completions/cast.fish
+anvil completions fish > $HOME/.config/fish/completions/anvil.fish
+source $HOME/.config/fish/config.fish
+echo -e ""
+echo -e "Installing Aderyn"
+brew install cyfrin/tap/aderyn
+echo -e ""
+echo -e " Now restart the shell and run the following"
+echo -e (set_color F9E400)""
+echo -e "foundryup "
+echo -e "cyfrinup"
+echo -e "" 
+echo -e "" 
+
+------ FILE END ../../../mx/solp.fish ------
+
+
+------ FILE START ../../../mx/ssh.fish ------
+
+#!/bin/fish
+# Accessing Snips , the above is being made for that purpose 
+# ssh -i <key> snips.sh
+# Then you can send a file like this 
+# bat pantysmell.txt | ssh -i bootylick snips.sh 
+# Change persmission to fix errors 
+# chmod 600 *
+
+ssh-keygen -t ed25519 
+
+echo "...changing permission to 600.."
+echo " chmod 600 *"
+chmod 600 *
+
+------ FILE END ../../../mx/ssh.fish ------
+
+
+------ FILE START ../../../mx/st.sh ------
+
+#!/bin/bash
+echo "####### SET ENVIRONMENT FOR RUST AND BREW"
+source "$HOME/.profile"
+source "$HOME/.cargo/env"
+echo "#############Setup Fish#############"
+echo "#############Setup Fish#############"
+echo "#############Setup Fish#############"
+echo "#############Setup Fish#############"
+sudo apt-add-repository ppa:fish-shell/release-4 -y
+sudo apt update
+sudo apt install fish -y
+echo ""
+echo "==================================="
+echo ""
+echo "############# Fup #############"
+echo "############# Fup #############"
+echo "############# Fup #############"
+echo "############# Fup #############"
+echo "***"
+echo ""
+echo ""
+echo " This bash script will run commands for a full update "
+echo " commands have been taken from this site "
+echo ""
+echo " https://null-byte.wonderhowto.com/how-to/top-10-things-do-after-installing-kali-linux-0186450/"
+echo ""
+echo "   Commands that will be run "
+echo "   --------------------------"
+echo "       sudo apt-get update "
+echo "       sudo apt-get dist-upgrade -Vy "
+echo "       sudo apt-get autoremove -y "
+echo "       sudo apt-get autoclean "
+echo "       sudo apt-get clean "
+echo "       cargo install-update -a"
+echo "       cargo install cargo-update"
+echo "       rustup update"
+echo "       sudo apt-add-repository ppa:fish-shell/release-3 -y"
+echo "       sudo apt-get install fish"
+echo "       sudo apt install libwebkit2gtk-4.0-dev libgtk-3-dev libappindicator3-dev -y"
+echo "       sudo apt-add-repository ppa:fish-shell/release-3"
+echo "       sudo apt-get install fish"
+echo ""
+sudo apt-get update
+sudo apt-get dist-upgrade -Vy
+sudo apt-get autoremove -y
+sudo apt-get autoclean
+sudo apt-get clean
+sudo apt install cmake -y
+sudo apt install neofetch -y
+cargo install-update -a
+cargo install cargo-update
+cargo install --locked cargo-modules
+rustup update
+sudo apt-add-repository ppa:fish-shell/release-3 -y
+sudo apt install libwebkit2gtk-4.0-dev libgtk-3-dev libappindicator3-dev -y
+sudo apt-get install fish -y
+sudo apt install openvpn -y
+echo ""
+echo ""
+echo ""
+echo "Version of Kali "
+echo "This will be executed with the command $ lbs_release -a"
+echo ""
+lsb_release -a
+echo ""
+echo ""
+echo " Now lets see the version with neofetch command $ neofetch"
+echo ""
+neofetch
+echo ""
+echo ""
+echo "############### CARGO INSTALLS ###############"
+echo "############### CARGO INSTALLS ###############"
+echo "############### CARGO INSTALLS ###############"
+echo "############### CARGO INSTALLS ###############"
+cargo install exa fd-find ripgrep du-dust starship bat artem nu image-to-ascii lolcrab prettydiff cfonts
+cargo install cargo-nextest --locked
+echo ""
+echo ""
+echo "############### BREW INSTALLS ###############"
+echo "############### BREW INSTALLS ###############"
+echo "############### BREW INSTALLS ###############"
+brew install fzf helix
+yes | /home/linuxbrew/.linuxbrew/opt/fzf/install
+fzf_key_bindings
+echo ""
+echo ""
+echo "############ STARSHIP ########################"
+echo "############ STARSHIP ########################"
+echo "############ STARSHIP ########################"
+echo -e " First Install for Fish Shell"
+echo "starship init fish | source" >~/.config/fish/config.fish
+starship preset pure-preset >~/.config/starship.toml
+# And add the following to the end of your Nushell configuration (find it by running $nu.config-path
+#source ~/.cache/starship/init.n
+echo "###### Add shit to config fish ##########"
+echo "Pulling down config.fish --->"
+echo "cp ./gwz/config.fish ~/.config/fish/"
+cp ./lq/config2.fish ~/.config/fish/
+
+
+------ FILE END ../../../mx/st.sh ------
+
+
+------ FILE START ../../../mx/st.sh.1 ------
+
+#!/bin/bash 
+echo "####### SET ENVIRONMENT FOR RUST AND BREW"
+source "$HOME/.profile"
+source "$HOME/.cargo/env"
+echo "#############Setup Fish#############"
+echo "#############Setup Fish#############"
+echo "#############Setup Fish#############"
+echo "#############Setup Fish#############"
+sudo apt-add-repository ppa:fish-shell/release-3 -y
+sudo apt-get install fish -y
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+echo ""
+echo "==================================="
+echo ""
+echo "############# Fup #############"
+echo "############# Fup #############"
+echo "############# Fup #############"
+echo "############# Fup #############"
+echo "***"
+echo ""
+echo "" 
+echo " This bash script will run commands for a full update "
+echo " commands have been taken from this site "
+echo "" 
+echo " https://null-byte.wonderhowto.com/how-to/top-10-things-do-after-installing-kali-linux-0186450/"
+echo ""
+echo "   Commands that will be run "
+echo "   --------------------------"
+echo "       sudo apt-get update "
+echo "       sudo apt-get dist-upgrade -Vy "
+echo "       sudo apt-get autoremove -y "
+echo "       sudo apt-get autoclean "
+echo "       sudo apt-get clean "
+echo "       cargo install-update -a"
+echo "       cargo install cargo-update"
+echo "       rustup update"
+echo "       sudo apt-add-repository ppa:fish-shell/release-3 -y"
+echo "       sudo apt-get install fish"
+echo "       sudo apt install libwebkit2gtk-4.0-dev libgtk-3-dev libappindicator3-dev -y"
+echo "       sudo apt-add-repository ppa:fish-shell/release-3"
+echo "       sudo apt-get install fish"
+echo ""
+sudo apt-get update 
+sudo apt-get dist-upgrade -Vy 
+sudo apt-get autoremove -y
+sudo apt-get autoclean
+sudo apt-get clean
+sudo apt install cmake -y
+sudo apt install neofetch -y
+cargo install-update -a
+cargo install cargo-update
+cargo install cargo-modules
+rustup update
+sudo apt-add-repository ppa:fish-shell/release-3 -y 
+sudo apt install libwebkit2gtk-4.0-dev libgtk-3-dev libappindicator3-dev -y
+sudo apt-get install fish -y
+echo ""
+echo ""
+echo ""
+echo "Version of Kali "
+echo "This will be executed with the command $ lbs_release -a"
+echo "" 
+lsb_release -a 
+echo ""
+echo "" 
+echo " Now lets see the version with neofetch command $ neofetch"
+echo "" 
+neofetch
+echo ""
+echo ""
+echo "############### CARGO INSTALLS ###############"
+echo "############### CARGO INSTALLS ###############"
+echo "############### CARGO INSTALLS ###############"
+echo "############### CARGO INSTALLS ###############"
+cargo install exa fd-find ripgrep du-dust starship bat artem nu image-to-ascii
+cargo install cargo-nextest --locked 
+echo ""
+echo ""
+echo "############### BREW INSTALLS ###############"
+echo "############### BREW INSTALLS ###############"
+echo "############### BREW INSTALLS ###############"
+brew install fzf helix 
+yes | /home/linuxbrew/.linuxbrew/opt/fzf/install
+fzf_key_bindings
+echo ""
+echo ""
+echo "############ STARSHIP ########################"
+echo "############ STARSHIP ########################"
+echo "############ STARSHIP ########################"
+echo -e " First Install for Fish Shell"
+echo "starship init fish | source" > ~/.config/fish/config.fish
+starship preset pure-preset > ~/.config/starship.toml
+# And add the following to the end of your Nushell configuration (find it by running $nu.config-path
+#source ~/.cache/starship/init.n
+echo "###### Add shit to config fish ##########"
+bash 
+cat << EOF >> ~/.config/fish/config.fish
+starship init fish | source
+
+# --- This section is for fish --- #
+
+# This is the exa command 
+alias e="exa -labBghHimnSuU --git --icons --octal-permissions --icons --color-scale --color=always --group-directories-first"
+
+# Command Aliases
+alias e="exa -labBghH --git --octal-permissions --icons --color-scale --color=always --group-directories-first"
+alias el="exa -labBghHimnSuU --git -@ --octal-permissions --icons --color-scale --color=always --group-directories-first"
+alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+
+# Github aliases 
+alias gl="git log --oneline --decorate --graph"
+alias gp="git add . && git commit && git push"
+alias gb="git branch -a"
+alias gsb="gb && git switch"
+alias gpp="git add . && git commit --allow-empty --allow-empty-message && git push --progress"
+EOF 
+
+------ FILE END ../../../mx/st.sh.1 ------
+
+
+------ FILE START ../../../mx/tgpt.txt ------
+
+Terminal GPT
+https://github.com/aandrew-me/tgpt
+- Use gpt3.5 from the terminal 
+- This one has a harcoded key 
+    -         AUTH_KEY, _ = base64.StdEncoding.DecodeString("QmVhcmVyIHNrLXVCckYxSHNpSHp5U3l4MlVtaFZQVDNCbGJrRkp5VUw5aUxhSmtxRXhEU0tOWDNBag==")
+    https://github.com/aandrew-me/tgpt/blob/a1b91b0148cfb055108f9e0b573cfce02bee5645/main.go#L36 - location of key
+- if shit fails then this is the one to use 
+
+Installation 
+curl -sSL https://raw.githubusercontent.com/aandrew-me/tgpt/main/install | bash -s /usr/local/bin
+
+------ FILE END ../../../mx/tgpt.txt ------
+
+
+------ FILE START ../../../mx/tgptt.fish ------
+
+#!/usr/bin/env fish
+curl -sSL https://raw.githubusercontent.com/aandrew-me/tgpt/main/install | bash -s /usr/local/bin
+
+------ FILE END ../../../mx/tgptt.fish ------
+
+
+------ FILE START ../../../mx/tmux.txt ------
+
+Notes for installing tmux 
+
+Step1 - Install Tmux 
+sudo apt-get install tmux 
+
+Step 2 - Make Config
+touch ~/.tmux.conf 
+
+Step3 - Install powerline & TPM PLugin manager 
+sudo apt install powerline -y 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+Step 4 add the following 
+
+```conf file 
+#This is a config file for the tmux sessions
+
+#This one is for adding the vim bindings
+set-window-option -g mode-keys vi
+
+# Add mouse Support 
+setw -g mouse on
+
+# tmux-loggin plugin config
+run-shell ~/DL/tmux-logging/logging.tmux
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm' # TPM Plugin Manager
+set -g @plugin 'tmux-plugins/tmux-sensible' # Sensible Defaults 
+set -g @plugin 'seebi/tmux-colors-solarized' # Theme 
+set -g @plugin 'tmux-plugins/tmux-logging' # Loggin 
+
+# Other examples:
+# set -g @plugin 'github_username/plugin_name'
+# set -g @plugin 'git@github.com/user/plugin'
+# set -g @plugin 'git@bitbucket.com/user/plugin'
+
+# This to be put at the end of file
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run -b '~/.tmux/plugins/tpm/tpm'
+run-shell 'powerline-config tmux setup'
+
+# Install nerd fonts 
+# git clone https://github.com/powerline/fonts.git --depth=1
+# install
+# cd fonts
+#./install.sh
+# cd ..find . -type f -newermt 2020-03-03 ! -newermt 2020-03-04 -size +25k -size -28k -name "*.config"
+# rm -rf fonts
+# Install tmux and powerline 
+# sudo apt intall tmux -y && sudo apt install powerline -y 
+# Install tpm - tmux plugin manager 
+# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# After installation initialize tmux with - tmux source .tmux.conf(this file contents is what u are reading now) 
+
+# Tmux Loggin Keys - https://github.com/tmux-plugins/tmux-logging - This has the keys 
+# 1. Begin Logging - prefix + Shift + p - Will make a file until exit session 
+# 2. Screen Capture - Will capture whatever is visible in terminal - prefix + alt + p
+# 3. Save Complete history - Capture whatever is in terminal - prefix alt + shift + p - Use this the most
+```
+
+Step 5 - Open tmux and do key Ctrl + B + I 
+
+------ FILE END ../../../mx/tmux.txt ------
+
+
+------ FILE START ../../../mx/tmuxx.fish ------
+
+#!/usr/bin/env fish
+echo " "
+echo " This wil run the following commands  "
+echo " 1. sudo apt-get install tmux -y = Install Tmux "
+echo " 2. sudo apt install powerline -y = Intall tmux powewrline"
+echo " 3. git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm = Install tmux plugins"
+echo " 4. cp /workspace/ceh/st/.tmux.conf ~/.tmux.conf = copy .tmux.conf to ~"
+echo ""
+echo ""
+echo ""
+
+sudo apt-get install tmux -y
+sudo apt install powerline -y 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+cp /workspace/ceh/st/.tmux.conf ~/.tmux.conf
+echo "Done ... Runinng tmux - tmux new -s w1"
+tmux new -s w1
+
+
+------ FILE END ../../../mx/tmuxx.fish ------
+
+
+------ FILE START ../../../mx/uv.fish ------
+
+#!/usr/bin/env fish 
+echo " "
+echo " Install UV and Fish Autocomplete "
+echo " "
+# Install UV 
+curl -LsSf https://astral.sh/uv/install.sh | sh
+# Setup automcomplete 
+echo 'uv generate-shell-completion fish | source' >> ~/.config/fish/config.fish
+echo 'uvx --generate-shell-completion fish | source' >> ~/.config/fish/config.fish
+
+
+------ FILE END ../../../mx/uv.fish ------
+
+
+------ FILE START ../../../mx/uvinit.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+hea1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+jupyter_setup() {
+    hea1 "UV Jupyter Lan Installation Commands"
+    # Get name of Project
+    echo -e "Enter the name of the project: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # Commands to execute
+    CO1="uv init $name_of_project"
+    CO2="cd $name_of_project"
+    CO3="uv add --dev ipykernel"
+    CO4="uv tree"
+
+    # Show Commands
+    echo -e ""
+    echo -e "${GREEN}---Commands to execute:---"
+    echo -e ">$CO1"
+    echo -e ">$CO2"
+    echo -e ">$CO3"
+    echo -e ">$CO4"
+    echo -e "Executing....${NC}"
+
+    # Execution Commands
+    eval "$CO1"
+    eval "$CO2"
+    eval "$CO3"
+    eval "$CO4"
+
+}
+
+# UV Setup
+
+uvsetup() {
+    hea1 "UV Installation with packages"
+
+    # Get Name of project
+    echo -e "Enter the name of the project: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # UC Commands
+    CO1="uv init $name_of_project"
+    CO2="cd $name_of_project"
+
+    DEPS="rich langgraph langgraph-sdk langgraph-checkpoint-sqlite langsmith langchain-community langchain-core langchain-openai notebook tavily-python wikipedia trustcall langgraph-cli"
+    CO3="uv add  $DEPS"
+    CO4="uv tree"
+
+    ## RUN Above Commands
+    echo -e "--- Executing ${CO1} ---"
+    eval "$CO1"
+    echo -e "--- Executing ${CO2} ---"
+    eval "$CO2"
+    echo -e "--- Executing ${CO3} ---"
+    eval "$CO3"
+    echo -e "--- Executing ${CO4} ---"
+    eval "$CO4"
+    echo -e "${GREEN}***** Installation Completed *****${NC}"
+}
+
+## UV Tavily Setup
+uv_tavily_setup() {
+    hea1 "UV Tavily Installation with packages"
+
+    # Get Name of project
+    echo -e "Enter the name of the project: "
+    read -r name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # UC Commands
+    CO1="uv init $name_of_project"
+    CO2="cd $name_of_project"
+
+    DEPS="rich tavily-python python-dotenv"
+    CO3="uv add  $DEPS"
+    CO4="uv tree"
+
+    ## RUN Above Commands
+    echo -e "--- Executing ${CO1} ---"
+    eval "$CO1"
+    echo -e "--- Executing ${CO2} ---"
+    eval "$CO2"
+    echo -e "--- Executing ${CO3} ---"
+    eval "$CO3"
+    echo -e "--- Executing ${CO4} ---"
+    eval "$CO4"
+    echo -e "${GREEN}***** Installation Completed *****${NC}"
+}
+
+uv_wik_setup() {
+    hea1 "UV Wikipedia Installation with packages"
+
+    # Get Name of project
+    echo -e "Enter the name of the project: "
+    read -r name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # UC Commands
+    CO1="uv init $name_of_project"
+    CO2="cd $name_of_project"
+
+    DEPS="rich wikipedia"
+    CO3="uv add  $DEPS"
+    CO4="uv tree"
+
+    ## RUN Above Commands
+    echo -e "--- Executing ${CO1} ---"
+    eval "$CO1"
+    echo -e "--- Executing ${CO2} ---"
+    eval "$CO2"
+    echo -e "--- Executing ${CO3} ---"
+    eval "$CO3"
+    echo -e "--- Executing ${CO4} ---"
+    eval "$CO4"
+    echo -e "${GREEN}***** Installation Completed *****${NC}"
+}
+
+menu_choice() {
+    clear
+    hea1 "Installation Menu"
+    echo -e "${YELLOW}Choose an option:${NC}"
+    echo -e "${GREEN}1) UV Wikipedia Setup${NC}"
+    echo -e "${GREEN}2) UV Tavily Setup${NC}"
+    echo -e "${GREEN}3) UV General Setup${NC}"
+    echo -e "${GREEN}4) Jupyter Setup${NC}"
+    echo -e "${RED}5) Exit${NC}"
+    echo -ne "${CYAN}Enter your choice: ${NC}"
+    read choice
+
+    case $choice in
+    1) uv_wik_setup ;;
+    2) uv_tavily_setup ;;
+    3) uvsetup ;;
+    4) jupyter_setup ;;
+    5)
+        echo -e "${RED}Exiting...${NC}"
+        exit 0
+        ;;
+    *)
+        echo -e "${RED}Invalid choice, exiting.${NC}"
+        exit 1
+        ;;
+    esac
+}
+
+# Execution
+menu_choice
+
+
+------ FILE END ../../../mx/uvinit.sh ------
+
+
+------ FILE START ../../../mx/uvmenu.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+hea1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+jupyter_setup() {
+    hea1 "UV Jupyter Lan Installation Commands"
+    # Get name of Project
+    echo -e "Enter the name of the project: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # Commands to execute
+    CO1="uv init $name_of_project"
+    CO2="cd $name_of_project"
+    CO3="uv add --dev ipykernel"
+    CO4="uv tree"
+
+    # Show Commands
+    echo -e ""
+    echo -e "${GREEN}---Commands to execute:---"
+    echo -e ">$CO1"
+    echo -e ">$CO2"
+    echo -e ">$CO3"
+    echo -e ">$CO4"
+    echo -e "Executing....${NC}"
+
+    # Execution Commands
+    eval "$CO1"
+    eval "$CO2"
+    eval "$CO3"
+    eval "$CO4"
+
+}
+
+# UV Setup
+
+uvsetup() {
+    hea1 "UV Installation with packages"
+
+    # Get Name of project
+    echo -e "Enter the name of the project: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # UC Commands
+    CO1="uv init $name_of_project"
+    CO2="cd $name_of_project"
+
+    DEPS="rich langgraph langgraph-sdk langgraph-checkpoint-sqlite langsmith langchain-community langchain-core langchain-openai notebook tavily-python wikipedia trustcall langgraph-cli"
+    CO3="uv add  $DEPS"
+    CO4="uv tree"
+
+    ## RUN Above Commands
+    echo -e "--- Executing ${CO1} ---"
+    eval "$CO1"
+    echo -e "--- Executing ${CO2} ---"
+    eval "$CO2"
+    echo -e "--- Executing ${CO3} ---"
+    eval "$CO3"
+    echo -e "--- Executing ${CO4} ---"
+    eval "$CO4"
+    echo -e "${GREEN}***** Installation Completed *****${NC}"
+}
+
+## UV Tavily Setup
+uv_tavily_setup() {
+    hea1 "UV Tavily Installation with packages"
+
+    # Get Name of project
+    echo -e "Enter the name of the project: "
+    read -r name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # UC Commands
+    CO1="uv init $name_of_project"
+    CO2="cd $name_of_project"
+
+    DEPS="rich tavily-python python-dotenv"
+    CO3="uv add  $DEPS"
+    CO4="uv tree"
+
+    ## RUN Above Commands
+    echo -e "--- Executing ${CO1} ---"
+    eval "$CO1"
+    echo -e "--- Executing ${CO2} ---"
+    eval "$CO2"
+    echo -e "--- Executing ${CO3} ---"
+    eval "$CO3"
+    echo -e "--- Executing ${CO4} ---"
+    eval "$CO4"
+    echo -e "${GREEN}***** Installation Completed *****${NC}"
+}
+
+uv_wik_setup() {
+    hea1 "UV Wikipedia Installation with packages"
+
+    # Get Name of project
+    echo -e "Enter the name of the project: "
+    read -r name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # UC Commands
+    CO1="uv init $name_of_project"
+    CO2="cd $name_of_project"
+
+    DEPS="rich wikipedia"
+    CO3="uv add  $DEPS"
+    CO4="uv tree"
+
+    ## RUN Above Commands
+    echo -e "--- Executing ${CO1} ---"
+    eval "$CO1"
+    echo -e "--- Executing ${CO2} ---"
+    eval "$CO2"
+    echo -e "--- Executing ${CO3} ---"
+    eval "$CO3"
+    echo -e "--- Executing ${CO4} ---"
+    eval "$CO4"
+    echo -e "${GREEN}***** Installation Completed *****${NC}"
+}
+uv_duck_setup() {
+    hea1 "UV Wikipedia Installation with packages"
+
+    # Get Name of project
+    echo -e "Enter the name of the project: "
+    read -r name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # UC Commands
+    CO1="uv init $name_of_project"
+    CO2="cd $name_of_project"
+
+    DEPS="rich duckduckgo_search"
+    CO3="uv add  $DEPS"
+    CO4="uv tree"
+
+    ## RUN Above Commands
+    echo -e "--- Executing ${CO1} ---"
+    eval "$CO1"
+    echo -e "--- Executing ${CO2} ---"
+    eval "$CO2"
+    echo -e "--- Executing ${CO3} ---"
+    eval "$CO3"
+    echo -e "--- Executing ${CO4} ---"
+    eval "$CO4"
+    echo -e "${GREEN}***** Installation Completed *****${NC}"
+}
+
+menu_choice() {
+    clear
+    hea1 "Installation Menu"
+    echo -e "${YELLOW}Choose an option:${NC}"
+    echo -e "${GREEN}1) UV Wikipedia Setup${NC}"
+    echo -e "${GREEN}2) UV Tavily Setup${NC}"
+    echo -e "${GREEN}3) UV General Setup${NC}"
+    echo -e "${GREEN}4) Jupyter Setup${NC}"
+    echo -e "${GREEN}5) DuclDuckGo Setup${NC}"
+    echo -e "${RED}6) Exit${NC}"
+    echo -ne "${CYAN}Enter your choice: ${NC}"
+    read choice
+
+    case $choice in
+    1) uv_wik_setup ;;
+    2) uv_tavily_setup ;;
+    3) uvsetup ;;
+    4) jupyter_setup ;;
+    5) uv_duck_setup ;;
+    6)
+        echo -e "${RED}Exiting...${NC}"
+        exit 0
+        ;;
+    *)
+        echo -e "${RED}Invalid choice, exiting.${NC}"
+        exit 1
+        ;;
+    esac
+}
+
+# Execution
+menu_choice
+
+
+------ FILE END ../../../mx/uvmenu.sh ------
+
+
+------ FILE START ../../../mx/uvvenv.sh ------
+
+#!/usr/bin/bash
+# This bash srcript is for installing the KL docker image here
+clear
+
+# Colors
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export WHITE='\033[0;37m'
+export NC='\033[0m' # No Color
+
+# Commands
+
+hea1() {
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+    echo -e "${PURPLE}$1${NC}"
+    echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
+}
+
+# Setup Env and install packages
+uvSetup() {
+    hea1 "Setting up Environment"
+
+    # Get Name of project
+    echo -e "Enter the name of the project: "
+    read name_of_project
+    if [ -z "$name_of_project" ]; then
+        echo -e "${RED}BASTARD ! Project name cannot be empty${NC}"
+        exit 1
+    fi
+
+    # Setup Directory
+    DEPS="fastapi uvicorn requests rich python-dotenv"
+    co1="mkdir -v $name_of_project && cd $name_of_project"
+    co2="uv venv"
+    co3="uv pip install $DEPS"
+    co4="uv pip list"
+
+    # Commands execution
+    eval "$co1"
+    eval "$co2"
+    eval "$co3"
+    eval "$co4"
+    echo -e "${YELLOW}[?] Execute source .venv/bin/activate.fish ${NC}"
+    echo -e "${GREEN}[+] Installation Completed ${NC}"
+}
+
+# Execute
+uvSetup
+
+
+------ FILE END ../../../mx/uvvenv.sh ------
+
+
+------ FILE START ../../../mx/vhs.txt ------
+
+vhs is for making cool gifs of cli 
+
+Main Repo 
+https://github.com/charmbracelet/vhs
+
+Installation 
+brew install vhs
+
+Usage Procedure 
+1. Lets record what you want 
+$> vhs record > cassette.tape 
+- The cassete.tape file is generated where you can add further options to make gif 
+
+********************************************************************************
+Example Config
+# Source code for the VHS neofetch example.
+#
+# To run:
+#
+#     vhs < neofetch.tape
+
+# Where should we write the GIF?
+Output demo.gif
+
+# Set up a 1200x600 terminal with 46px font.
+Set FontSize 46
+Set Width 1200
+Set Height 600
+
+# Type a command in the terminal.
+Type "echo 'Welcome to VHS!'"
+
+# Pause for dramatic effect...
+Sleep 500ms
+
+# Run the command by pressing enter.
+Enter
+
+# Admire the output for a bit.
+Sleep 5s
+*****************************************************************
+
+3. Now with the tape  file we can create whatever is mentioned in the tape file
+$> vhs cassette.tape
+
+------ FILE END ../../../mx/vhs.txt ------
+
+
+------ FILE START ../../../mx/vs.txt ------
+
+{
+  // Editor Settings
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always",
+    "source.fixAll": "always"
+  },
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "GoMono Nerd Font",
+  "editor.fontLigatures": "yes",
+  "editor.fontSize": 17,
+  "editor.fontVariations": false,
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": true,
+  "editor.inlayHints.fontFamily": "Dubai",
+  "editor.inlayHints.fontSize": 13,
+  "editor.inlineSuggest.fontFamily": "",
+  "editor.lineHeight": 2,
+  "editor.linkedEditing": true,
+  "editor.renderWhitespace": "all",
+  "editor.smoothScrolling": true,
+  "editor.suggestFontSize": 15,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+
+  // Files & Explorer
+  "explorer.fileNesting.patterns": {
+    "*.db": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.s3db": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.sh": "shellscript",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.ts": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+    "tsconfig.json": "tsconfig.*.json"
+  },
+  "files.associations": {
+    "*.rs": "rust",
+    "*.sh": "shellscript"
+  },
+  "files.autoSave": "onFocusChange",
+
+  // Git
+  "git.autofetch": true,
+  "git.openRepositoryInParentFolders": "always",
+
+  // Terminal
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.lineHeight": 1.8,
+
+  // Workbench
+  "workbench.colorTheme": "Best Themes - Monokai Awesome",
+  "workbench.iconTheme": "file-icons",
+  "workbench.list.smoothScrolling": true,
+  "workbench.settings.applyToAllProfiles": [],
+  "workbench.tree.enableStickyScroll": true,
+  "window.commandCenter": false,
+
+  // Extensions
+  "codeium.enableCodeLens": false,
+  "codeium.enableConfig": {
+    "*": true,
+    "django-html": true,
+    "go.mod": true,
+    "ignore": true,
+    "markdown": true,
+    "plaintext": true
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+
+  // Language Specific
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+      "source.fixAll": "explicit"
+    },
+    "ruff.importStrategy": "fromEnvironment",
+    "ruff.serverEnabled": true,
+    "ruff.format.enable": true,
+    "python.formatting.provider": "none"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  // Ruff-specific settings
+  "ruff.organizeImports": true,
+  "ruff.path": ["${workspaceFolder}/.venv/bin/ruff"],
+
+  // Other Settings
+  "js/ts.implicitProjectConfig.target": "ESNext",
+  "makefile.configureOnOpen": false,
+  "markdown.extension.print.imgToBase64": true,
+  "markdown.extension.print.theme": "dark",
+  "markdown.extension.toc.orderedList": true,
+  "notebook.lineNumbers": "on",
+  "prettier.semi": false,
+  "remote.autoForwardPortsSource": "hybrid",
+  "svelte.enable-ts-plugin": true,
+  "typescript.tsserver.maxTsServerMemory": 1024
+}
+
+
+------ FILE END ../../../mx/vs.txt ------
+
+
+------ FILE START ../../../mx/vscodedev.txt ------
+
+{
+  "workbench.list.smoothScrolling": true,
+  "editor.smoothScrolling": true,
+  "editor.renderWhitespace": "all",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.bracketPairs": true,
+  "editor.cursorBlinking": "expand",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "editor.fontFamily": "GoMono Nerd Font",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "codeium.enableConfig": {
+    "*": true,
+    "Log": true,
+    "markdown": true,
+    "plaintext": true,
+    "github-actions-workflow": true,
+    "go.mod": true
+  },
+  "workbench.colorTheme": "Best Themes - Monokai Awesome",
+  "markdown.extension.toc.orderedList": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.formatOnSave": true,
+  "git.openRepositoryInParentFolders": "always",
+  "redhat.telemetry.enabled": true,
+  "editor.formatOnPaste": true,
+  "editor.lineHeight": 2,
+  "editor.fontSize": 17,
+  "notebook.stickyScroll.enabled": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.stickyTabStops": true,
+  "workbench.iconTheme": "file-icons",
+  "remote.autoForwardPortsSource": "hybrid",
+  "vsicons.dontShowNewVersionMessage": true,
+  "files.autoSave": "onFocusChange",
+  "terminal.integrated.lineHeight": 1.8,
+
+  // 🧾 Formatter Settings
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[gitignore]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[env]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+
+  // 🐍 Python Formatter
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
+  },
+
+  // 🦀 Rust Analyzer Settings
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
+  },
+
+  // 📦 Shell Script / Ignore File Formatting
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[solidity]": {
+    "editor.defaultFormatter": "AckeeBlockchain.tools-for-solidity"
+  },
+
+  // 🛠 Git Smart Commit & Autofetch
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+
+  // 🔒 Disable AI Lens (Optional)
+  "codeium.enableCodeLens": false,
+
+  // 👓 Inlay Hints Styling
+  "editor.inlayHints.fontFamily": "Dubai",
+  "editor.inlayHints.fontSize": 13,
+
+  // 🦀 Rust Analyzer Lenses
+  "rust-analyzer.lens.references.adt.enable": true,
+  "rust-analyzer.lens.references.enumVariant.enable": true,
+  "rust-analyzer.lens.references.method.enable": true,
+  "rust-analyzer.lens.references.trait.enable": true,
+
+  // 🛠 Makefile Auto Configure
+  "makefile.configureOnOpen": true,
+
+  // 🧠 Rust Analyzer Advanced Settings
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "rust-analyzer.cargo.loadOutDirsFromCheck": true,
+  "rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.inlayHints.chainingHints": true,
+  "rust-analyzer.inlayHints.typeHints": true,
+  "rust-analyzer.inlayHints.parameterHints": true,
+  "rust-analyzer.inlayHints.maxLength": 20,
+  "rust-analyzer.rustfmt.extraArgs": ["--config", "edition=2021"],
+  "rust-analyzer.completion.useShadowedModuleNames": true,
+  "rust-analyzer.imports.granularity.group": "module",
+  "rust-analyzer.imports.autogenerate": true,
+
+  // Solidity Settings
+  "solidity.packageDefaultDependenciesContractsDirectory": "src",
+  "solidity.packageDefaultDependenciesDirectory": "lib",
+  "terminal.integrated.fontSize": 16,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "editor.linkedEditing": true,
+  "prettier.semi": false,
+
+  // 🔧 ESLint Settings
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.fixAll.eslint": "always",
+    "source.organizeImports": "always"
+  },
+  "eslint.useFlatConfig": true,
+  "eslint.format.enable": true
+}
+
+------ FILE END ../../../mx/vscodedev.txt ------
+
+
+------ FILE START ../../../mx/webp.fish ------
+
+#!/usr/bin/env fish
+
+echo "Follwing Commands will be executed"
+echo ""
+echo ""
+echo "pnpm i -D prettier prettier-plugin-tailwindcss"
+echo "pnpm i tailwindcss-animated"
+echo "pnpm i -D daisyui@latest"
+echo "" 
+echo "Did you change into the correct directory ?(Yes/No)"
+read -a response
+switch $response
+    case "Yes" "yes" "y" "Y"
+        echo "Continuing with script"
+        pnpm i -D prettier prettier-plugin-tailwindcss
+        pnpm i tailwindcss-animated
+        pnpm i -D daisyui@latest
+    case "*"
+        echo "Fucker Change into the right diretory !"
+        exit 1
+end
+
+------ FILE END ../../../mx/webp.fish ------
+
+
+------ FILE START ../../../mx/wp.fish ------
+
+
+
+------ FILE END ../../../mx/wp.fish ------
+
+
+------ FILE START ../../../mx/z.sh ------
+
+#!/bin/sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
+
+
+
+------ FILE END ../../../mx/z.sh ------
+
+
+------ FILE START ../../../resp.txt ------
+
+
+
+
+------ FILE END ../../../resp.txt ------
+
+
+------ FILE START ../../../time.txt ------
+
+
+[2025-06-18 09:09:07] Minute task executed 
+[2025-06-18 09:10:49] Minute task executed 
+[2025-06-18 09:12:31] Minute task executed 
+[2025-06-18 09:14:13] Minute task executed 
+[2025-06-18 09:15:54] Minute task executed 
+[2025-06-18 09:17:36] Minute task executed 
+[2025-06-18 09:19:17] Minute task executed 
+[2025-06-18 09:20:59] Minute task executed 
+[2025-06-18 09:22:40] Minute task executed 
+[2025-06-18 09:24:22] Minute task executed 
+[2025-06-18 09:26:03] Minute task executed 
+[2025-06-18 09:27:45] Minute task executed 
+[2025-06-18 09:29:26] Minute task executed 
+[2025-06-18 09:31:08] Minute task executed 
+[2025-06-18 09:32:49] Minute task executed 
+[2025-06-18 09:34:31] Minute task executed 
+[2025-06-18 09:36:12] Minute task executed 
+[2025-06-18 09:37:54] Minute task executed 
+[2025-06-18 09:39:35] Minute task executed 
+[2025-06-18 09:41:17] Minute task executed 
+[2025-06-18 09:42:59] Minute task executed 
+[2025-06-18 09:44:40] Minute task executed 
+[2025-06-18 09:46:22] Minute task executed 
+[2025-06-18 09:48:04] Minute task executed 
+[2025-06-18 09:49:45] Minute task executed 
+[2025-06-18 09:51:27] Minute task executed 
+[2025-06-18 09:53:09] Minute task executed 
+[2025-06-18 09:54:51] Minute task executed 
+[2025-06-18 09:56:32] Minute task executed 
+[2025-06-18 09:58:14] Minute task executed 
+[2025-06-18 09:59:55] Minute task executed 
+[2025-06-18 10:01:37] Minute task executed 
+[2025-06-18 10:03:18] Minute task executed 
+[2025-06-18 10:05:00] Minute task executed 
+[2025-06-18 10:06:41] Minute task executed 
+[2025-06-18 10:08:23] Minute task executed 
+[2025-06-18 10:10:04] Minute task executed 
+[2025-06-18 10:11:46] Minute task executed 
+[2025-06-18 10:13:27] Minute task executed 
+[2025-06-18 10:15:08] Minute task executed 
+[2025-06-18 10:16:50] Minute task executed 
+[2025-06-18 10:18:32] Minute task executed 
+[2025-06-18 10:20:13] Minute task executed 
+[2025-06-18 10:21:55] Minute task executed 
+[2025-06-18 10:23:36] Minute task executed 
+[2025-06-18 10:25:18] Minute task executed 
+[2025-06-18 10:26:59] Minute task executed 
+[2025-06-18 10:28:41] Minute task executed 
+[2025-06-18 10:30:23] Minute task executed 
+[2025-06-18 10:32:04] Minute task executed 
+[2025-06-18 10:33:46] Minute task executed 
+[2025-06-18 10:35:28] Minute task executed 
+[2025-06-18 10:37:09] Minute task executed 
+[2025-06-18 10:38:51] Minute task executed 
+[2025-06-18 10:40:33] Minute task executed 
+[2025-06-18 10:42:14] Minute task executed 
+[2025-06-18 10:43:56] Minute task executed 
+[2025-06-18 10:45:37] Minute task executed 
+[2025-06-18 10:47:19] Minute task executed 
+[2025-06-18 10:49:00] Minute task executed 
+[2025-06-18 10:50:42] Minute task executed 
+[2025-06-18 10:52:23] Minute task executed 
+[2025-06-18 10:54:05] Minute task executed 
+[2025-06-18 10:55:47] Minute task executed 
+[2025-06-18 10:57:28] Minute task executed 
+[2025-06-18 10:59:10] Minute task executed 
+[2025-06-18 11:00:51] Minute task executed 
+[2025-06-18 11:02:33] Minute task executed 
+[2025-06-18 11:04:14] Minute task executed 
+[2025-06-18 11:05:56] Minute task executed 
+[2025-06-18 11:07:37] Minute task executed 
+[2025-06-18 11:09:19] Minute task executed 
+[2025-06-18 11:11:00] Minute task executed 
+[2025-06-18 11:12:42] Minute task executed 
+[2025-06-18 11:14:23] Minute task executed 
+[2025-06-18 11:16:05] Minute task executed 
+[2025-06-18 11:17:46] Minute task executed 
+[2025-06-18 11:19:28] Minute task executed 
+[2025-06-18 11:21:09] Minute task executed 
+[2025-06-18 11:22:51] Minute task executed 
+[2025-06-18 11:24:32] Minute task executed 
+[2025-06-18 11:26:14] Minute task executed 
+[2025-06-18 11:27:55] Minute task executed 
+[2025-06-18 11:29:37] Minute task executed 
+[2025-06-18 11:31:18] Minute task executed 
+[2025-06-18 11:33:00] Minute task executed 
+[2025-06-18 11:34:41] Minute task executed 
+[2025-06-18 11:36:23] Minute task executed 
+[2025-06-18 11:38:04] Minute task executed 
+[2025-06-18 11:39:45] Minute task executed 
+[2025-06-18 12:19:21] Minute task executed 
+[2025-06-19 09:34:31] Minute task executed 
+[2025-06-19 09:36:14] Minute task executed 
+[2025-06-19 09:37:56] Minute task executed 
+[2025-06-19 09:39:37] Minute task executed 
+[2025-06-19 09:41:18] Minute task executed 
+[2025-06-19 09:43:00] Minute task executed 
+[2025-06-19 09:44:41] Minute task executed 
+[2025-06-19 09:46:23] Minute task executed 
+[2025-06-19 09:48:04] Minute task executed 
+[2025-06-19 09:49:46] Minute task executed 
+[2025-06-19 09:51:27] Minute task executed 
+[2025-06-19 09:53:09] Minute task executed 
+[2025-06-19 09:54:50] Minute task executed 
+[2025-06-19 09:56:32] Minute task executed 
+[2025-06-19 09:58:13] Minute task executed 
+[2025-06-19 09:59:55] Minute task executed 
+[2025-06-19 10:01:37] Minute task executed 
+[2025-06-19 10:03:18] Minute task executed 
+[2025-06-19 10:05:00] Minute task executed 
+[2025-06-19 10:06:41] Minute task executed 
+[2025-06-19 10:08:23] Minute task executed 
+[2025-06-19 10:10:04] Minute task executed 
+[2025-06-19 10:11:46] Minute task executed 
+[2025-06-19 10:13:27] Minute task executed 
+[2025-06-19 10:15:09] Minute task executed 
+[2025-06-19 10:16:50] Minute task executed 
+[2025-06-19 10:18:32] Minute task executed 
+[2025-06-19 10:20:13] Minute task executed 
+[2025-06-19 10:21:55] Minute task executed 
+[2025-06-19 10:23:36] Minute task executed 
+[2025-06-19 10:25:18] Minute task executed 
+[2025-06-19 10:26:59] Minute task executed 
+[2025-06-19 10:28:41] Minute task executed 
+[2025-06-19 10:30:22] Minute task executed 
+[2025-06-19 10:32:04] Minute task executed 
+[2025-06-19 10:33:45] Minute task executed 
+[2025-06-19 10:35:27] Minute task executed 
+[2025-06-19 10:37:08] Minute task executed 
+[2025-06-19 10:38:50] Minute task executed 
+[2025-06-19 10:40:31] Minute task executed 
+[2025-06-19 10:42:13] Minute task executed 
+[2025-06-19 10:43:54] Minute task executed 
+[2025-06-19 10:45:35] Minute task executed 
+[2025-06-19 10:47:17] Minute task executed 
+[2025-06-19 10:48:58] Minute task executed 
+[2025-06-19 10:50:40] Minute task executed 
+[2025-06-19 10:52:22] Minute task executed 
+[2025-06-19 10:54:03] Minute task executed 
+[2025-06-19 10:55:45] Minute task executed 
+[2025-06-19 10:57:26] Minute task executed 
+[2025-06-19 10:59:08] Minute task executed 
+[2025-06-19 16:48:54] Minute task executed 
+[2025-06-19 16:50:36] Minute task executed 
+[2025-06-19 16:52:18] Minute task executed 
+[2025-06-19 16:53:59] Minute task executed 
+[2025-06-19 16:55:41] Minute task executed 
+[2025-06-19 16:57:23] Minute task executed 
+[2025-06-19 16:59:06] Minute task executed 
+[2025-06-19 17:00:48] Minute task executed 
+[2025-06-19 17:02:29] Minute task executed 
+[2025-06-19 17:04:10] Minute task executed 
+[2025-06-19 17:05:52] Minute task executed 
+[2025-06-19 17:07:33] Minute task executed 
+[2025-06-19 17:09:15] Minute task executed 
+[2025-06-19 17:10:57] Minute task executed 
+[2025-06-19 17:12:38] Minute task executed 
+[2025-06-19 17:14:20] Minute task executed 
+[2025-06-19 17:16:02] Minute task executed 
+[2025-06-19 17:17:49] Minute task executed 
+[2025-06-19 17:19:31] Minute task executed 
+[2025-06-19 17:21:13] Minute task executed 
+[2025-06-19 17:22:54] Minute task executed 
+[2025-06-19 17:24:35] Minute task executed 
+[2025-06-19 17:26:17] Minute task executed 
+[2025-06-19 17:27:59] Minute task executed 
+[2025-06-19 17:29:40] Minute task executed 
+[2025-06-19 17:31:22] Minute task executed 
+[2025-06-19 17:33:03] Minute task executed 
+[2025-06-19 17:34:45] Minute task executed 
+[2025-06-19 17:36:26] Minute task executed 
+[2025-06-19 17:38:08] Minute task executed 
+[2025-06-19 17:39:49] Minute task executed 
+[2025-06-19 17:41:31] Minute task executed 
+[2025-06-19 17:43:12] Minute task executed 
+[2025-06-19 17:44:54] Minute task executed 
+[2025-06-19 17:46:35] Minute task executed 
+[2025-06-19 17:48:16] Minute task executed 
+[2025-06-19 17:49:58] Minute task executed 
+[2025-06-19 17:51:39] Minute task executed 
+[2025-06-19 17:53:21] Minute task executed 
+[2025-06-19 17:55:02] Minute task executed 
+[2025-06-19 17:56:44] Minute task executed 
+[2025-06-19 17:58:26] Minute task executed 
+[2025-06-19 18:00:07] Minute task executed 
+[2025-06-19 18:01:49] Minute task executed 
+[2025-06-19 18:03:30] Minute task executed 
+[2025-06-19 18:05:11] Minute task executed 
+[2025-06-19 18:06:53] Minute task executed 
+[2025-06-19 18:08:34] Minute task executed 
+[2025-06-19 18:10:16] Minute task executed 
+[2025-06-19 18:11:57] Minute task executed 
+[2025-06-19 18:13:39] Minute task executed 
+[2025-06-19 18:15:20] Minute task executed 
+[2025-06-19 18:17:02] Minute task executed 
+[2025-06-19 18:18:43] Minute task executed 
+[2025-06-19 18:20:25] Minute task executed 
+[2025-06-19 18:22:06] Minute task executed 
+[2025-06-19 18:23:48] Minute task executed 
+[2025-06-19 18:25:29] Minute task executed 
+[2025-06-19 18:27:10] Minute task executed 
+[2025-06-19 18:28:52] Minute task executed 
+[2025-06-19 18:30:33] Minute task executed 
+[2025-06-19 18:32:15] Minute task executed 
+[2025-06-19 18:33:56] Minute task executed 
+[2025-06-19 18:35:38] Minute task executed 
+[2025-06-19 18:37:19] Minute task executed 
+[2025-06-19 18:39:01] Minute task executed 
+[2025-06-19 18:40:42] Minute task executed 
+[2025-06-20 09:15:06] Minute task executed 
+[2025-06-20 09:16:48] Minute task executed 
+[2025-06-20 09:18:29] Minute task executed 
+[2025-06-20 09:20:11] Minute task executed 
+[2025-06-20 09:21:52] Minute task executed 
+[2025-06-20 09:23:34] Minute task executed 
+[2025-06-20 09:25:15] Minute task executed 
+[2025-06-20 09:26:56] Minute task executed 
+[2025-06-20 09:28:38] Minute task executed 
+[2025-06-20 09:30:19] Minute task executed 
+
+
+------ FILE END ../../../time.txt ------
+
+
+======== END OF PART 45 OF 46  ========
+
+This is only a part of the code. Please do not respond until I provide all parts (1 remaining).
