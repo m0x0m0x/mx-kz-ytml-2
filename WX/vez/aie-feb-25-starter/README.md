@@ -1,6 +1,17 @@
 1. [Tutoza My Work](#tutoza-my-work)
+2. [Filez Description](#filez-description)
 
 # Tutoza My Work
 
 1. This work is following this [TUTO](https://youtu.be/kDlqpN1JyIw?si=YUh4oceKbLn5l-8A)
 2. You are also testing groq-chatoni capabilities here
+
+# Filez Description
+
+1. This is referencing the files in the `src/` dirz
+
+|             File             |                          Description                          |
+| :--------------------------: | :-----------------------------------------------------------: |
+| [`index.ts`](./src/index.ts) |                 Main entry point for the app                  |
+|    [`wm.ts`](./src/wm.ts)    |       Save to markdown function, being called in me1.ts       |
+|   [`me1.ts`](./src/me1.ts)   | Function you are writing to test other models with the ai-sdk |
