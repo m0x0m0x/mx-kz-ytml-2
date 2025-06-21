@@ -16,6 +16,7 @@ export async function t1_main() {
     margin: 1,
     borderStyle: "round",
     borderColor: "yellow",
+    title: "t1_main",
   })
   console.log(chalk.bold.blue(boxedMessage))
 }
