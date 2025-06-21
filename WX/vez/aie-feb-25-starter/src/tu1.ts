@@ -21,12 +21,15 @@ export async function t1_main() {
 async function t1_func1() {
   printTutorialHeader("t1_func1", "t1_func1")
 
+  const modelz = groq("compound-beta")
+  const quez = "When was the AI engineer summit 2025"
+
   const result = await generateText({
-    model: groq("llama-3.3-70b-versatile"),
+    model: modelz,
     messages: [
       {
         role: "user",
-        content: "When was the AI engineer summit 2025",
+        content: quez,
       },
     ],
   })
