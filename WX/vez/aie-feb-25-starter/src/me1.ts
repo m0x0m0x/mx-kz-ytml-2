@@ -93,8 +93,7 @@ export async function googleSearchGrounding() {
       messages: [
         {
           role: "user",
-          content:
-            "Explain the key points of the Iran-Israel War as of June 2025",
+          content: "Explain high profile web 2 and web 3 June 2025",
         },
       ],
     })
