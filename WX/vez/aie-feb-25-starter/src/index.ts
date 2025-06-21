@@ -10,7 +10,7 @@ const main = async () => {
     messages: [
       {
         role: "user",
-        content: "Explain what is atmosphere, like a ancient greek philosopher",
+        content: "When was the AI engineer summit 2025",
       },
     ],
   })
