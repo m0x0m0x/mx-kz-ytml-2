@@ -1,3 +1,7 @@
+/* 
+This will have various functions you are testing while doing the tutorial. 
+*/
+
 import { groq } from "@ai-sdk/groq"
 import { generateText } from "ai"
 import boxen from "boxen"
@@ -8,7 +12,7 @@ export async function m1_main() {
   explainAtmosphereInGangstaRap()
 }
 
-// Query closed model from groq
+// Query closed model from groq directly
 export async function explainAtmosphereInGangstaRap() {
   try {
     const result = await generateText({
@@ -44,7 +48,7 @@ export async function compoundBetaTest() {
         {
           role: "user",
           content:
-            "Explain the key points of the Iran-Israel War as of June 2025",
+            "Explain the key points of the Iran-Israel War as of June 2025, answer like a drunk knight",
         },
       ],
     })
