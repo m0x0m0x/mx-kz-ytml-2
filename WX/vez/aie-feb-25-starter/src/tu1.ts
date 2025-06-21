@@ -23,7 +23,8 @@ async function t1_func1() {
   printTutorialHeader("t1_func1", "t1_func1")
 
   const modelz = groq("compound-beta")
-  const quez = "When was the AI engineer summit 2025"
+  const quez =
+    "When was the AI engineer summit 2025, and what impact has it had in the world of AI"
 
   const result = await generateText({
     model: modelz,
@@ -40,6 +41,7 @@ async function t1_func1() {
     margin: 1,
     borderStyle: "round",
     borderColor: "greenBright",
+    title: "groq(compound-beta)",
   })
 
   console.log(chalk.blueBright(boxedMessage))
