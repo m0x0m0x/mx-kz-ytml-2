@@ -72,13 +72,6 @@ export async function compoundBetaTest() {
     console.log(chalk.greenBright(result.sources)) // Note if there are sources then it will be here
     console.log(chalk.bold.green("✔ Operation completed"))
 
-    saveAsMarkdown(result.text, {
-      model: "gemini-2.5-flash",
-      sources: result.sources,
-      query: "Iran-Israel War June 2025",
-      functionName: "googleSearchGrounding",
-    })
-
     return result.text // Optional: return the response for reuse
   } catch (error) {
     console.error(chalk.red.bold("💥 Error:"), error.message)
@@ -118,6 +111,13 @@ export async function googleSearchGrounding() {
     console.log(chalk.greenBright(boxedMessage))
     console.log(chalk.greenBright(result.sources)) // Note if there are sources then it will be here
     console.log(chalk.bold.green("✔ Operation completed"))
+
+    saveAsMarkdown(result.text, {
+      model: "gemini-2.5-flash",
+      sources: result.sources,
+      query: "Iran-Israel War June 2025",
+      functionName: "googleSearchGrounding",
+    })
 
     return result.text // Optional: return the response for reuse
   } catch (error) {
