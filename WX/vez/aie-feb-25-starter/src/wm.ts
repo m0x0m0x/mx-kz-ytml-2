@@ -1,9 +1,3 @@
-/* 
-Fucntion for writing captured results to a markdown file
-- Directory name is called rez 
--- Appends 
-*/
-
 import chalk from "chalk"
 import fs from "fs"
 import path from "path"

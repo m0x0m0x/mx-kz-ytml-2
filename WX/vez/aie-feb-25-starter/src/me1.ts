@@ -8,6 +8,7 @@ import { generateText } from "ai"
 import boxen from "boxen"
 import chalk from "chalk"
 import "dotenv/config"
+import { writeToMarkdown } from "./wm"
 
 export async function m1_main() {
   explainAtmosphereInGangstaRap()
@@ -114,6 +115,76 @@ export async function googleSearchGrounding() {
     return result.text // Optional: return the response for reuse
   } catch (error) {
     console.error(chalk.red.bold("💥 Error:"), error.message)
+    throw error
+  }
+}
+
+// Function using the writeToMarkdown function
+
+interface AITextResult {
+  text: string
+  sources?: any[]
+}
+
+export async function googleSearchGroundingTwo(): Promise<string> {
+  const FUNCTION_NAME = "googleSearchGrounding"
+
+  try {
+    const result: AITextResult = await generateText({
+      model: google("gemini-1.5-flash", {
+        useSearchGrounding: true,
+      }),
+      messages: [
+        {
+          role: "user",
+          content:
+            "Explain the key points of the Iran-Israel War as of June 2025",
+        },
+      ],
+    })
+
+    // Console output
+    console.log(chalk.bold.blue("🔥 Atmosphere, Gangsta Style:"))
+    console.log(
+      chalk.greenBright(
+        boxen(result.text, {
+          padding: 1,
+          margin: 1,
+          borderStyle: "round",
+          borderColor: "yellow",
+        })
+      )
+    )
+
+    if (result.sources) {
+      console.log(
+        chalk.greenBright("Sources:\n"),
+        chalk.greenBright(JSON.stringify(result.sources, null, 2))
+      )
+    }
+
+    // File output
+    const metadata: MarkdownMetadata = {
+      model: "gemini-1.5-flash",
+      sources: result.sources || [],
+      query: "Iran-Israel War June 2025",
+      functionName: FUNCTION_NAME,
+    }
+
+    writeToMarkdown(
+      result.text,
+      metadata,
+      "iran_israel_war_analysis",
+      FUNCTION_NAME
+    )
+
+    console.log(chalk.bold.green("✔ Operation completed"))
+    return result.text
+  } catch (error) {
+    console.error(
+      chalk.red.bold("💥 Error:"),
+      error instanceof Error ? error.message : String(error)
+    )
     throw error
   }
 }
