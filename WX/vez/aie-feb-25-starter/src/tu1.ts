@@ -134,8 +134,8 @@ async function t1_func3() {
     padding: 1,
     margin: 1,
     borderStyle: "round",
-    borderColor: "greenBright",
-    title: "google(gemini-2.5-flash-preview-04-17) - Search Grounding",
+    borderColor: "cyanBright",
+    title: "google(gemini-2.5-flash) - Search Grounding",
   })
   console.log(chalk.blueBright(boxedMessage))
 }
