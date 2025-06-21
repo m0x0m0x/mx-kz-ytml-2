@@ -48,6 +48,11 @@ ${sourcesText}
 import boxen from "boxen"
 import chalk from "chalk"
 
+/*
+Function Usage 
+printTutorialHeader("Tu1 - Main Tutorial Function Calls", "t1_main")
+*/
+
 export const printTutorialHeader = (msg: string, title: string) => {
   const boxedMessage = boxen(msg, {
     padding: 1,
