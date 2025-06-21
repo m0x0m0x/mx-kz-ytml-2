@@ -3,7 +3,6 @@ import { generateText } from "ai"
 import boxen from "boxen"
 import chalk from "chalk"
 import "dotenv/config"
-import { googleSearchGroundingTwo } from "./me1"
 
 const main = async () => {
   const result = await generateText({
@@ -31,5 +30,4 @@ const main = async () => {
 // m1_main()
 // main()
 // compoundBetaTest()
-// googleSearchGrounding()
-googleSearchGroundingTwo()
+googleSearchGrounding()
