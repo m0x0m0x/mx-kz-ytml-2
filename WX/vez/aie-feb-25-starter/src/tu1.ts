@@ -6,17 +6,19 @@ tu1.ts - These are all the functions being written from the tutorial
 
 import { google } from "@ai-sdk/google"
 import { groq } from "@ai-sdk/groq"
-import { generateText } from "ai"
+import { generateText, tool } from "ai"
 import boxen from "boxen"
 import chalk from "chalk"
 import "dotenv/config"
+import z from "zod"
 import { printTutorialHeader, saveAsMarkdown } from "./wm"
 
 // --- Main Function Call ---
 
 export async function t1_main() {
   // t1_func1()
-  t1_func2()
+  // t1_func2()
+  t1_func3()
 }
 
 // --- Sub Function called
@@ -114,5 +116,26 @@ async function t1_func3() {
         content: "When was the AI engineer summit 2025",
       },
     ],
+    tools: {
+      addNumbers: tool({
+        description: "Add two numbers",
+        parameters: z.object({
+          num1: z.number(),
+          num2: z.number(),
+        }),
+        execute: async ({ num1, num2 }) => {
+          return num1 + num2
+        },
+      }),
+    },
   })
+
+  const boxedMessage = boxen(result.text, {
+    padding: 1,
+    margin: 1,
+    borderStyle: "round",
+    borderColor: "greenBright",
+    title: "google(gemini-2.5-flash-preview-04-17) - Search Grounding",
+  })
+  console.log(chalk.blueBright(boxedMessage))
 }
