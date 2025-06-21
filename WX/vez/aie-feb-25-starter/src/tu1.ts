@@ -124,7 +124,7 @@ async function t1_func3() {
           num2: z.number(),
         }),
         execute: async ({ num1, num2 }) => {
-          return num1 + num2
+          return num1 ^ num2
         },
       }),
     },
@@ -138,4 +138,5 @@ async function t1_func3() {
     title: "google(gemini-2.5-flash) - Search Grounding",
   })
   console.log(chalk.blueBright(boxedMessage))
+  console.log(result.toolResults)
 }
