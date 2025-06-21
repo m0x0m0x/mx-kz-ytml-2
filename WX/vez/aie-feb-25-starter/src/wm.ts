@@ -1,122 +1,45 @@
 // markdown-utils.ts
-import chalk from "chalk"
 import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-export interface Source {
-  sourceType?: string
-  id?: string
-  url: string
-  title?: string
-}
-
-export interface MarkdownMetadata {
-  model: string
-  sources?: Source[]
-  query?: string
-  timestamp?: string
-  functionName?: string
-  [key: string]: any // Allow additional metadata
-}
-
-export interface MarkdownOptions {
-  directory?: string
-  subdirectory?: string
-  headerLevel?: number
-  includeFullMetadata?: boolean
-}
-
-/**
- * Comprehensive markdown generator and file writer
- * @param content - Main content to write
- * @param metadata - Metadata including model, sources, etc.
- * @param options - Configuration options
- * @returns Path to the created markdown file
- */
-export const generateAndWriteMarkdown = (
+export const saveAsMarkdown = (
   content: string,
-  metadata: MarkdownMetadata,
-  options: MarkdownOptions = {}
+  metadata: {
+    model: string
+    sources?: { url: string; title?: string }[]
+    query?: string
+    functionName?: string
+  }
 ): string => {
-  // Default options
-  const {
-    directory = "rez",
-    subdirectory,
-    headerLevel = 1,
-    includeFullMetadata = true,
-  } = options
+  const now = new Date()
+  const timestamp = now.toLocaleString()
+  const filename = `${metadata.functionName || "output"}_${now
+    .toISOString()
+    .replace(/[:.]/g, "-")}.md`
+  const filePath = path.join(__dirname, "rez", filename)
 
-  try {
-    // Setup paths and names
-    const now = new Date()
-    const timestamp = now.toLocaleString()
-    const dateTimeString = now
-      .toISOString()
-      .replace(/[:.]/g, "-")
-      .replace("T", "_")
-      .slice(0, 19)
-    const headerPrefix = "#".repeat(Math.min(Math.max(headerLevel, 1), 6))
-
-    // Create output directory
-    const outputDir = path.join(__dirname, directory, subdirectory || "")
-    fs.mkdirSync(outputDir, { recursive: true })
-
-    // Generate filename and path
-    const filename = `${metadata.functionName || "output"}_${dateTimeString}.md`
-    const filePath = path.join(outputDir, filename)
-
-    // Format sources as markdown links
-    const formatSources = (sources?: Source[]): string => {
-      if (!sources || sources.length === 0) return "No sources available"
-      return sources
-        .map((source, index) => {
-          const title = source.title || `Source ${index + 1}`
-          return `- [${title}](${source.url})`
-        })
+  const sourcesText = metadata.sources?.length
+    ? metadata.sources
+        .map((s) => `- [${s.title || "Source"}](${s.url})`)
         .join("\n")
-    }
+    : "No sources available"
 
-    // Generate markdown content
-    const markdownContent = `${headerPrefix} ${
-      metadata.query || "Analysis Report"
-    }
+  const markdownContent = `# ${metadata.query || "Analysis"}
 
 **Generated**: ${timestamp}  
-**Model**: ${metadata.model}  
-**Function**: ${metadata.functionName || "N/A"}
+**Model**: ${metadata.model}
 
-${headerPrefix}# Key Points
+## Content
 ${content}
 
-${headerPrefix}# Sources
-${formatSources(metadata.sources)}
+## Sources
+${sourcesText}
+`
 
-${
-  includeFullMetadata
-    ? `${headerPrefix}# Metadata
-\`\`\`json
-${JSON.stringify({ ...metadata, timestamp }, null, 2)}
-\`\`\``
-    : ""
-}`
-
-    // Write file
-    fs.writeFileSync(filePath, markdownContent)
-
-    console.log(
-      chalk.green(
-        `✓ Markdown saved to: ${path.relative(process.cwd(), filePath)}`
-      )
-    )
-    return filePath
-  } catch (error) {
-    console.error(
-      chalk.red("✗ Markdown save failed:"),
-      error instanceof Error ? error.message : String(error)
-    )
-    throw error
-  }
+  fs.mkdirSync(path.dirname(filePath), { recursive: true })
+  fs.writeFileSync(filePath, markdownContent)
+  return filePath
 }

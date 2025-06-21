@@ -8,7 +8,6 @@ import { generateText } from "ai"
 import boxen from "boxen"
 import chalk from "chalk"
 import "dotenv/config"
-import { writeToMarkdown } from "./wm"
 
 export async function m1_main() {
   explainAtmosphereInGangstaRap()
