@@ -1,4 +1,5 @@
 1. [Tutoza My Work](#tutoza-my-work)
+   1. [Main Tutorial Links](#main-tutorial-links)
 2. [Filez Description](#filez-description)
 
 # Tutoza My Work
@@ -6,6 +7,8 @@
 1. This work is following this [TUTO](https://youtu.be/kDlqpN1JyIw?si=YUh4oceKbLn5l-8A)
 2. You are also testing groq-chatoni capabilities here
 3. Note the whoel point of using the ai9-sdk is to have unified way to acess models, using TS. Since everymodel has their own way of caling their API, and getting the important components from the response
+
+## Main Tutorial Links
 
 # Filez Description
 
