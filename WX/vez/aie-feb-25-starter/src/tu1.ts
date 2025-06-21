@@ -108,7 +108,9 @@ Function calling
 async function t1_func3() {
   printTutorialHeader("Function calling", "t1_func3")
 
-  const modelz = groq("compound-beta")
+  const modelz = google("gemini-2.5-flash-preview-04-17", {
+    useSearchGrounding: true,
+  })
   const promptz = "What is 2000 + 3000"
 
   const result = await generateText({
