@@ -6,6 +6,7 @@ tu1.ts - These are all the functions being written from the tutorial
 
 import { groq } from "@ai-sdk/groq"
 import { generateText } from "ai"
+import boxen from "boxen"
 import chalk from "chalk"
 import "dotenv/config"
 import { printTutorialHeader } from "./wm"
@@ -33,5 +34,13 @@ async function t1_func1() {
       },
     ],
   })
-  console.log(chalk.greenBright(result.text))
+
+  const boxedMessage = boxen(result.text, {
+    padding: 1,
+    margin: 1,
+    borderStyle: "round",
+    borderColor: "greenBright",
+  })
+
+  console.log(chalk.blueBright(boxedMessage))
 }
