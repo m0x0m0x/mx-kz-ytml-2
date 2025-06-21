@@ -1,3 +1,4 @@
+// markdown-utils.ts
 import chalk from "chalk"
 import fs from "fs"
 import path from "path"
@@ -29,13 +30,18 @@ export interface MarkdownOptions {
 }
 
 /**
- * Writes content to a markdown file with enhanced formatting
+ * Comprehensive markdown generator and file writer
+ * @param content - Main content to write
+ * @param metadata - Metadata including model, sources, etc.
+ * @param options - Configuration options
+ * @returns Path to the created markdown file
  */
-export const writeToMarkdown = (
+export const generateAndWriteMarkdown = (
   content: string,
   metadata: MarkdownMetadata,
   options: MarkdownOptions = {}
 ): string => {
+  // Default options
   const {
     directory = "rez",
     subdirectory,
@@ -44,59 +50,39 @@ export const writeToMarkdown = (
   } = options
 
   try {
+    // Setup paths and names
     const now = new Date()
-    const dateTimeString = formatDateTime(now)
+    const timestamp = now.toLocaleString()
+    const dateTimeString = now
+      .toISOString()
+      .replace(/[:.]/g, "-")
+      .replace("T", "_")
+      .slice(0, 19)
     const headerPrefix = "#".repeat(Math.min(Math.max(headerLevel, 1), 6))
 
-    // Create output directory structure
+    // Create output directory
     const outputDir = path.join(__dirname, directory, subdirectory || "")
     fs.mkdirSync(outputDir, { recursive: true })
 
-    // Generate filename
+    // Generate filename and path
     const filename = `${metadata.functionName || "output"}_${dateTimeString}.md`
     const filePath = path.join(outputDir, filename)
 
-    // Format the markdown content
-    const markdownContent = generateMarkdownContent(content, metadata, {
-      headerPrefix,
-      includeFullMetadata,
-    })
+    // Format sources as markdown links
+    const formatSources = (sources?: Source[]): string => {
+      if (!sources || sources.length === 0) return "No sources available"
+      return sources
+        .map((source, index) => {
+          const title = source.title || `Source ${index + 1}`
+          return `- [${title}](${source.url})`
+        })
+        .join("\n")
+    }
 
-    // Write to file
-    fs.writeFileSync(filePath, markdownContent)
-
-    console.log(
-      chalk.green(
-        `✓ Markdown saved to: ${path.relative(process.cwd(), filePath)}`
-      )
-    )
-    return filePath
-  } catch (error) {
-    console.error(
-      chalk.red("✗ Markdown save failed:"),
-      error instanceof Error ? error.message : String(error)
-    )
-    throw error
-  }
-}
-
-// Helper functions
-const formatDateTime = (date: Date): string => {
-  return date.toISOString().replace(/[:.]/g, "-").replace("T", "_").slice(0, 19)
-}
-
-const generateMarkdownContent = (
-  content: string,
-  metadata: MarkdownMetadata,
-  options: {
-    headerPrefix: string
-    includeFullMetadata: boolean
-  }
-): string => {
-  const { headerPrefix, includeFullMetadata } = options
-  const timestamp = metadata.timestamp || new Date().toLocaleString()
-
-  return `${headerPrefix} ${metadata.query || "Analysis Report"}
+    // Generate markdown content
+    const markdownContent = `${headerPrefix} ${
+      metadata.query || "Analysis Report"
+    }
 
 **Generated**: ${timestamp}  
 **Model**: ${metadata.model}  
@@ -112,22 +98,25 @@ ${
   includeFullMetadata
     ? `${headerPrefix}# Metadata
 \`\`\`json
-${JSON.stringify(metadata, null, 2)}
+${JSON.stringify({ ...metadata, timestamp }, null, 2)}
 \`\`\``
     : ""
-}
-`
-}
+}`
 
-const formatSources = (sources?: Source[]): string => {
-  if (!sources || sources.length === 0) {
-    return "No sources available"
+    // Write file
+    fs.writeFileSync(filePath, markdownContent)
+
+    console.log(
+      chalk.green(
+        `✓ Markdown saved to: ${path.relative(process.cwd(), filePath)}`
+      )
+    )
+    return filePath
+  } catch (error) {
+    console.error(
+      chalk.red("✗ Markdown save failed:"),
+      error instanceof Error ? error.message : String(error)
+    )
+    throw error
   }
-
-  return sources
-    .map((source, index) => {
-      const title = source.title || `Source ${index + 1}`
-      return `- [${title}](${source.url})`
-    })
-    .join("\n")
 }
