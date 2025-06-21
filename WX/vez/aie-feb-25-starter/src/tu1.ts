@@ -111,7 +111,7 @@ async function t1_func3() {
   const modelz = google("gemini-2.5-flash", {
     useSearchGrounding: true,
   })
-  const promptz = "What is 2000 + 3000"
+  const promptz = "What is 2000 raised to the power of 3000"
 
   const result = await generateText({
     model: modelz,
@@ -124,7 +124,7 @@ async function t1_func3() {
           num2: z.number(),
         }),
         execute: async ({ num1, num2 }) => {
-          return num1 ^ num2
+          return num1 - num2
         },
       }),
     },
