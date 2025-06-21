@@ -111,6 +111,7 @@ export async function googleSearchGrounding() {
     console.log(chalk.greenBright(result.sources)) // Note if there are sources then it will be here
     console.log(chalk.bold.green("✔ Operation completed"))
 
+    // Save and write to markdown file in directory called rez
     saveAsMarkdown(result.text, {
       model: "gemini-2.5-flash",
       sources: result.sources,
