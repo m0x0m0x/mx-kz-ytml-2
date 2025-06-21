@@ -36,6 +36,7 @@ async function t1_func1() {
     ],
   })
 
+  // Printing the result
   const boxedMessage = boxen(result.text, {
     padding: 1,
     margin: 1,
@@ -45,4 +46,5 @@ async function t1_func1() {
   })
 
   console.log(chalk.blueBright(boxedMessage))
+  console.log(chalk.bold.green(result.sources))
 }
