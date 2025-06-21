@@ -8,7 +8,7 @@ import { generateText } from "ai"
 import boxen from "boxen"
 import chalk from "chalk"
 import "dotenv/config"
-import { MarkdownMetadata, writeToMarkdown } from "./wm"
+import { MarkdownMetadata } from "./wm"
 
 export async function m1_main() {
   explainAtmosphereInGangstaRap()
@@ -123,11 +123,18 @@ export async function googleSearchGrounding() {
 
 interface AITextResult {
   text: string
-  sources?: any[]
+  sources?: Source[]
+}
+
+interface Source {
+  sourceType?: string
+  id?: string
+  url: string
+  title?: string
 }
 
 export async function googleSearchGroundingTwo(): Promise<string> {
-  const FUNCTION_NAME = "googleSearchGrounding"
+  const FUNCTION_NAME = "googleSearchGroundingTwo"
 
   try {
     const result: AITextResult = await generateText({
@@ -163,20 +170,19 @@ export async function googleSearchGroundingTwo(): Promise<string> {
       )
     }
 
-    // File output
+    // File output with new markdown function
     const metadata: MarkdownMetadata = {
-      model: "gemini-1.5-flash",
+      model: "gemini-2.5-flash-preview-04-17", // Updated model name
       sources: result.sources || [],
       query: "Iran-Israel War June 2025",
       functionName: FUNCTION_NAME,
     }
 
-    writeToMarkdown(
-      result.text,
-      metadata,
-      "iran_israel_war_analysis",
-      FUNCTION_NAME
-    )
+    writeToMarkdown(result.text, metadata, {
+      subdirectory: "middle-east-conflicts",
+      headerLevel: 1,
+      includeFullMetadata: true,
+    })
 
     console.log(chalk.bold.green("✔ Operation completed"))
     return result.text
