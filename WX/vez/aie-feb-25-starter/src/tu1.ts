@@ -15,10 +15,10 @@ export async function t1_main() {
     padding: 1,
     margin: 1,
     borderStyle: "round",
-    borderColor: "yellow",
+    borderColor: "greenBright",
     title: "t1_main",
   })
-  console.log(chalk.bold.blue(boxedMessage))
+  console.log(chalk.bold.yellowBright(boxedMessage))
 }
 
 // --- Sub Function called
