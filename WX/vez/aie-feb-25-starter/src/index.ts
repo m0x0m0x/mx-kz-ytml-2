@@ -3,12 +3,16 @@ import { generateText } from "ai"
 import boxen from "boxen"
 import chalk from "chalk"
 import "dotenv/config"
-import { m1_main } from "./me1"
 
 const main = async () => {
   const result = await generateText({
     model: groq("llama-3.3-70b-versatile"),
-    prompt: "Explain what is atmosphere, in gangzta rap style",
+    messages: [
+      {
+        role: "user",
+        content: "Explain what is atmosphere, like a ancient greek philosopher",
+      },
+    ],
   })
 
   console.log(chalk.bold.blue("Generated Recipe:"))
@@ -23,4 +27,5 @@ const main = async () => {
 }
 
 // My function
-m1_main()
+// m1_main()
+main()
