@@ -111,6 +111,7 @@ async function t1_func3() {
   const modelz = google("gemini-2.5-flash", {
     useSearchGrounding: true,
   })
+
   const promptz = "What is 2000 * 3000"
 
   const result = await generateText({
