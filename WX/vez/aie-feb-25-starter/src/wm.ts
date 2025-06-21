@@ -5,7 +5,7 @@ import { fileURLToPath } from "url"
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-interface MarkdownMetadata {
+export interface MarkdownMetadata {
   [key: string]: any
   model?: string
   sources?: any[]
