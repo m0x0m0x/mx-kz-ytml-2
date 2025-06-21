@@ -108,7 +108,7 @@ Function calling
 async function t1_func3() {
   printTutorialHeader("Function calling", "t1_func3")
 
-  const modelz = google("gemini-2.5-flash-preview-04-17", {
+  const modelz = google("gemini-2.5-flash", {
     useSearchGrounding: true,
   })
   const promptz = "What is 2000 + 3000"
