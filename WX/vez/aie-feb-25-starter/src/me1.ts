@@ -48,7 +48,7 @@ export async function compoundBetaTest() {
         {
           role: "user",
           content:
-            "Explain the key points of the Iran-Israel War as of June 2025, answer like a drunk knight",
+            "Explain the key points of the Iran-Israel War as of June 2025",
         },
       ],
     })
