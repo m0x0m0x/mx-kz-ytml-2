@@ -110,12 +110,7 @@ async function t1_func3() {
 
   const result = await generateText({
     model: groq("llama-3.3-70b-versatile"),
-    messages: [
-      {
-        role: "user",
-        content: "When was the AI engineer summit 2025",
-      },
-    ],
+    prompt: "What is 1000 + 2000",
     tools: {
       addNumbers: tool({
         description: "Add two numbers",
