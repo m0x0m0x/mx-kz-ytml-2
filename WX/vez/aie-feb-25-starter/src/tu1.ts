@@ -102,3 +102,7 @@ async function t1_func2() {
 /*
 Function calling
 */
+
+async function t1_func3() {
+  printTutorialHeader("Function calling", "t1_func3")
+}
