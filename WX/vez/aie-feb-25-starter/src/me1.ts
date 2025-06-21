@@ -85,6 +85,8 @@ export async function compoundBetaTest() {
 
 // Query Compount Beta which also has web search
 export async function googleSearchGrounding() {
+  const quez = "Explain high profile hacks web 2 and web 3 as of 2025"
+
   try {
     const result = await generateText({
       model: google("gemini-2.5-flash-preview-04-17", {
@@ -93,7 +95,7 @@ export async function googleSearchGrounding() {
       messages: [
         {
           role: "user",
-          content: "Explain high profile web 2 and web 3 June 2025",
+          content: quez,
         },
       ],
     })

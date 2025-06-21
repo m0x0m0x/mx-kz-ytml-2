@@ -10,6 +10,10 @@
 
 ## Main Tutorial Links
 
+1. https://aie-feb-25.vercel.app/docs
+   1. Source of the origial files
+   2. [Repo](https://github.com/nicoalbanese/aie-feb-25-starter) - Mainr Repo source of the files
+
 # Filez Description
 
 1. This is referencing the files in the `src/` dirz
