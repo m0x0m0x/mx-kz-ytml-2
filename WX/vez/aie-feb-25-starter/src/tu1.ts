@@ -108,9 +108,12 @@ Function calling
 async function t1_func3() {
   printTutorialHeader("Function calling", "t1_func3")
 
+  const modelz = groq("compound-beta")
+  const promptz = "What is 2000 + 3000"
+
   const result = await generateText({
-    model: groq("llama-3.3-70b-versatile"),
-    prompt: "What is 1000 + 2000",
+    model: modelz,
+    prompt: promptz,
     tools: {
       addNumbers: tool({
         description: "Add two numbers",
