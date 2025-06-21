@@ -94,7 +94,7 @@ export async function compoundBetaTest() {
 export async function googleSearchGrounding() {
   try {
     const result = await generateText({
-      model: google("gemini-1.5-flash", {
+      model: google("gemini-2.5-flash-preview-04-17", {
         useSearchGrounding: true,
       }),
       messages: [
