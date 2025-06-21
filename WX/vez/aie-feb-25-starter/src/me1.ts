@@ -39,11 +39,12 @@ export async function explainAtmosphereInGangstaRap() {
 export async function compoundBetaTest() {
   try {
     const result = await generateText({
-      model: groq("Compound Beta"),
+      model: groq("compound-beta"),
       messages: [
         {
           role: "user",
-          content: "Explain the economic outlook in 2025",
+          content:
+            "Explain the key points of the Iran-Israel War as of June 2025",
         },
       ],
     })
