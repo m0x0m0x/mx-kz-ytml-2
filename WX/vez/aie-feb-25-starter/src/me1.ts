@@ -63,6 +63,7 @@ export async function compoundBetaTest() {
     })
 
     console.log(chalk.greenBright(boxedMessage))
+    console.log(chalk.greenBright(result.sources)) // Note if there are sources then it will be here
     console.log(chalk.bold.green("✔ Operation completed"))
 
     return result.text // Optional: return the response for reuse
