@@ -43,3 +43,18 @@ ${sourcesText}
   fs.writeFileSync(filePath, markdownContent)
   return filePath
 }
+
+// Header Function
+import boxen from "boxen"
+import chalk from "chalk"
+
+export const printTutorialHeader = (msg: string, title: string) => {
+  const boxedMessage = boxen(msg, {
+    padding: 1,
+    margin: 1,
+    borderStyle: "round",
+    borderColor: "greenBright",
+    title: title,
+  })
+  console.log(chalk.bold.yellowBright(boxedMessage))
+}
