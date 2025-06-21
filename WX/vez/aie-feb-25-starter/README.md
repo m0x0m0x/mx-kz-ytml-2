@@ -2,4 +2,5 @@
 
 # Tutoza My Work
 
-1. Was supposed to follow the tutorial but you are using your own code ehere
+1. This work is following this [TUTO](https://youtu.be/kDlqpN1JyIw?si=YUh4oceKbLn5l-8A)
+2. You are also testing groq-chatoni capabilities here
