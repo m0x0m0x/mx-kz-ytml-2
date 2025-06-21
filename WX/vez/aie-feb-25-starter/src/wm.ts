@@ -5,79 +5,129 @@ import { fileURLToPath } from "url"
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
+export interface Source {
+  sourceType?: string
+  id?: string
+  url: string
+  title?: string
+}
+
 export interface MarkdownMetadata {
-  [key: string]: any
-  model?: string
-  sources?: any[]
+  model: string
+  sources?: Source[]
   query?: string
   timestamp?: string
   functionName?: string
+  [key: string]: any // Allow additional metadata
+}
+
+export interface MarkdownOptions {
+  directory?: string
+  subdirectory?: string
+  headerLevel?: number
+  includeFullMetadata?: boolean
 }
 
 /**
- * Writes content to a markdown file in the 'rez' directory
- * @param content - The main content to write
- * @param metadata - Additional metadata to include
- * @param filenamePrefix - Prefix for the filename
- * @param functionName - Name of the calling function for organization
- * @returns Path to the created file
+ * Writes content to a markdown file with enhanced formatting
  */
 export const writeToMarkdown = (
   content: string,
-  metadata: MarkdownMetadata = {},
-  filenamePrefix: string = "output",
-  functionName?: string
+  metadata: MarkdownMetadata,
+  options: MarkdownOptions = {}
 ): string => {
+  const {
+    directory = "rez",
+    subdirectory,
+    headerLevel = 1,
+    includeFullMetadata = true,
+  } = options
+
   try {
     const now = new Date()
-    const dateTimeString = now
-      .toISOString()
-      .replace(/[:.]/g, "-")
-      .replace("T", "_")
-    const formattedDate = now.toLocaleString()
+    const dateTimeString = formatDateTime(now)
+    const headerPrefix = "#".repeat(Math.min(Math.max(headerLevel, 1), 6))
 
-    // Enhance metadata
-    const enhancedMetadata: MarkdownMetadata = {
-      ...metadata,
-      timestamp: formattedDate,
-      functionName: functionName || metadata.functionName,
-    }
+    // Create output directory structure
+    const outputDir = path.join(__dirname, directory, subdirectory || "")
+    fs.mkdirSync(outputDir, { recursive: true })
 
-    // Prepare markdown content
-    const markdownContent =
-      `# ${filenamePrefix}\n\n` +
-      `**Generated**: ${formattedDate}\n\n` +
-      `## Content\n${content}\n\n` +
-      `## Metadata\n\`\`\`json\n${JSON.stringify(
-        enhancedMetadata,
-        null,
-        2
-      )}\n\`\`\``
+    // Generate filename
+    const filename = `${metadata.functionName || "output"}_${dateTimeString}.md`
+    const filePath = path.join(outputDir, filename)
 
-    // Create rez directory structure
-    const rezDir = path.join(__dirname, "rez")
-    const functionDir = functionName ? path.join(rezDir, functionName) : rezDir
+    // Format the markdown content
+    const markdownContent = generateMarkdownContent(content, metadata, {
+      headerPrefix,
+      includeFullMetadata,
+    })
 
-    if (!fs.existsSync(functionDir)) {
-      fs.mkdirSync(functionDir, { recursive: true })
-    }
-
-    // Write file
-    const filename = `${filenamePrefix}_${dateTimeString}.md`
-    const filePath = path.join(functionDir, filename)
+    // Write to file
     fs.writeFileSync(filePath, markdownContent)
 
     console.log(
       chalk.green(
-        `✓ Results saved to ${path.relative(process.cwd(), filePath)}`
+        `✓ Markdown saved to: ${path.relative(process.cwd(), filePath)}`
       )
     )
     return filePath
   } catch (error) {
     console.error(
-      chalk.red("✗ Error writing markdown file:"),
+      chalk.red("✗ Markdown save failed:"),
       error instanceof Error ? error.message : String(error)
     )
     throw error
   }
+}
+
+// Helper functions
+const formatDateTime = (date: Date): string => {
+  return date.toISOString().replace(/[:.]/g, "-").replace("T", "_").slice(0, 19)
+}
+
+const generateMarkdownContent = (
+  content: string,
+  metadata: MarkdownMetadata,
+  options: {
+    headerPrefix: string
+    includeFullMetadata: boolean
+  }
+): string => {
+  const { headerPrefix, includeFullMetadata } = options
+  const timestamp = metadata.timestamp || new Date().toLocaleString()
+
+  return `${headerPrefix} ${metadata.query || "Analysis Report"}
+
+**Generated**: ${timestamp}  
+**Model**: ${metadata.model}  
+**Function**: ${metadata.functionName || "N/A"}
+
+${headerPrefix}# Key Points
+${content}
+
+${headerPrefix}# Sources
+${formatSources(metadata.sources)}
+
+${
+  includeFullMetadata
+    ? `${headerPrefix}# Metadata
+\`\`\`json
+${JSON.stringify(metadata, null, 2)}
+\`\`\``
+    : ""
+}
+`
+}
+
+const formatSources = (sources?: Source[]): string => {
+  if (!sources || sources.length === 0) {
+    return "No sources available"
+  }
+
+  return sources
+    .map((source, index) => {
+      const title = source.title || `Source ${index + 1}`
+      return `- [${title}](${source.url})`
+    })
+    .join("\n")
 }
