@@ -2,6 +2,7 @@
 This will have various functions you are testing while doing the tutorial. 
 */
 
+import { google } from "@ai-sdk/google"
 import { groq } from "@ai-sdk/groq"
 import { generateText } from "ai"
 import boxen from "boxen"
@@ -16,7 +17,7 @@ export async function m1_main() {
 export async function explainAtmosphereInGangstaRap() {
   try {
     const result = await generateText({
-      model: groq("llama-3.3-70b-versatile"),
+      model: google("gemini-1.5-flash-latest", { useSearchGrounding: true }),
       prompt: "Explain what is atmosphere, in gangsta rap style",
     })
 
