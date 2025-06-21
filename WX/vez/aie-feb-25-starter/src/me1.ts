@@ -13,11 +13,15 @@ export async function m1_main() {
   explainAtmosphereInGangstaRap()
 }
 
+///////////////////////////////////////////////////////////////
+// Groq Usage
+///////////////////////////////////////////////////////////////
+
 // Query closed model from groq directly
 export async function explainAtmosphereInGangstaRap() {
   try {
     const result = await generateText({
-      model: google("gemini-1.5-flash-latest", { useSearchGrounding: true }),
+      model: groq("llama-3.3-70b-versatile"),
       prompt: "Explain what is atmosphere, in gangsta rap style",
     })
 
@@ -74,13 +78,17 @@ export async function compoundBetaTest() {
   }
 }
 
-// Using google gemini and search grounding
+///////////////////////////////////////////////////////////////
+// Googel Usage
+///////////////////////////////////////////////////////////////
 
 // Query Compount Beta which also has web search
 export async function googleSearchGrounding() {
   try {
     const result = await generateText({
-      model: groq("compound-beta"),
+      model: google("gemini-1.5-flash", {
+        useSearchGrounding: true,
+      }),
       messages: [
         {
           role: "user",
