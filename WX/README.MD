@@ -12,5 +12,4 @@
 | [`agz`](./agz/) |        Smol Agent CW here         |
 | [`tez`](./tez/) |           Various Tests           |
 | [`hfs`](./hfs/) | HugginFace Smolgents Course Work  |
-| [`hfs`](./hfs/) | HugginFace Smolgents Course Work  |
 | [`vez`](./vez/) | VercelPantySmelling Projects here |
