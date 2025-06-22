@@ -19,7 +19,8 @@ load_dotenv("src/.azz")
 gq_t = os.getenv("GRQ")
 
 modelz = [
-    "llama-3.3-70b-versatile"
+    "llama-3.3-70b-versatile",
+    "compund-beta"
 ]
 
 
@@ -43,7 +44,7 @@ def env_test():
 def gq1_chat1():
     he1("Chat1 - Testing examples from docs")
 
-    quez = "Is wokeism a type of cancer ?"
+    quez = "Explain the role of b52 bombers in Iran War as of June 2025"
 
     client = Groq(
         api_key=gq_t,
@@ -56,7 +57,7 @@ def gq1_chat1():
                 "content": quez,
             }
         ],
-        model=modelz[0],
+        model=modelz[1],
     )
 
     rpr(chat_completion.choices[0].message.content)
