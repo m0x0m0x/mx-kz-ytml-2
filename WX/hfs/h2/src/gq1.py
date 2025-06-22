@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 from groq import Groq
 from rich import print as rpr
 
+from .utz import he1
 from .wm import save_to_markdown
 
 # --- Global Pussy ---
@@ -33,14 +34,14 @@ def gq1_main():
 ### Sub Funtions ###
 
 def env_test():
-    header1("Token_Brinting")
+    he1("Token_Brinting")
     rpr(f"[green_yellow]GQ1: {gq_t}[/green_yellow]")
 
 ### Chat Function1 ###
 
 
 def gq1_chat1():
-    header1("Chat1 - Testing examples from docs")
+    he1("Chat1 - Testing examples from docs")
 
     quez = "Is wokeism a type of cancer ?"
 
