@@ -14,7 +14,7 @@ install(show_locals=True)
 
 # Setting up rich logger with color
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.DEBUG,
     format="%(message)s",
     datefmt="[%X]",
     handlers=[RichHandler(rich_tracebacks=True, markup=True)],
