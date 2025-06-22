@@ -44,5 +44,5 @@ dockrun_once() {
 }
 
 # Exection
-# ru1
-dockrun_once
+ru1
+# dockrun_once
