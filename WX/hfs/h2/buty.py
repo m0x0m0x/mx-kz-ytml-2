@@ -4,13 +4,14 @@
 
 # --- Imports ---
 
-from src.utz import eline, he1, tline
+from src.gq1 import gq1_main
+from src.utz import eline, tline
 
 # --- App Code ---
 
 
 def buty():
-    he1("Suck and Fuck")
+    gq1_main()
 
 
 if __name__ == "__main__":
