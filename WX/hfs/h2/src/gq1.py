@@ -20,7 +20,7 @@ gq_t = os.getenv("GRQ")
 
 modelz = [
     "llama-3.3-70b-versatile",
-    "compund-beta"
+    "compound-beta"
 ]
 
 
@@ -69,7 +69,7 @@ def gq1_chat1():
         header_level=2,
         include_time_in_filename=True,
         metadata={
-            "Model": modelz[0],
+            "Model": modelz[1],
             "Question": quez
         }
     )
