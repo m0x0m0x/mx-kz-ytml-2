@@ -4,5 +4,7 @@
 
 # DIRZ
 
-| Dir | What |
-| :-: | :--: |
+|     Dir      |                What                |
+| :----------: | :--------------------------------: |
+| [`h1`](./h1) |  Initial testing with HF and gq1   |
+| [`h2`](./h2) | HuggingFace SmolAgents Course Work |

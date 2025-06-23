@@ -44,7 +44,7 @@ def env_test():
 def gq1_chat1():
     he1("Chat1 - Testing examples from docs")
 
-    quez = "Explain the role of b52 bombers in Iran War as of June 2025"
+    quez = "Find AI based automated web app penetesting tools that are opnsource and utilize google gemini api "
 
     client = Groq(
         api_key=gq_t,
