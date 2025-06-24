@@ -15,6 +15,12 @@ from .utz import he1
 load_dotenv("src/.azz")
 gh_t = os.getenv("GHB")
 
+# Models from github
+modelz = [
+    "openai/gpt-4.1",
+
+]
+
 # --- Main Function ---
 
 
@@ -24,13 +30,15 @@ def gh1_main():
 # --- Sub Function ---
 
 # Brintaz envaz
+
+
 def fn1():
     he1("Function 1")
     rpr(f"[green] GHB: {gh_t} [/green]")
 
 #
-# Calling function from doco 
+# Calling function from doco
 #
 
+
 def fn2():
-    
