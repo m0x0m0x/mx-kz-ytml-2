@@ -23,7 +23,14 @@ def gh1_main():
 
 # --- Sub Function ---
 
-
+# Brintaz envaz
 def fn1():
     he1("Function 1")
     rpr(f"[green] GHB: {gh_t} [/green]")
+
+#
+# Calling function from doco 
+#
+
+def fn2():
+    
