@@ -7,10 +7,12 @@
 import os
 
 from dotenv import load_dotenv
-from rich import print as rpr
 from openai import OpenAI
+from rich import inspect
+from rich import print as rpr
 
 from .utz import he1
+from .wm import save_to_markdown
 
 # --- Vars ---
 load_dotenv("src/.azz")
@@ -38,11 +40,12 @@ def fn1():
 
 #
 # Calling function from doco
-#
+# 1. Testing models that are compatible with open ai sdk
 
 
 def fn2():
 
+    quez = "What is the significant war happening in June 2025"
     endpoint = "https://models.github.ai/inference"
     client = OpenAI(
         base_url=endpoint,
@@ -57,7 +60,7 @@ def fn2():
             },
             {
                 "role": "user",
-                "content": "What is the capital of France?",
+                "content": quez,
             }
         ],
         temperature=1.0,
@@ -65,4 +68,18 @@ def fn2():
         model=modelz[0]
     )
 
-    print(response.choices[0].message.content)
+    answerz = response.choices[0].message.content
+    inspect(answerz, methods=True)
+    rpr(response.choices[0].message.content)
+
+    save_to_markdown(
+        answerz,
+        prefix="openai_gpt-4.1",
+        directory="rez/",
+        header_level=2,
+        include_time_in_filename=True,
+        metadata={
+            "Model": modelz[0],
+            "Question": quez
+        }
+    )

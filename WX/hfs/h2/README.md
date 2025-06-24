@@ -13,3 +13,4 @@
 | [`gq1.py`](src/gq1.py) |                                 Groqi Teztaz                                  |
 | [`utz.py`](src/utz.py) |                                  Utilz booty                                  |
 |  [`wm.py`](src/wm.py)  |                          Write to markdown function                           |
+| [`gh2.py`](src/gh1.py) |                       Testing gitrepo models directlry                        |
