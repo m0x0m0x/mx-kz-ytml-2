@@ -14,7 +14,7 @@ from .utz import he1
 
 # --- Vars ---
 load_dotenv("src/.azz")
-gh_t = os.getenv("GHB")
+GH_T = os.getenv("GHB")
 
 # Models from github
 modelz = [
@@ -25,7 +25,7 @@ modelz = [
 
 
 def gh1_main():
-    fn1()
+    fn2()
 
 # --- Sub Function ---
 
@@ -34,7 +34,7 @@ def gh1_main():
 
 def fn1():
     he1("Function 1")
-    rpr(f"[green] GHB: {gh_t} [/green]")
+    rpr(f"[green] GHB: {GH_T} [/green]")
 
 #
 # Calling function from doco
@@ -46,7 +46,7 @@ def fn2():
     endpoint = "https://models.github.ai/inference"
     client = OpenAI(
         base_url=endpoint,
-        api_key=token,
+        api_key=GH_T,
     )
 
     response = client.chat.completions.create(
@@ -62,7 +62,7 @@ def fn2():
         ],
         temperature=1.0,
         top_p=1.0,
-        model=model
+        model=modelz[0]
     )
 
     print(response.choices[0].message.content)
